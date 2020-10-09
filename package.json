@@ -1,0 +1,30 @@
+{
+  "name": "fp-examples",
+  "version": "1.0.0",
+  "description": "* recursive read folder  ```+ :: revursive a -> RoseTree [RoseTree]```.",
+  "main": "obtain-files.js",
+  "scripts": {
+    "obtain:files": "nodemon --exec babel-node obtain-files.js",
+    "read": "nodemon --exec babel-node read.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kasselTrankos/fp-examples.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kasselTrankos/fp-examples/issues"
+  },
+  "homepage": "https://github.com/kasselTrankos/fp-examples#readme",
+  "dependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/node": "^7.10.5",
+    "@babel/preset-env": "^7.11.5"
+  }
+}
