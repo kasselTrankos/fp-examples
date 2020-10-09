@@ -9,12 +9,11 @@ RoseTree.of = function(x) {
 }
 
 // ap :: Apply f => f a ~> f (a -> b) -> f b
-RoseTree.prototype.ap = function(b) {
+RoseTree.prototype.ap = function({node: f, forest: fs}) {
   const {node, forest} = this;
-  const {node: f, forest: fs} = b;
   return new RoseTree(f(node), [].concat(
-    forest ? forest.map(x => x.map(f)) : [], 
-    fs ? fs.map(m => m instanceof RoseTree ? this.ap(m) : RoseTree.of(m)) : []
+    forest.map(f),
+    fs.map(m => this.ap(m))
   ));
 }
 // map :: Functor f => f a ~> (a -> b) -> f b
@@ -30,8 +29,9 @@ RoseTree.prototype.chain = function(f) {
 }
 
 // concat :: Semogroup a => a ~> a -> a
-RoseTree.prototype.concat = function(b) {
-  return new RoseTree(this.node,  [...this.forest, ...b.forest]);
+// a is inmutable
+RoseTree.prototype.concat = function(that) {
+  return new RoseTree(this.node,  [...this.forest, ...that.forest]);
 }
 
 
