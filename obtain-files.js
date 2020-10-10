@@ -1,29 +1,29 @@
 // is obtain-files.js
 import { I } from './lambda';
-import { pipe, getFiles, ap, chain, filter, map, lift2, flatMap, isDirectory } from './utils';
+import { pipe, getFiles, ap, log, chain, filter, map, lift2, flatMap, isDirectory, prop } from './utils';
 import RoseTree from './fp/monad/rosetree';
 
-const log = t => x => {
-  console.log(t, '::::', x)
-  return x;
-}
 const traverse = T => xs => xs.reduce((acc, x)=> lift2(append)(x)(acc), T.of([])) 
 const append = x => xs => [x, ...xs]; 
 const dir = RoseTree.of('./');
 const files = pipe(
   // traverse(RoseTree),
-  log('recursive'),
   map(RoseTree.of),
   filter(isDirectory),
   getFiles
 );
+const getNode = prop('node');
 
-export const proc = pipe(
-  chain(xs => new RoseTree(xs, files(xs)))
-);
+const obtainFiles =  chain(xs => new RoseTree(xs, files(xs)));
 
-// const e = proc(dir);
+export const proc = r => {
+  const path = getNode(r);
+  log('PAT')(path)
+  return pipe(obtainFiles)(r)
+} 
 
 
-// log('end')(e)
-// console.log(JSON.stringify(e))
+const k = proc(dir);
+
+console.log(k);
+log('K::: os ')(k.node)

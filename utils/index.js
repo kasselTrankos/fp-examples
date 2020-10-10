@@ -6,7 +6,11 @@ export const chain = f => xs => xs.chain(f);
 export const map = f => xs => xs.map(f);
 export const flatMap = f => xs => xs.flatMap(f);
 export const filter = f => xs => xs.filter(f);
-export const lift2 = f => a => b => console.log(b, a, '22222222') || b.ap(a.map(f)); 
+export const lift2 = f => a => b => b.ap(a.map(f)); 
+export const log = t => x => {
+  console.log(t, '::::', x);
+  return x;
+}
 // + :: getFiles a -> [a]
 export const getFiles = a => {
   try {
@@ -25,3 +29,4 @@ export const isDirectory = a =>
   }
 };
 
+export const prop = k => o => o[k];
