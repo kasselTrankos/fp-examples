@@ -41,6 +41,6 @@ const proc = pipe(
 );
     
 
-const origin = RoseTree.of('/home/vera/irrigation-native');
+const origin = RoseTree.of('./bb');
 const data = A(origin);
 console.log( JSON.stringify(data))
