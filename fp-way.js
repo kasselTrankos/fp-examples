@@ -5,23 +5,18 @@ import RoseTree from './fp/monad/rosetree';
 import Either from './fp/monad/either';
 const  { Left, Right} = Either;
 
-const dir = RoseTree.of('.');
+const dir = RoseTree.of('bb');
 // this is Left Rigth | Either
-const recursive = x => typeof x === 'string' ?  x : run(x);
+const recursive = p => x => typeof x === 'string' ?  x : run(x, p);
 const g = m => m === 10 
   ? Left(1)
   : Right(m)
 
-function run(a) {
- return  proc(a).ap(RoseTree.of(recursive))
-} 
+const run =(a, p= '.') => a.concat(proc(a.map(x => `${p}/${x}`))).ap(RoseTree.of(recursive(`${p}/${a.node}`))); 
 
 
-log('Either')(g(90))
-log('BEFORE')(new Date())
 const j = run(dir)
 log('M')(JSON.stringify(j))
-log('AFTER')(new Date())
 
 
 
