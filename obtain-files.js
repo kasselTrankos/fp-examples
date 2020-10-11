@@ -1,10 +1,16 @@
 // is obtain-files.js
-import { I } from './lambda';
-import { pipe, getFiles, B, ap, log, chain, filter, map, lift2, flatMap, isDirectory, prop } from './utils';
+import { B } from './lambda';
+import { pipe, getFiles, ap, log, chain, filter, map, lift2, flatMap, isDirectory, prop } from './utils';
 import RoseTree from './fp/monad/rosetree';
+
+const isNotHideHidenDir = x => x.substring(0, 1) !== '.';
+const getFolderName = x => x.split('/').slice(-1)[0]
 
 const obtainDirs = pipe(
   map(RoseTree.of),
+  filter(
+    B(isNotHideHidenDir)(getFolderName)
+  ),
   filter(isDirectory),
   getFiles
 );

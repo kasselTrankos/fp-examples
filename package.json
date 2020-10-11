@@ -4,8 +4,8 @@
   "description": "* recursive read folder  ```+ :: revursive a -> RoseTree [RoseTree]```.",
   "main": "obtain-files.js",
   "scripts": {
-    "obtain:files": "nodemon --exec babel-node obtain-files.js",
-    "read": "nodemon --exec babel-node read.js",
+    "lambda:way": "nodemon --exec babel-node lambda-way.js",
+    "fp:way": "nodemon --exec babel-node fp-way.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
