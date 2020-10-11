@@ -4,7 +4,7 @@ const RoseTree = require('./fp/monad/rosetree');
 const { I, B, S } = require('./lambda');
 
 const pipe = (...fns) => x => fns.reduceRight((acc, fn)=> fn(acc) , x);
-const append = a => b => a.append(b);
+const append = a => b => a.concat(new RoseTree(null, b));
 const map = f => xs => xs.map(f);
 const ap = f => xs => xs.p(f);
 const filter = f => xs => xs.filter(f);

@@ -14,7 +14,7 @@ export const log = t => x => {
 // + :: getFiles a -> [a]
 export const getFiles = a => {
   try {
-    return readdirSync(a);
+    return readdirSync(a).map(x => `${a}/${x}`);
   }catch(e){
     return [];
   }
