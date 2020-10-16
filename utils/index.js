@@ -1,4 +1,4 @@
-const { readdirSync, lstatSync } = require('fs');
+const { readdirSync, lstatSync, readFileSync } = require('fs');
 
 export const pipe = (...fns) => x => fns.reduceRight((acc, fn)=> fn(acc) , x);
 export const ap = f => xs => xs.ap(f);
@@ -19,6 +19,8 @@ export const getFiles = a => {
     return [];
   }
 };
+
+
 // + :: isDirectory a => Bool
 export const isDirectory = a => 
 {
@@ -27,7 +29,20 @@ export const isDirectory = a =>
   } catch(e){
     return false;
   }
-};  
+};
+
+
+// + :: isFile a => Bool
+export const isFile = a => 
+{
+  try{
+    return lstatSync(`${a}`).isFile();
+  } catch(e){
+    return false;
+  }
+};
+
+export const readFile = filename => console.log(filename) || readFileSync(filename, 'utf-8');
 
 
 export const prop = k => o => o[k];

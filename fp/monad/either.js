@@ -23,7 +23,7 @@ Either.prototype.ap = function(that) {
 // map:: Functor f => f a ~>(a -> b) -> b 
 Either.prototype.map = function (f) {
   return this.cata({
-    Rigth: x => Either.Rigth(f(x)),
+    Right: x => Either.Right(f(x)),
     Left: () => this
   });
 }
@@ -33,8 +33,8 @@ Either.map = Either.prototype.map;
 // alt :: Alternative f =>...s
 Either.prototype.alt = function (that) {
   return this.cata({
-    Left: () => this,
-    Rigth: () => that,
+    Left: _ => this,
+    Right: () => that,
   });
 }
 

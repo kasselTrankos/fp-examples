@@ -1,6 +1,7 @@
 //io-ex.js is
 const IO = require('./fp/monad/io');
 import Maybe from './fp/monad/maybe';
+import RoseTree from './fp/monad/rosetree';
 import {Nothing, Just} from './fp/monad/maybe';
 var fs = require('fs');
 const { B, I, ONCE } = require('./lambda'); 
@@ -18,5 +19,5 @@ var toJSON = x => IO.of(JSON.parse(x));
 
 
 
-var cat = B(map(getName))(B(chain(toJSON))(readFile));
+var cat = B(map(prop('name')))(B(chain(toJSON))(readFile));
 console.log(cat('package.json').unsafePerformIO())
