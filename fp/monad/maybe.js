@@ -7,10 +7,7 @@ const Maybe = taggedSum('Maybe', {
 });
 
 Maybe.of = function(x) {
-    return this.cata({
-        Just: x,
-        Nothing: Maybe.Nothing
-    });
+   return Maybe.Just(x);
 }
 
 Maybe.prototype.map = function(f) {
@@ -18,6 +15,15 @@ Maybe.prototype.map = function(f) {
         Just: x =>  Maybe.Just(f(x)),
         Nothing: Maybe.Nothing
     });
+}
+Maybe.prototype.ap = function(that) {
+  return this.cata({
+    Just: x=> that.cata({
+      Just: f => Maybe.Just(f(x)),
+      Nothing:_=> Maybe.Nothing
+    }),
+    Nothing:_=> Maybe.Nothing
+  });
 }
 Maybe.prototype.empty = function(){
     return this.cata({
@@ -32,9 +38,10 @@ Maybe.prototype.chain = function(m) {
     });
 }
 
-Maybe.prototype.alt = function(x) {
+Maybe.prototype.alt = function(b) {
     return this.cata({
-        
+        Just: _ => this,
+        Nothing: _ => b
     });
 }
 
