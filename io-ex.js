@@ -1,28 +1,27 @@
 //io-ex.js is
 const IO = require('./fp/monad/io');
+import { Nothing, Just} from './fp/monad/maybe';
 var fs = require('fs');
 
-const { B } = require('./lambda'); 
-import {map, chain} from './utils';
+const { B, I, ONCE } = require('./lambda'); 
+import {map, chain, prop} from './utils';
 
 const io_window = IO(() =>(
   {a: 1, innerWidth: 900}
 ));
+const getName = ONCE(prop('name'));
 
 //  readFile :: String -> IO String
 var readFile = filename => IO(() => fs.readFileSync(filename, 'utf-8'))
 
 
-//  print :: String -> IO String
-var print = function(x) {
-  return IO(function() {
-    return x;
-  });
-};
+//  toJSON :: String -> IO JSON
+var toJSON = x => IO.of(JSON.parse(x));
 
 
-var cat = B(chain(print))(readFile);
 
-console.log(cat('./README.md').unsafePerformIO(), '00000')
+var cat = B(map(getName))(B(chain(toJSON))(readFile));
+
+console.log(cat('./package.json').unsafePerformIO(), '00000')
 const e = io_window.map((win) => win.innerWidth);
 console.log(e.unsafePerformIO())

@@ -27,7 +27,7 @@ export const isDirectory = a =>
   } catch(e){
     return false;
   }
-};
+};  
 
 
 export const prop = k => o => o[k];
