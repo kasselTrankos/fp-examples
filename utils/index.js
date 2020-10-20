@@ -2,6 +2,7 @@ const { readdirSync, lstatSync, readFileSync } = require('fs');
 
 export const pipe = (...fns) => x => fns.reduceRight((acc, fn)=> fn(acc) , x);
 export const ap = f => xs => xs.ap(f);
+export const reduce = (f, acc) => xs => xs.reduce(f, acc);
 export const chain = f => xs => xs.chain(f);
 export const map = f => xs => xs.map(f);
 export const flatMap = f => xs => xs.flatMap(f);

@@ -1,5 +1,5 @@
 // ZERO := ƛfx.x 
-const ZERO = f => x => x;
+export const ZERO = f => x => x;
 
 // T = K := ƛxy.x
 export const K = x => y => x;
@@ -19,20 +19,21 @@ export const C = f => a => b => f(b)(a);
 // F : = ƛxy.y
 const F = x => y => y;
 // ONCE := ƛfx.fx
-const ONCE = f => x => f(x);
+export const ONCE = f => x => f(x);
 // SUCCESSOR := λnfx.f(nfx)
 const SUCC = num => f => x => f(num(f)(x));
 
 // ADD := ƛnk.n(SUCC)k
 export const ADD = n => k => n(SUCC)(k);
+
 // B := λab.a∘b = compose
-const B = a => b => x =>a(b(x));
+export const B = a => b => x =>a(b(x));
 
 // MULT := λab.a∘b = compose
 const MULT = B;
 
 // NOT := ƛb.bFT
-const NOT = b => b(F)(T)
+export const NOT = b => b(F)(T);
 
 // AND := ƛpq.pTq
 export const AND = p => q => p(q)(F);
@@ -44,6 +45,10 @@ export const OR = p => q => p(T)(q);
 // I := ƛx.x
 export const I = x => x;
 
+// EQ := ƛpq.pq.NOTq
+export const EQ = p => q => p(q)(NOT(q));
+
+
 
 // is0 := ƛn.n(KF)T
 const is0 = n => n(K(F))(T);
@@ -53,5 +58,8 @@ const S = f => g => x => f(x)(g(x));
 
 
 
-const PAIR = a => b => f(a)(b);
+const PAIR = a => b => f => f(a)(b);
+
+// VIREO 
+export const V = x => y => z => z(x)(y);
 

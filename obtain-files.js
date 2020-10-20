@@ -26,22 +26,20 @@ const getFile = x =>  B(isFile)(getPackage)(x) && getPackageName(x)
   ? getPackageName(x)
   : getFolderName(x)
 
-const getPath = p => `${path}/${p}`;
-const setPath = xs => {
-  path = xs.node;
-  return xs;
+
+export const proccess = (path, xs)=> {
+  const _path = xs.reduce((acc, x) =>  `${acc}/${x}`, path);
+  const getPath = p => `${_path}/${p}`;
+  const obtainDirs = pipe(
+    map(B(RoseTree.of)(getFolderName)),
+    // map(B(RoseTree.of)(B(getName)(toJSON))),
+    // map(B(readFile)(B(getFolderName)(getPackage))),
+    // filter(B(isFile)(B(getFolderName)(getPackage))),
+    filter(B(isNotHideHidenDir)(getFolderName)),
+    filter(isDirectory),
+    log('STAR 3'),
+    map(getPath),
+    getFiles,
+  ); 
+  return xs.chain(xs =>  RoseTree.Cons(xs, obtainDirs(xs)));
 }
-const obtainDirs = pipe(
-  map(B(RoseTree.of)(getFolderName)),
-  // map(B(RoseTree.of)(B(getName)(toJSON))),
-  // map(B(readFile)(B(getFolderName)(getPackage))),
-  // filter(B(isFile)(B(getFolderName)(getPackage))),
-  filter(B(isNotHideHidenDir)(getFolderName)),
-  filter(isDirectory),
-  map(getPath),
-  getFiles,
-); 
-export const proc = pipe(
-  chain(xs => new RoseTree(xs, obtainDirs(xs))),
-  setPath,
-);
