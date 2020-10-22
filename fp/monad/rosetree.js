@@ -22,7 +22,7 @@ RoseTree.empty = function() {
 RoseTree.prototype.concat = function(b) {
   return this.cata({
     Cons: (Node, Forest)=> b.cata({
-      Cons: (_, xs) => RoseTree.Cons(Node, [...Forest, ...xs]),
+      Cons: (_, xs) => RoseTree.Cons(Node, [...Forest, b]),
       Nil:_ => this
     }),
     Nil: _ => b
@@ -34,7 +34,7 @@ RoseTree.prototype.ap = function(b) {
   return this.cata({
     Cons: (Node, Forest)=> b.cata({
       Cons: (f, fs)=> RoseTree.Cons(f(Node), [].concat(
-        Forest.map(f),
+        Forest.map(x => x.ap(b)),
         fs.map(m => this.ap(m))
       )),
       Nil:_ => RoseTree.Nil
