@@ -1,0 +1,9178 @@
+[33m[nodemon] 2.0.4[39m
+[33m[nodemon] reading config ./nodemon.json[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] or send SIGHUP to 89688 to restart[39m
+[33m[nodemon] watching path(s): *.*[39m
+[33m[nodemon] watching extensions: js,mjs,json[39m
+[32m[nodemon] starting `babel-node fp-way.js`[39m
+[33m[nodemon] spawning[39m
+[33m[nodemon] child pid: 89700[39m
+[33m[nodemon] watching 19 files[39m
+[33m[nodemon] files triggering change check: a[39m
+[33m[nodemon] changes after filters (before/after): 1/0[39m
+{ Node: '.', Forest: [ { Node: [Array], Forest: [] } ] }
+[33m[nodemon] files triggering change check: a[39m
+[33m[nodemon] changes after filters (before/after): 1/0[39m
+{
+  Node: {
+    Node: [ './fp', './lambda', './node_modules', './test', './utils' ],
+    Forest: []
+  },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+[33m[nodemon] files triggering change check: a[39m
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+[33m[nodemon] changes after filters (before/after): 1/0[39m
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+[33m[nodemon] files triggering change check: a[39m
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+[33m[nodemon] changes after filters (before/after): 1/0[39m
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+[33m[nodemon] files triggering change check: a[39m
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+[33m[nodemon] changes after filters (before/after): 1/0[39m
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+[33m[nodemon] files triggering change check: a[39m
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+[33m[nodemon] changes after filters (before/after): 1/0[39m
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+[33m[nodemon] files triggering change check: a[39m
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+[33m[nodemon] changes after filters (before/after): 1/0[39m
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+[33m[nodemon] files triggering change check: a[39m
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+[33m[nodemon] changes after filters (before/after): 1/0[39m
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+[33m[nodemon] files triggering change check: a[39m
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+[33m[nodemon] changes after filters (before/after): 1/0[39m
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+[33m[nodemon] files triggering change check: a[39m
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+[33m[nodemon] changes after filters (before/after): 1/0[39m
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+[33m[nodemon] files triggering change check: a[39m
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+[33m[nodemon] changes after filters (before/after): 1/0[39m
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+[33m[nodemon] files triggering change check: a[39m
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+[33m[nodemon] changes after filters (before/after): 1/0[39m
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+[33m[nodemon] files triggering change check: a[39m
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+[33m[nodemon] changes after filters (before/after): 1/0[39m
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+[33m[nodemon] files triggering change check: a[39m
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+[33m[nodemon] changes after filters (before/after): 1/0[39m
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+[33m[nodemon] files triggering change check: a[39m
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+[33m[nodemon] changes after filters (before/after): 1/0[39m
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+[33m[nodemon] files triggering change check: a[39m
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+[33m[nodemon] changes after filters (before/after): 1/0[39m
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+[33m[nodemon] files triggering change check: a[39m
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+[33m[nodemon] changes after filters (before/after): 1/0[39m
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+[33m[nodemon] files triggering change check: a[39m
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+[33m[nodemon] changes after filters (before/after): 1/0[39m
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+[33m[nodemon] files triggering change check: a[39m
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+[33m[nodemon] changes after filters (before/after): 1/0[39m
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+{
+  Node: { Node: [], Forest: [] },
+  Forest: [ { Node: [], Forest: [] } ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[33m[nodemon] files triggering change check: fp-way.js[39m
+[33m[nodemon] matched rule: **/*.*[39m
+[33m[nodemon] changes after filters (before/after): 1/1[39m
+[32m[nodemon] restarting due to changes...[39m
+[33m[nodemon] fp-way.js[39m
+
+[32m[nodemon] starting `babel-node fp-way.js`[39m
+[33m[nodemon] spawning[39m
+[33m[nodemon] child pid: 89758[39m
+[33m[nodemon] files triggering change check: a[39m
+[33m[nodemon] changes after filters (before/after): 1/0[39m
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[33m[nodemon] files triggering change check: a[39m
+[33m[nodemon] changes after filters (before/after): 1/0[39m
+[33m[nodemon] files triggering change check: fp-way.js[39m
+[33m[nodemon] matched rule: **/*.*[39m
+[33m[nodemon] changes after filters (before/after): 1/1[39m
+[32m[nodemon] restarting due to changes...[39m
+[33m[nodemon] fp-way.js[39m
+
+[32m[nodemon] starting `babel-node fp-way.js`[39m
+[33m[nodemon] spawning[39m
+[33m[nodemon] child pid: 89785[39m
+[33m[nodemon] files triggering change check: a[39m
+[33m[nodemon] changes after filters (before/after): 1/0[39m
+GGGGG :::: ---- :: ---  - :::: {"Node":".","Forest":[{"Node":["./fp","./lambda","./node_modules","./test","./utils"],"Forest":[]}]}
+[33m[nodemon] files triggering change check: a[39m
+BEFORE :::: 2020-10-24T11:33:02.963Z
+AFTER :::: 2020-10-24T11:33:02.966Z
+DIFF :::: 4
+[33m[nodemon] changes after filters (before/after): 1/0[39m
+[32m[nodemon] clean exit - waiting for changes before restart[39m
+[33m[nodemon] files triggering change check: a[39m
+[33m[nodemon] changes after filters (before/after): 1/0[39m
+[33m[nodemon] files triggering change check: package.json[39m
+[33m[nodemon] matched rule: **/*.*[39m
+[33m[nodemon] changes after filters (before/after): 1/1[39m
+[32m[nodemon] restarting due to changes...[39m
+[33m[nodemon] package.json[39m
+
+[32m[nodemon] starting `babel-node fp-way.js`[39m
+[33m[nodemon] spawning[39m
+[33m[nodemon] child pid: 89816[39m
+[33m[nodemon] files triggering change check: a[39m
+[33m[nodemon] changes after filters (before/after): 1/0[39m
+GGGGG :::: ---- :: ---  - :::: {"Node":".","Forest":[{"Node":["./fp","./lambda","./node_modules","./test","./utils"],"Forest":[]}]}
+[33m[nodemon] files triggering change check: a[39m
+BEFORE :::: 2020-10-24T11:33:08.902Z
+AFTER :::: 2020-10-24T11:33:08.905Z
+DIFF :::: 3
+[33m[nodemon] changes after filters (before/after): 1/0[39m
+[32m[nodemon] clean exit - waiting for changes before restart[39m
+[33m[nodemon] exiting[39m
