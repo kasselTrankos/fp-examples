@@ -1,14 +1,13 @@
 // read is
 import { log, pipe, ap } from './utils';
-import { I } from './lambda'
-import {proc, proccess} from './obtain-files';
+import { proc } from './obtain-files';
 import RoseTree from './fp/monad/rosetree';
 const a = RoseTree.of('./bb')
 
-const run = s => s.ap(RoseTree.Cons(x => x, [ RoseTree.of(proccess) ]))
+const run = s => s.ap(RoseTree.Cons(x => x, [ RoseTree.of(proc) ]))
   .reduce((acc, x) => x, a).reduce((acc, x) => acc.concat(run(x)), s);
 
-const t = run(RoseTree.of('./'));//proccess('./bb').reduce((acc, x) => acc.concat(run(x)), a);
+const t = run(RoseTree.of('./'));
 
 const d = new Date();
 
