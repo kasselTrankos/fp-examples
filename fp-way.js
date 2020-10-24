@@ -1,21 +1,18 @@
 // read is
 import { log, pipe, ap } from './utils';
+import { I } from './lambda'
 import {proc, proccess} from './obtain-files';
 import RoseTree from './fp/monad/rosetree';
+const a = RoseTree.of('./bb')
 
-const dir = RoseTree.of('');
-// this is Left Rigth | Either
-const recursive = p => x =>typeof x === 'string' ?  x :  run(x, p);
-const run = (a, p) => a.concat(
-    proccess(p, a.map(x =>  p ? `${p}/${x}`: x))
-  ).ap(RoseTree.of(
-    recursive(a.reduce((acc, x)=> `${acc || ''}/${x}`, '.'))
-  )
-); 
-// const run = proc;
+const run = s => s.ap(RoseTree.Cons(x => x, [ RoseTree.of(proccess) ]))
+  .reduce((acc, x) => x, a).reduce((acc, x) => acc.concat(run(x)), s);
 
-const j = run(dir, '.')
-log('M')(JSON.stringify(j))
+const t = run(RoseTree.of('./'));//proccess('./bb').reduce((acc, x) => acc.concat(run(x)), a);
 
+const d = new Date();
 
-
+log('GGGGG :::: ---- :: ---  -')(JSON.stringify(t));
+log('BEFORE')(d);
+log('AFTER')(new Date())
+log('DIFF')(new Date().getTime() - d.getTime())

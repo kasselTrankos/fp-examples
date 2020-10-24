@@ -32,7 +32,7 @@ RoseTree.prototype.concat = function(b) {
 // ap :: Apply f => f a ~> f (a -> b) -> f b
 RoseTree.prototype.ap = function(b) {
   return this.cata({
-    Cons: (Node, Forest)=> b.cata({
+    Cons: (Node, Forest) => b.cata({
       Cons: (f, fs)=> RoseTree.Cons(f(Node), [].concat(
         Forest.map(x => x.ap(b)),
         fs.map(m => this.ap(m))
