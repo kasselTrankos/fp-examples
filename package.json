@@ -10,6 +10,7 @@
     "maybe": "nodemon --exec babel-node maybe-ex",
     "rosetree": "nodemon --exec babel-node rosetree-ex",
     "lambda": "nodemon --exec babel-node lambda-ex",
+    "signature": "nodemon --exec babel-node signature",
     "test": "mocha --require  @babel/register -w"
   },
   "repository": {
