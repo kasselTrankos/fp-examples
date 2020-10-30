@@ -15,4 +15,15 @@ const yes = a => true;
 // not :: a -> Bool
 const not = a => false;
 
-console.log(max3(11,3,6), unit());
+// m :: Int -> (Int, Bool)
+const m = [1, true];
+// p :: Int -> Int
+const p = x => x;
+// q :: Int -> Boolean
+const q = _ => true;
+
+const fst = (x, y) => x;
+
+const scnd = (x, y) => y
+
+console.log(max3(11,3,6), scnd(...m));
