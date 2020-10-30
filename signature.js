@@ -16,14 +16,21 @@ const yes = a => true;
 const not = a => false;
 
 // m :: Int -> (Int, Bool)
-const m = [1, true];
+const m = x => [x, true];
 // p :: Int -> Int
 const p = x => x;
 // q :: Int -> Boolean
 const q = _ => true;
 
-const fst = (x, y) => x;
+const fst = m => m[0];
 
-const scnd = (x, y) => y
+const scnd = m => m[1];
+// all is from https://bartoszmilewski.com/2015/01/07/products-and-coproducts/
 
-console.log(max3(11,3,6), scnd(...m));
+// pp :: Int -> Int
+const pp = x => fst(m(x));
+const qq = x => scnd(m(x));
+const B = f => g => x =>f(g(x)); 
+
+
+console.log(pp(11), B(fst)(m)(11), qq(90), B(scnd)(m)(90));
