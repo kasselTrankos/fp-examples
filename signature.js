@@ -4,7 +4,9 @@ import {Left, Right} from './fp/monad/either';
 import { B } from './lambda';
 import { taggedSum } from 'daggy';
 import DOM from './fp/monad/DOM';
-import { concat } from 'ramda';
+import IO from './fp/monad/io';
+
+import { concat, construct } from 'ramda';
 
 const Pair = taggedSum('Pair', {
     Cons: ['A', 'B'],
@@ -30,6 +32,23 @@ const unit = a => [];
 const yes = a => true;
 // not :: a -> Bool
 const not = a => false;
+
+function List(h, t) {
+    this.head = h;
+    this.tail = t;
+}
+List.of = function(h) {
+    return new List(h, null)
+}
+List.prototype.map = function(f) {
+    return new List(f(this.head), this.tail ? this.tail.map(f) : null)
+}
+List.prototype.toArray = function() {
+    return [].concat(this.head, this.tail ? this.tail.toArray(): []);
+}
+List.prototype.concat = function(b) {
+    return new List(this.head, this.tail ? this.tail.concat(b) : b)
+}
 
 function Moan(a) {
     this.value = a;
@@ -83,7 +102,7 @@ const cata = o => xs => xs.cata(o);
 const m = x => x > 14 ? fst(x) : scnd(x)
 // https://bartoszmilewski.com/2015/01/07/products-and-coproducts/
 
-const v = [1, 2, 3, 2];
+const v = [1, 2, 9];
 const ft = x =>fst(x).cata({Left: i, Right: j});
 const data = v.map(m).map(cata({Left: i, Right: j}));
 
@@ -105,18 +124,28 @@ const p = new DOM('html').concat(
     .concat(new DOM('span', 'joder')));
 
 
+    
+    
+    console.log(p.html());
+    console.log(product(r, g, 8));
+    const concater = x => xs => xs.concat(x);
+    const ttt = d.reduce((acc, x)=> Right(acc.ap(x.map(concater))), Right(Multiply.empty()));
+    console.log('tttt', ttt);
+    
+    
+    // const _fst = P => P.A;
+    // const _scnd = P => P.B;
+    
+    // const P = Pair.of(1, true);
+    
+    // console.log(_fst(P), _scnd(P))
+const log = x =>  IO(()=> 2 + x +2);
+const a = log(0).map(x => x + 10).chain(x => IO(()=> Right(x))).unsafePerformIO().cata({
+    Left: x => x - 100,
+    Right: x => Left(List.of( x +2))
+});
+console.log(a)
 
-console.log(p.html());
-console.log(product(r, g, 8));
-const concater = x => xs => xs.concat(x);
-const ttt = d.reduce((acc, x)=> Right(acc.ap(x.map(concater))), Right(Sum.empty()));
-console.log('tttt', ttt.cata({Left: x => x + 100, Right: x => x.concat(Sum.of(10))}));
+const ja = new List(2, List.of(9)).concat(List.of(0)).map(x => x + 3);
 
-
-
-// const _fst = P => P.A;
-// const _scnd = P => P.B;
-
-// const P = Pair.of(1, true);
-
-// console.log(_fst(P), _scnd(P))
+console.log(ja.toArray())
