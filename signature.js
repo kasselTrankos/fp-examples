@@ -41,13 +41,17 @@ List.of = function(h) {
     return new List(h, null)
 }
 List.prototype.map = function(f) {
-    return new List(f(this.head), this.tail ? this.tail.map(f) : null)
+    return new List(this.head ? f(this.head) : null, this.tail ? this.tail.map(f) : null)
 }
 List.prototype.toArray = function() {
-    return [].concat(this.head, this.tail ? this.tail.toArray(): []);
+    return [].concat(this.head  ? this.head : [], this.tail ? this.tail.toArray(): []);
 }
 List.prototype.concat = function(b) {
-    return new List(this.head, this.tail ? this.tail.concat(b) : b)
+    return this.head ? new List(this.head , this.tail ? this.tail.concat(b) : b): b;
+
+}
+List.empty = function() {
+    return List.of(null)
 }
 
 function Moan(a) {
@@ -146,6 +150,8 @@ const a = log(0).map(x => x + 10).chain(x => IO(()=> Right(x))).unsafePerformIO(
 });
 console.log(a)
 
-const ja = new List(2, List.of(9)).concat(List.of(0)).map(x => x + 3);
+const ja = List.empty().concat(new List(5, new List(9, new List(6, List.of(2))))).concat(List.of(90)).map(x => x + 3);
+const al = List.of(1).concat(List.empty());
+const bl = List.empty().concat(List.of(1));
 
-console.log(ja.toArray())
+console.log(ja.toArray(), al.toArray(), bl.toArray(), List.empty().toArray())
