@@ -112,6 +112,8 @@ const concater = x => xs => xs.concat(x);
 const ttt = d.reduce((acc, x)=> Right(acc.ap(x.map(concater))), Right(Sum.empty()));
 console.log('tttt', ttt.cata({Left: x => x + 100, Right: x => x.concat(Sum.of(10))}));
 
+
+
 // const _fst = P => P.A;
 // const _scnd = P => P.B;
 
