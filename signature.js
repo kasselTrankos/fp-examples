@@ -57,10 +57,11 @@ LinkedList.empty = function() {
     return LinkedList.of(null)
 }
 LinkedList.prototype.filter = function(f) {
-    console.log(this.head, '000000')
-   return LinkedList.empty().concat(f(this.head)
-    ? new LinkedList(this.head, this.tail ? this.tail.filter(f): null)
-    : this.tail ? this.tail.filter(f) : LinkedList.empty());
+   return LinkedList.empty().concat(
+       f(this.head)
+            ? new LinkedList(this.head, this.tail
+                ? this.tail.filter(f): null)
+                : this.tail ? this.tail.filter(f) : LinkedList.empty());
 }
 
 
