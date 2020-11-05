@@ -6,7 +6,7 @@ import { taggedSum } from 'daggy';
 import DOM from './fp/monad/DOM';
 import IO from './fp/monad/io';
 
-import { concat, construct } from 'ramda';
+import { concat, construct, empty } from 'ramda';
 
 const Pair = taggedSum('Pair', {
     Cons: ['A', 'B'],
@@ -33,26 +33,36 @@ const yes = a => true;
 // not :: a -> Bool
 const not = a => false;
 
-function List(h, t) {
+function LinkedList(h, t) {
     this.head = h;
     this.tail = t;
 }
-List.of = function(h) {
-    return new List(h, null)
+LinkedList.of = function(h) {
+    return new LinkedList(h, null)
 }
-List.prototype.map = function(f) {
-    return new List(this.head ? f(this.head) : null, this.tail ? this.tail.map(f) : null)
+LinkedList.prototype.map = function(f) {
+    return new LinkedList(this.head ? f(this.head) : null, this.tail ? this.tail.map(f) : null)
 }
-List.prototype.toArray = function() {
+LinkedList.prototype.toArray = function() {
     return [].concat(this.head  ? this.head : [], this.tail ? this.tail.toArray(): []);
 }
-List.prototype.concat = function(b) {
-    return this.head ? new List(this.head , this.tail ? this.tail.concat(b) : b): b;
+LinkedList.prototype.concat = function(b) {
+    return this.head ? new LinkedList(this.head , this.tail ? this.tail.concat(b) : b): b;
+}
+// chain :: Chain m => m a ~> (a -> m b) -> m b
+LinkedList.prototype.chain = function(f) {
+    return f(this.head, this.tail)
+}
+LinkedList.empty = function() {
+    return LinkedList.of(null)
+}
+LinkedList.prototype.filter = function(f) {
+    console.log(this.head, '000000')
+   return LinkedList.empty().concat(f(this.head)
+    ? new LinkedList(this.head, this.tail ? this.tail.filter(f): null)
+    : this.tail ? this.tail.filter(f) : LinkedList.empty());
+}
 
-}
-List.empty = function() {
-    return List.of(null)
-}
 
 function Moan(a) {
     this.value = a;
@@ -146,12 +156,13 @@ const p = new DOM('html').concat(
 const log = x =>  IO(()=> 2 + x +2);
 const a = log(0).map(x => x + 10).chain(x => IO(()=> Right(x))).unsafePerformIO().cata({
     Left: x => x - 100,
-    Right: x => Left(List.of( x +2))
+    Right: x => Left(LinkedList.of( x +2))
 });
-console.log(a)
 
-const ja = List.empty().concat(new List(5, new List(9, new List(6, List.of(2))))).concat(List.of(90)).concat(new List(100, List.of(8))).map(x => x * 3);
-const al = List.of(1).concat(List.empty());
-const bl = List.empty().concat(List.of(1));
-const gl = ja.toArray().reduce((acc, x)=> acc.concat(List.of(x)), List.empty());
-console.log(ja.toArray(), al.toArray(), bl.toArray(), List.empty().toArray(), gl.toArray())
+const ja = LinkedList.empty().concat(new LinkedList(5, new LinkedList(9, new LinkedList(6, LinkedList.of(2))))).concat(LinkedList.of(90)).concat(new LinkedList(100, LinkedList.of(8))).map(x => x * 3);
+const al = LinkedList.of(1).concat(new LinkedList(2, LinkedList.of(11)));
+const bl = LinkedList.empty().concat(LinkedList.of(1));
+const gl = ja.toArray().reduce((acc, x)=> acc.concat(LinkedList.of(x)), LinkedList.empty());
+const hl = Right(1);
+const suma = x => x + 1;
+console.log(al.filter(x => x > 1));
