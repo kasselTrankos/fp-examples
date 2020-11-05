@@ -150,8 +150,8 @@ const a = log(0).map(x => x + 10).chain(x => IO(()=> Right(x))).unsafePerformIO(
 });
 console.log(a)
 
-const ja = List.empty().concat(new List(5, new List(9, new List(6, List.of(2))))).concat(List.of(90)).map(x => x + 3);
+const ja = List.empty().concat(new List(5, new List(9, new List(6, List.of(2))))).concat(List.of(90)).concat(new List(100, List.of(8))).map(x => x * 3);
 const al = List.of(1).concat(List.empty());
 const bl = List.empty().concat(List.of(1));
-
-console.log(ja.toArray(), al.toArray(), bl.toArray(), List.empty().toArray())
+const gl = ja.toArray().reduce((acc, x)=> acc.concat(List.of(x)), List.empty());
+console.log(ja.toArray(), al.toArray(), bl.toArray(), List.empty().toArray(), gl.toArray())
