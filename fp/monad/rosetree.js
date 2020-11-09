@@ -1,7 +1,6 @@
 const { isFile } = require("../../utils");
 
 import { taggedSum } from 'daggy';
-import { composeP } from 'ramda';
 // data RoseRoseTree a = RoseRoseTree a [RoseRoseTree a]
 // of :: Applicative f => f a ~> a -> f a
 const RoseTree = taggedSum('RoseTree', {

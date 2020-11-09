@@ -22,10 +22,36 @@ const fibonacci = n =>
     n == 0 ? 0 : n == 1 ? 1 : fibonacci (n - 2) + fibonacci (n - 1);
 console.log(fibonacci(2));
 
+
 // FROM:
 // https://ulissesaraujo.wordpress.com/2009/04/09/hylomorphisms-in-haskell/
 // hylo f h = cata f x ana h
 // data BTree a = Empty | Node(a, (BTree a, BTree a))
+// hylo :: Functor f => Algebra f b -> Coalgebra f a -> a -> b
+// hylo alg coalg = ana coalg >>> cata alghylo :: Functor f => (f b -> b) -> (a -> f a) -> a -> b
+// type Coalgebra f a = a -> f a
+// data Token
+//   = Lit Int
+//   | Op (Int -> Int -> Int)
 
+// Op :: + -> Int -> Int -> Int
+const Op = a => b => a + b;
+const add = a => b => a + b;
+const mult = a => b => a * b;
+const less = a => b => a - b;
+const div = a => b => a / b;
+
+// parseToken :: String -> Token
+const parseToken = s => s === '+' ? Op(add)
+  : s ==='*' ? Op(mult)
+    : s === '-' ? Op(less) : Op(div);
+
+const sts = '1 2 '
+function Algebra(a) {
+  this.value = a;
+}
+Algebra.prototype.map = function(f) {
+  return new Algebra(f(this.value));
+}
 
 
