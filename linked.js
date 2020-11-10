@@ -9,6 +9,6 @@ const c = a.concat(b);
 
 const addOne = x => LinkedList.of(x + 1)
 
-console.log(c.chain(addOne).ap(LinkedList.of(x => x +2)).toArray());
+console.log(c.chain(addOne).ap(LinkedList.of(x => x +2)).filter(x => x < 6).toArray());
 
 // console.log(a.concat(b))

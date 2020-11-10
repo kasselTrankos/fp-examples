@@ -36,6 +36,13 @@ LinkedList.prototype.ap = function (that) {
     });
 }
 
+LinkedList.prototype.filter = function(f) {
+    return this.cata({
+        Cons: (head, tail) => LinkedList.empty().concat(f(head) ? LinkedList.of(head) : LinkedList.empty()).concat(tail.filter(f)),
+        Nil: ()=> LinkedList.Nil
+    });
+}
+
 LinkedList.prototype.toArray = function() {
     return this.cata({
         Cons: (head, tail ) => [head, ...tail.toArray()],
