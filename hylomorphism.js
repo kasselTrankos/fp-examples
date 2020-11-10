@@ -106,44 +106,40 @@ Lit.prototype.map = function(f) {
 }
 
 const Expr = taggedSum('Expr', {
-  // Index: ['e', 'ee'],
+  Index: ['e', 'ee'],
   // Call: ['e'],
   // Unary: ['x', 'e'],
   // Binary: ['e', 'x', 'ee'],
-  // Paren: ['e'],
+  Paren: ['e'],
   Literal: [Lit]
 });
 
 Expr.prototype.toString = function() {
   return this.cata({
-    // Index: (e, ee)=> `Index :: Expr -> ${e}-> ${ee}`,
+    Index: (e, i)=> `Index :: Expr -> (${e}, ${i})`,
     // Call: e => `Call :: Expr -> ${e}`,
     // Unary: (x, e)=> `Unary :: Expr -> ${x} -> ${e}`,
     // Binary: (e, x, ee) => `Binary :: Expr -> ${e} -> ${x} -> ${ee}`,
-    // Paren: e => `Paren :: Expr -> ${e}`,
+    Paren: e => `Paren :: Expr -> ${e}`,
     Literal: lit => `Literal :: Expr => ${lit.toString()}`,
   });
 };
-Expr.prototype.map = function(f) {
+Expr.prototype.flatten = function(that) {
   return this.cata({
-    // Index: (e, ee)=> `Index :: Expr -> ${e}-> ${ee}`,
-    // Call: e => `Call :: Expr -> ${e}`,
-    // Unary: (x, e)=> `Unary :: Expr -> ${x} -> ${e}`,
-    // Binary: (e, x, ee) => `Binary :: Expr -> ${e} -> ${x} -> ${ee}`,
-    // Paren: e => `Paren :: Expr -> ${e}`,
-    Literal: lit => Expr.Literal(lit.map(f)),
+    Index: (e, i) => Expr.flatten(e.flatten(that), i.flatten(that)),
+    Paren: e => Expr.Paren(e.flatten(that)),
+    Literal: lit => Expr.Literal(lit),
   });
-};
+}
 
-Expr.prototype.chain = function(f) {
-  
+Expr.prototype.apply = function(f) {
   return this.cata({
-    // Index: (e, ee)=> `Index :: Expr -> ${e}-> ${ee}`,
+    Index: (e, ee)=> Expr.Index(e.apply(f), ee.apply(f)),
     // Call: e => `Call :: Expr -> ${e}`,
     // Unary: (x, e)=> `Unary :: Expr -> ${x} -> ${e}`,
     // Binary: (e, x, ee) => `Binary :: Expr -> ${e} -> ${x} -> ${ee}`,
-    // Paren: e => `Paren :: Expr -> ${e}`,
-    Literal: lit => lit.map(f),
+    Paren: e => Expr.Paren(e.apply(f)),
+    Literal: lit => Expr.Literal(lit.map(f)),
   });
 };
 
@@ -162,8 +158,8 @@ const lab = Lit.StrLit('hola');
 // const exx = Expr.Literal(lab);
 // const ind = Expr.Index(Expr.Literal(Lit.IntLit(1)), Lit.IntLit(1));
 // applyExpr :: (Expr -> Expr) -> Expr -> Expr
-const applyExpr = f => e => e.map(f);
+// map :: Functor f => f a ~> (a -> b) -> f b
 const one = Expr.Literal(Lit.IntLit(1));
-const two = Expr.Literal(Lit.IntLit(2));
-const app = applyExpr(x => x + 11);
-console.log(app(one).toString())
+const two = Expr.Paren(one);
+const three = Expr.Index(one, two)
+console.log(one.flatten(two).toString())
