@@ -124,11 +124,11 @@ Expr.prototype.toString = function() {
     Literal: lit => `Literal :: Expr => ${lit.toString()}`,
   });
 };
-Expr.prototype.flatten = function(that) {
+Expr.prototype.flatten = function() {
   return this.cata({
-    Index: (e, i) => Expr.flatten(e.flatten(that), i.flatten(that)),
-    Paren: e => Expr.Paren(e.flatten(that)),
-    Literal: lit => lit.flatten ? lit.flatten(that) : Expr.Literal(lit),
+    Index: (e, i) => Expr.flatten(e.flatten(), i.flatten()),
+    Paren: e => Expr.Paren(e.flatten()),
+    Literal: lit => lit.flatten ? lit.flatten() : Expr.Literal(lit),
   });
 }
 
@@ -160,6 +160,7 @@ const lab = Lit.StrLit('hola');
 // applyExpr :: (Expr -> Expr) -> Expr -> Expr
 // map :: Functor f => f a ~> (a -> b) -> f b
 const one = Expr.Literal(Lit.IntLit(1));
-const two = Expr.Paren(one);
+const fd = Expr.Literal(one);
+const two = Expr.Paren(fd);
 const three = Expr.Index(one, two)
-console.log(one.flatten(two).toString())
+console.log(two.flatten().toString())
