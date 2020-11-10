@@ -109,8 +109,8 @@ Lit.prototype.apply = function(f) {
 const Expr = taggedSum('Expr', {
   Index: ['e', 'ee'],
   Call: ['e', ['e']],
-  // Unary: ['x', 'e'],
-  // Binary: ['e', 'x', 'ee'],
+  Unary: ['x', 'arg'],
+  Binary: ['l', 'op', 'r'],
   Paren: ['e'],
   Literal: [Lit],
 });
@@ -119,8 +119,8 @@ Expr.prototype.toString = function() {
   return this.cata({
     Index: (e, i)=> `Index :: Expr -> (${e}, ${i})`,
     Call: (e, args) => `Call :: Expr -> (${e}, ${args.map(x=> x.toString())})`,
-    // Unary: (x, e)=> `Unary :: Expr -> ${x} -> ${e}`,
-    // Binary: (e, x, ee) => `Binary :: Expr -> ${e} -> ${x} -> ${ee}`,
+    Unary: (op, arg)=> `Unary :: Expr -> (${op}, ${arg.toString()})`,
+    Binary: (l, op, r) => `Binary :: Expr -> (${l.toString()},  ${op}, ${r.toString()})`,
     Paren: e => `Paren :: Expr -> ${e}`,
     Literal: lit => `Literal :: Expr => ${lit.toString()}`,
   });
@@ -129,17 +129,22 @@ Expr.prototype.flatten = function() {
   return this.cata({
     Index: (e, i) => Expr.Index(e.flatten(), i.flatten()),
     Call: (e, args) => Expr.Call(e.flatten(), args.map(x => x.flatten())),
+    Unary: (op, arg) => Expr.Unary(op, arg.flatten()),
     Paren: e => Expr.Paren(e.flatten()),
+    Binary: (l, op, r) => Expr.Binary(l.flatten(), op, r.flatten()),
     Literal: lit => lit.flatten ? lit.flatten() : Expr.Literal(lit),
   });
 }
-
+// apply :: (a -> b) -> ExprF a -> ExprF b
+// yes was map!!!!
+// map :: f => f a -> (a -> b ) -> f b
+// map :: Functor f => f a ~> (a -> b) -> f b
 Expr.prototype.apply = function(f) {
   return this.cata({
     Index: (e, ee)=> Expr.Index(e.apply(f), ee.apply(f)),
     Call: (e, args) => Expr.Call(e.apply(f), args.map(x => x.apply(f))),
-    // Unary: (x, e)=> `Unary :: Expr -> ${x} -> ${e}`,
-    // Binary: (e, x, ee) => `Binary :: Expr -> ${e} -> ${x} -> ${ee}`,
+    Unary: (op, arg)=> Expr.Unary(op, arg.apply(f)),
+    Binary: (l, op, r) => Expr.Binary(l.apply(f), op, r.apply(f)),
     Paren: e => Expr.Paren(e.apply(f)),
     Literal: lit => Expr.Literal(lit.apply(f)),
   });
@@ -165,5 +170,13 @@ const one = Expr.Literal(Lit.IntLit(2));
 const fd = Expr.Literal(one);
 const two = Expr.Paren(fd);
 const ga = Expr.Literal(Lit.IntLit(9))
-const three = Expr.Call(one, [fd, two, ga])
-console.log(three.apply(x => x +110).flatten().toString())
+const three = Expr.Call(one, [fd, two, ga]);
+const nine = Expr.Unary('mas ahora', three);
+const six = Expr.Binary(one, 'nine', two);
+
+console.log(six.apply(x => x +110).flatten().toString())
+
+// CAP 1 -> Fixed Points
+// Consider the Y-combinator. Given a function f that takes one argument, 
+// y(f) represents the result of repeatedly applying f to itself:
+// y f = f (f (f (f ...)))
