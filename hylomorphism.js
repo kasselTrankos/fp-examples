@@ -10,6 +10,7 @@
 //List
 import { taggedSum, tagged } from 'daggy';
 import { ap } from 'ramda';
+import { LinkedList } from './fp/monad/linkedlist';
 // factorial :: Int  -> Int
 const factorial = n =>
   n == 0 ? 1 : n * factorial (n - 1);
@@ -97,17 +98,17 @@ Lit.prototype.eq = function(b) {
     Ident: x => x === b,
   });
 }
-Lit.prototype.map = function(f) {
+Lit.prototype.apply = function(f) {
   return this.cata({
     StrLit: x => Lit.StrLit(f(x)),
-    IntLit: x => console.log(x, '90') || Lit.IntLit(f(x)),
+    IntLit: x => Lit.IntLit(f(x)),
     Ident: x => Lit.Ident(f(x)),
   });
 }
 
 const Expr = taggedSum('Expr', {
   Index: ['e', 'ee'],
-  // Call: ['e'],
+  Call: ['e', ['e']],
   // Unary: ['x', 'e'],
   // Binary: ['e', 'x', 'ee'],
   Paren: ['e'],
@@ -117,7 +118,7 @@ const Expr = taggedSum('Expr', {
 Expr.prototype.toString = function() {
   return this.cata({
     Index: (e, i)=> `Index :: Expr -> (${e}, ${i})`,
-    // Call: e => `Call :: Expr -> ${e}`,
+    Call: (e, args) => `Call :: Expr -> (${e}, ${args.map(x=> x.toString())})`,
     // Unary: (x, e)=> `Unary :: Expr -> ${x} -> ${e}`,
     // Binary: (e, x, ee) => `Binary :: Expr -> ${e} -> ${x} -> ${ee}`,
     Paren: e => `Paren :: Expr -> ${e}`,
@@ -126,7 +127,8 @@ Expr.prototype.toString = function() {
 };
 Expr.prototype.flatten = function() {
   return this.cata({
-    Index: (e, i) => Expr.flatten(e.flatten(), i.flatten()),
+    Index: (e, i) => Expr.Index(e.flatten(), i.flatten()),
+    Call: (e, args) => Expr.Call(e.flatten(), args.map(x => x.flatten())),
     Paren: e => Expr.Paren(e.flatten()),
     Literal: lit => lit.flatten ? lit.flatten() : Expr.Literal(lit),
   });
@@ -135,11 +137,11 @@ Expr.prototype.flatten = function() {
 Expr.prototype.apply = function(f) {
   return this.cata({
     Index: (e, ee)=> Expr.Index(e.apply(f), ee.apply(f)),
-    // Call: e => `Call :: Expr -> ${e}`,
+    Call: (e, args) => Expr.Call(e.apply(f), args.map(x => x.apply(f))),
     // Unary: (x, e)=> `Unary :: Expr -> ${x} -> ${e}`,
     // Binary: (e, x, ee) => `Binary :: Expr -> ${e} -> ${x} -> ${ee}`,
     Paren: e => Expr.Paren(e.apply(f)),
-    Literal: lit => Expr.Literal(lit.map(f)),
+    Literal: lit => Expr.Literal(lit.apply(f)),
   });
 };
 
@@ -159,8 +161,9 @@ const lab = Lit.StrLit('hola');
 // const ind = Expr.Index(Expr.Literal(Lit.IntLit(1)), Lit.IntLit(1));
 // applyExpr :: (Expr -> Expr) -> Expr -> Expr
 // map :: Functor f => f a ~> (a -> b) -> f b
-const one = Expr.Literal(Lit.IntLit(1));
+const one = Expr.Literal(Lit.IntLit(2));
 const fd = Expr.Literal(one);
 const two = Expr.Paren(fd);
-const three = Expr.Index(one, two)
-console.log(two.flatten().toString())
+const ga = Expr.Literal(Lit.IntLit(9))
+const three = Expr.Call(one, [fd, two, ga])
+console.log(three.apply(x => x +110).flatten().toString())
