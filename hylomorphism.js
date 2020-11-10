@@ -111,7 +111,7 @@ const Expr = taggedSum('Expr', {
   // Unary: ['x', 'e'],
   // Binary: ['e', 'x', 'ee'],
   Paren: ['e'],
-  Literal: [Lit]
+  Literal: [Lit],
 });
 
 Expr.prototype.toString = function() {
@@ -128,7 +128,7 @@ Expr.prototype.flatten = function(that) {
   return this.cata({
     Index: (e, i) => Expr.flatten(e.flatten(that), i.flatten(that)),
     Paren: e => Expr.Paren(e.flatten(that)),
-    Literal: lit => Expr.Literal(lit),
+    Literal: lit => lit.flatten ? lit.flatten(that) : Expr.Literal(lit),
   });
 }
 
