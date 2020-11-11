@@ -43,9 +43,21 @@ LinkedList.prototype.filter = function(f) {
     });
 }
 
+
+/// This was an implemention to Isomorphic
+/// toArray :: LinkedList a -> [a] 
 LinkedList.prototype.toArray = function() {
     return this.cata({
         Cons: (head, tail ) => [head, ...tail.toArray()],
         Nil: ()=> []
     });
+}
+// fromArray :: LinkedList [a] -> LinkedList a
+LinkedList.fromArray = function(data) {
+    return data.reduce((acc, x)=> acc.concat(LinkedList.of(x)), LinkedList.empty());
+}
+// end then the monkey patchvalue
+// toLinkedList :: Array [a] -> LinkedList a
+Array.prototype.toLinkedList = function() {
+    return LinkedList.fromArray(this);
 }
