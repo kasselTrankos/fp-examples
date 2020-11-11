@@ -2,6 +2,7 @@
 
 import { curryN } from 'ramda';
 import {LinkedList} from './fp/monad/linkedlist';
+import Maybe from './fp/monad/maybe';
 
 const list = LinkedList.empty();
 const a = LinkedList.Cons(1, LinkedList.of(2));
@@ -32,7 +33,8 @@ const ia = insideOut(LinkedList, arra);
 const aa = LinkedList.of(9);
 const ab = LinkedList.of(8);
 // const ov = lift2(append, aa, ab);
-console.log(ia.toArray(), LinkedList.empty().reduce((acc, x)=>  x + acc, 0));
+// https://blog.ploeh.dk/2019/04/29/catamorphisms/
+console.log(ia.toArray(), arr.toLinkedList().reduce((acc, x)=>  `${acc}${String.fromCharCode(x + 65)}`, 'z'));
 // traverse n -> 1 , [a] -> a
 
 const factorial = n =>
@@ -42,3 +44,16 @@ console.log(factorial(6));
 
 // FP Is List 
 // A* ::= Nil | Cons [A||A*]
+
+// cardinal LinkedList(a, b) = x*y = 2 * 1 = 2
+// Maybe Just Boolean | Nothing = 2 + 0 = 2
+const xc = [true, true, true, true, true];
+const Li = LinkedList.Cons(false, LinkedList.of(true))
+LinkedList.prototype.toMaybe = function() {
+  return this.cata({
+    Cons: (head, tail) =>console.log(head, tail , tail.toMaybe()) ||  Maybe.Just(head && tail.toMaybe().chain(x => x)),
+    Nil: () => Maybe.Just(true)
+  });
+}
+
+console.log(xc.toLinkedList().toMaybe());
