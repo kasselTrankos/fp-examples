@@ -107,7 +107,7 @@ Lit.prototype.apply = function(f) {
 }
 
 const Expr = taggedSum('Expr', {
-  Index: ['e', 'ee'],
+  Ident: ['e', 'ee'],
   Call: ['e', ['e']],
   Unary: ['x', 'arg'],
   Binary: ['l', 'op', 'r'],
@@ -117,7 +117,7 @@ const Expr = taggedSum('Expr', {
 
 Expr.prototype.toString = function() {
   return this.cata({
-    Index: (e, i)=> `Index :: Expr -> (${e}, ${i})`,
+    Ident: (e, i)=> `Ident :: Expr -> (${e}, ${i})`,
     Call: (e, args) => `Call :: Expr -> (${e}, ${args.map(x=> x.toString())})`,
     Unary: (op, arg)=> `Unary :: Expr -> (${op}, ${arg.toString()})`,
     Binary: (l, op, r) => `Binary :: Expr -> (${l.toString()},  ${op}, ${r.toString()})`,
@@ -132,7 +132,7 @@ Expr.prototype.flatten = function() {
     Binary: (l, op, r) => Expr.Binary(l.flatten(), op, r.flatten()),
     Literal: lit => Expr.Literal(lit),
     Paren: e => e.flatten(),
-    Index: (e, i) => Expr.Index(e.flatten(), i.flatten()),
+    Ident: (e, i) => Expr.Ident(e.flatten(), i.flatten()),
   });
 }
 
@@ -143,7 +143,7 @@ Expr.prototype.traverse = function() {
     Binary: (l, op, r) => Expr.Binary(l.flatten(), op, r.flatten()),
     Literal: lit => Expr.Literal(lit),
     Paren: e => e.flatten(),
-    Index: (e, i) => Expr.Index(e.flatten(), i.flatten()),
+    Ident: (e, i) => Expr.Ident(e.flatten(), i.flatten()),
   });
 }
 
@@ -153,7 +153,7 @@ Expr.prototype.traverse = function() {
 // map :: Functor f => f a ~> (a -> b) -> f b
 Expr.prototype.apply = function(f) {
   return this.cata({
-    Index: (e, ee)=> Expr.Index(e.apply(f), ee.apply(f)),
+    Ident: (e, ee)=> Expr.Ident(e.apply(f), ee.apply(f)),
     Call: (e, args) => Expr.Call(e.apply(f), args.map(x => x.apply(f))),
     Unary: (op, arg)=> Expr.Unary(op, arg.apply(f)),
     Binary: (l, op, r) => Expr.Binary(l.apply(f), op, r.apply(f)),
@@ -175,12 +175,12 @@ const rect = Shape.Rectangle(po, p1);
 // console.log(circle.area(), rect.area(), po);
 const lab = Lit.StrLit('hola');
 // const exx = Expr.Literal(lab);
-// const ind = Expr.Index(Expr.Literal(Lit.IntLit(1)), Lit.IntLit(1));
+// const ind = Expr.Ident(Expr.Literal(Lit.IntLit(1)), Lit.IntLit(1));
 // applyExpr :: (Expr -> Expr) -> Expr -> Expr
 // map :: Functor f => f a ~> (a -> b) -> f b
 const one = Expr.Literal(Lit.IntLit(2));
 const fd = Expr.Paren(Expr.Literal(Lit.IntLit(90)));
-const md = Expr.Index(fd, one);
+const md = Expr.Ident(fd, one);
 
 // console.log(md.flatten().toString(), one.flatten().toString())
 

@@ -49,6 +49,13 @@ LinkedList.prototype.filter = function(f) {
         Nil: ()=> LinkedList.Nil
     });
 }
+LinkedList.prototype.reduce = function(f, acc) {
+    return this.cata({
+        Cons: (head, tail) => tail.reduce(f, f(acc, head)),
+        Nil: () => acc
+    });
+}
+
 
 
 /// This was an implemention to Isomorphic

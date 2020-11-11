@@ -32,10 +32,13 @@ const ia = insideOut(LinkedList, arra);
 const aa = LinkedList.of(9);
 const ab = LinkedList.of(8);
 // const ov = lift2(append, aa, ab);
-console.log(ia.toArray());
+console.log(ia.toArray(), LinkedList.empty().reduce((acc, x)=>  x + acc, 0));
 // traverse n -> 1 , [a] -> a
 
 const factorial = n =>
   n == 0 ? 1 : n * factorial (n - 1);
 
 console.log(factorial(6));
+
+// FP Is List 
+// A* ::= Nil | Cons [A||A*]
