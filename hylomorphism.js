@@ -127,14 +127,26 @@ Expr.prototype.toString = function() {
 };
 Expr.prototype.flatten = function() {
   return this.cata({
-    Index: (e, i) => Expr.Index(e.flatten(), i.flatten()),
     Call: (e, args) => Expr.Call(e.flatten(), args.map(x => x.flatten())),
     Unary: (op, arg) => Expr.Unary(op, arg.flatten()),
-    Paren: e => Expr.Paren(e.flatten()),
     Binary: (l, op, r) => Expr.Binary(l.flatten(), op, r.flatten()),
-    Literal: lit => lit.flatten ? lit.flatten() : Expr.Literal(lit),
+    Literal: lit => Expr.Literal(lit),
+    Paren: e => e.flatten(),
+    Index: (e, i) => Expr.Index(e.flatten(), i.flatten()),
   });
 }
+
+Expr.prototype.traverse = function() {
+  return this.cata({
+    Call: (e, args) => Expr.Call(e.flatten(), args.map(x => x.flatten())),
+    Unary: (op, arg) => Expr.Unary(op, arg.flatten()),
+    Binary: (l, op, r) => Expr.Binary(l.flatten(), op, r.flatten()),
+    Literal: lit => Expr.Literal(lit),
+    Paren: e => e.flatten(),
+    Index: (e, i) => Expr.Index(e.flatten(), i.flatten()),
+  });
+}
+
 // apply :: (a -> b) -> ExprF a -> ExprF b
 // yes was map!!!!
 // map :: f => f a -> (a -> b ) -> f b
@@ -167,16 +179,37 @@ const lab = Lit.StrLit('hola');
 // applyExpr :: (Expr -> Expr) -> Expr -> Expr
 // map :: Functor f => f a ~> (a -> b) -> f b
 const one = Expr.Literal(Lit.IntLit(2));
-const fd = Expr.Literal(one);
-const two = Expr.Paren(fd);
-const ga = Expr.Literal(Lit.IntLit(9))
-const three = Expr.Call(one, [fd, two, ga]);
-const nine = Expr.Unary('mas ahora', three);
-const six = Expr.Binary(one, 'nine', two);
+const fd = Expr.Paren(Expr.Literal(Lit.IntLit(90)));
+const md = Expr.Index(fd, one);
 
-console.log(six.apply(x => x +110).flatten().toString())
+// console.log(md.flatten().toString(), one.flatten().toString())
 
 // CAP 1 -> Fixed Points
 // Consider the Y-combinator. Given a function f that takes one argument, 
 // y(f) represents the result of repeatedly applying f to itself:
 // y f = f (f (f (f ...)))
+
+
+// TRAVERSE def: 
+
+// Unpack the term so as to access its children.
+// Recursively traverse each child of the unpacked term with ƒ.
+// Repack the term.
+// Apply ƒ to it.
+
+
+// bottomUp :: Functor a => (Term a -> Term a) -> Term a -> Term a
+// bottomUp fn =
+//   out                    -- 1) unpack
+//   >>> fmap (bottomUp fn) -- 2) recurse
+//   >>> In                 -- 3) repack
+//   >>> fn                 -- 4) apply
+
+const alph = Expr.Literal(Lit.IntLit(9));
+const fn = x => x +19;
+const bet = alph.apply(fn);
+console.log(bet.toString());
+
+const arr = [1,2,4];
+const tas = arr.reduce((acc, x) => [...acc, fn(x)], []);
+console.log(tas);

@@ -12,6 +12,13 @@ LinkedList.empty = function () {
 LinkedList.of = function(x) {
     return LinkedList.Cons(x, LinkedList.empty());
 }
+LinkedList.prototype.map = function(f) {
+    return this.cata({
+        Cons: (head, tail) => LinkedList.Cons(f(head), tail.map(f)),
+        Nil: ()  => LinkedList.Nil
+    });
+}
+
 
 LinkedList.prototype.concat = function(that) {
     return this.cata({
