@@ -11,6 +11,7 @@
     "rosetree": "nodemon --exec babel-node rosetree-ex",
     "lambda": "nodemon --exec babel-node lambda-ex",
     "signature": "nodemon --exec babel-node signature",
+    "pair": "nodemon --exec babel-node pair",
     "linked": "nodemon --exec babel-node linked",
     "hylomorphism": "nodemon --exec babel-node hylomorphism",
     "test": "mocha --require  @babel/register -w"

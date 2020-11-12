@@ -51,9 +51,9 @@ const xc = [true, true, true, true, true];
 const Li = LinkedList.Cons(false, LinkedList.of(true))
 LinkedList.prototype.toMaybe = function() {
   return this.cata({
-    Cons: (head, tail) => this.reduce((acc, x)=> acc.map(a => [...a, x]), Maybe.Just([])),
+    Cons: () => this.reduce((acc, x)=> acc.map(a => [...a, x]), Maybe.Just([])),
     Nil: () => Maybe.Nothing
   });
 }
 
-console.log(xc.toLinkedList().toMaybe());
+console.log(Li.toMaybe());
