@@ -60,6 +60,18 @@ const S = f => g => x => f(x)(g(x));
 
 const PAIR = a => b => f => f(a)(b);
 
+
+
+export const Y =
+  fn =>
+    (
+      maker =>
+        arg => fn(maker(maker))(arg)
+    )(
+      maker =>
+        arg => fn(maker(maker))(arg)
+    );
+
 // VIREO 
 export const V = x => y => z => z(x)(y);
 

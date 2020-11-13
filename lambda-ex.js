@@ -1,5 +1,5 @@
 //lambda.js is
-import {K, KI, C, M, I, OR, AND, EQ, NOT, V, ZERO } from './lambda';
+import {K, KI, Y, C, M, I, OR, AND, EQ, NOT, V, ZERO } from './lambda';
 Function.prototype.toJsBool = function()  { return this(true)(false); }
 
 const tt = AND(K)(K)('si')('no')
@@ -15,4 +15,5 @@ const l123 = V(1)(pair(2)(pair(3)(EMPTY)));
 
 const _0 = ZERO(I)(0)
 console.log(_0)
-
+// https://raganwald.com/2018/09/10/why-y.html
+const fibonaci = Y(x => x +1)(10)
