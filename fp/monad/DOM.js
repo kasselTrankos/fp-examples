@@ -1,9 +1,12 @@
 // DOM is
+import {h} from 'virtual-dom';
+import createElement from 'virtual-dom/create-element';
 
 function DOM(tag, text, child) {
     this.tag = tag;
     this.text = text || '';
     this.child = child || [];
+    this.h = h(tag, {value: text});
 }
 
 DOM.prototype.concat = function(b) {
@@ -15,7 +18,8 @@ DOM.epmty = function() {
 }
 
 DOM.prototype.html = function() {
-    return `<${this.tag}>${this.text}${this.child.map(x=>x.html()).join('')}</${this.tag}>`
+    console.log(this.h);
+    return createElement(this.h)
 }
 
 module.exports = DOM;

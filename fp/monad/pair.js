@@ -1,34 +1,20 @@
 // Pair
-import { taggedSum }  from 'daggy';
+import { tagged }  from 'daggy';
 
-export const Pair = taggedSum('Pair', {
-    Cons: ['a', 'b'],
-    Nil: []
-});
+export const Pair = tagged('Pair', ['a', 'b']);
 
 Pair.prototype.map = function(f) {
-    return this.cata({
-        Cons: (a, b) => Pair.Cons(a, f(b)),
-        Nil: ()=> Pair.Nil
-    });
+    return Pair(this.a, f(this.b))
 }
 
 Pair.prototype.chain = function(f) {
-    return this.cata({
-        Cons: (a, b) => f(b),
-        Nil: ()=> Pair.Nil
-    });
+    return f(this.b)
 }
 
+
 Pair.prototype.fst = function() {
-    return this.cata({
-        Cons: a => a,
-        Nil: () => Pair.Nil
-    });
+    return this.a;
 }
 Pair.prototype.snd = function() {
-    return this.cata({
-        Cons: (_, b) => b,
-        Nil: () => Pair.Nil
-    });
+    return this.b;
 }

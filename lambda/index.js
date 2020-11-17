@@ -62,15 +62,8 @@ const PAIR = a => b => f => f(a)(b);
 
 
 
-export const Y =
-  fn =>
-    (
-      maker =>
-        arg => fn(maker(maker))(arg)
-    )(
-      maker =>
-        arg => fn(maker(maker))(arg)
-    );
+export const Y = fn => M(m => a => fn(m(m))(a));
+
 
 // VIREO 
 export const V = x => y => z => z(x)(y);

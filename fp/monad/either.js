@@ -47,5 +47,11 @@ Either.prototype.of = function _of(x) {
   });
 }
 Either.of = Either.prototype.of;
+Either.prototype.bimap = function(f, g) {
+  return this.cata({
+    Right: f,
+    Left: g
+  });
+}
 
 module.exports = Either;
