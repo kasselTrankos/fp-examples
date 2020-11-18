@@ -13,5 +13,9 @@ Task.prototype.map = function(f) {
     return new Task((reject, resolve)=> this.fork(reject, x => resolve(f(x))));
 }
 
+Task.prototype.chain = function(m) {
+    return this.fork(x=> {}, x => m(x));
+}
+
 
 module.exports = Task;

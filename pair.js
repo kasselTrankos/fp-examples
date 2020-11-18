@@ -28,9 +28,12 @@ const { Just } = Maybe;
 Pair.prototype.toMaybe= function() {
     return Just([Just(this.a), Just(this.b)])
 }
-Pair.prototype.bimap = function(f, g) {
-    return Pair(f(this.a), g(this.b));
+
+// toEither : Pair a b -> Either a b 
+Pair.prototype.toEither = function() {
+    return this.a === 1 ? Either.Right(this.b): Either.Left(this.b);
 }
+
 Maybe.prototype.toPair = function() {
     return this.cata({
         Just: ([a, b]) => Pair(a.chain(I), b.chain(I)),
@@ -72,7 +75,7 @@ const p = x=>  Pair(x,  call(89));
 const ta = p(1)
 const tam = ta.toMaybe()
 const rtam = tam.toPair()
-console.log(ta, '->', tam, '-> ', rtam, rtam.bimap(x => x +1, x=> x+2));
+// console.log(ta, '->', tam, '-> ', rtam, rtam.bimap(x => x +1, x=> x+2));
 const login = x => x == 1 ? Either.Right('alvaro') : Either.Left('Vera');
 
 console.log(login(11).bimap(x => ' soy '+ x, x => 'ella es' +x))
@@ -95,3 +98,25 @@ console.log(main('dame str')
     .map(z => z + ' hola')
     .unsafePerformIO());
 
+const pair = Pair(10, 'lisa');
+console.log(pair.toEither().bimap(x => ' soy '+ x, x => 'ella es ' +x))
+// Boolean = {x : x ∈ {True, False}} => #Boolean = 2
+// UInt8 = {x : x ∈ {0, …, 255}} => #UInt8 = 256
+// Pair Bolean UInt = 2 * 256 = 512
+// either a | b  -> a + b  sum 2
+// pair a b  -> 1 * 1 prod 1
+// pair a Either -> 1 * (1 + 1) -> 2 --- a (b c) or (a b)c
+// both touch b sum to prod
+// void(0) = 0
+// Null = Nothing = 1
+// Two types are said to be Isomorphic if they have same cardinality.
+// An isomorphism between types a and b is a pair of functions to and from such that:
+// · Composition
+// to :: a -> b
+// from :: b -> a
+// to · from = id
+// from · to = id
+// |[a]| = 1 + |a| + |a|^2 + |a|^3 + ...
+// Pair a b = Pair a b
+const _p = Pair(1, void(0));
+console.log(_p.map(x => x + 8));

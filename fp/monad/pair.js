@@ -7,10 +7,14 @@ Pair.prototype.map = function(f) {
     return Pair(this.a, f(this.b))
 }
 
+
 Pair.prototype.chain = function(f) {
     return f(this.b)
 }
 
+Pair.prototype.bimap = function(f, g) {
+    return Pair(f(this.a), g(this.b));
+}
 
 Pair.prototype.fst = function() {
     return this.a;
