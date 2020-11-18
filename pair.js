@@ -74,3 +74,9 @@ const login = x => x == 1 ? Either.Right('alvaro') : Either.Left('Vera');
 
 console.log(login(11).bimap(x => ' soy '+ x, x => 'ella es' +x))
 
+// isPalindromo :: String -> Bool
+const isPalindromo = a => a === a.split('').reverse().join('');
+
+console.log(isPalindromo('tacoat'));
+console.log(isPalindromo('tacocat'));
+
