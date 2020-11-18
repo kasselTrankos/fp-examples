@@ -9,7 +9,7 @@ const _readline = a => new Task((_, resolve)=> {
     const rl = readline.createInterface({ input: process.stdin, output: process.stdout});
     return rl.question(a, str => {
         resolve(str);
-        rl.close();
+        // rl.close();
     });
 });
 
@@ -34,13 +34,15 @@ const readDir = a  => new Task((reject, resolve) => {
       }) 
 });
 
-const getList = (list, i) => list.reduce((acc, x, index)=> `${acc}\t ${index===i ? '\x1b[36m' : '\x1b[31m'}-${x}`, '');
+const getList = (list, i) => list.reduce((acc, x, index)=> `${acc}\t ${index===i ? '\x1b[32m' : '\x1b[0m'}${x}${index%8===0 ? '\n' : ''}`, '');
 const getIndex = (list, i) => i < 0 ? list.length -1 : i >= list.length ? 0 : i
 
 const drawList = list => new Task((_, resolve)=> {
     let index = -1;
+    const init = process.stdout.rows;
     const a = getList(list) 
     readline.emitKeypressEvents(process.stdin);
+    const numberOfLines = Math.ceil(list.length / 8);
     if (process.stdin.isTTY) {
         process.stdin.setRawMode(true);
     }
@@ -52,15 +54,16 @@ const drawList = list => new Task((_, resolve)=> {
         } else if(key.name==='left') {
 
             index = getIndex(list, ++index);
-            process.stdout.clearLine();
-            process.stdout.cursorTo(0);
+            process.stdout.moveCursor(0, -numberOfLines)      // moving two lines up
+            process.stdout.cursorTo(0)            // then getting cursor at the begining of the line
+            process.stdout.clearScreenDown() 
             process.stdout.write( getList(list, index) )
         }else if(key.name==='right') {
 
             index = getIndex(list, --index);
-            
-            process.stdout.clearLine();
-            process.stdout.cursorTo(0);
+            process.stdout.moveCursor(0, -numberOfLines)      // moving two lines up
+            process.stdout.cursorTo(0)            // then getting cursor at the begining of the line
+            process.stdout.clearScreenDown() 
             process.stdout.write( getList(list, index) )
         }
     });
@@ -71,9 +74,9 @@ const drawList = list => new Task((_, resolve)=> {
 
 // ask :: Function  -> String -> String
 export const ask = (f, g) => a => 
-drawList([1, 2, 0, 9])
-    // _readline(a)
-    // .chain(readDir)
-    // .chain(drawList)
+// drawList([1, 2, 0, 9])
+    _readline(a)
+    .chain(readDir)
+    .chain(drawList)
     // .chain(x => getFile(x))
     .fork(f, g)
