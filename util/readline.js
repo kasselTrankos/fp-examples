@@ -1,6 +1,8 @@
 // readline
 import readline from 'readline';
 import Task from '../fp/monad/task';
+import { readFileSync } from 'fs';
+import { get } from 'https';
 
 /// _readline :: Task a => String -> Error String
 const _readline = a => new Task((_, resolve)=> {
@@ -11,6 +13,18 @@ const _readline = a => new Task((_, resolve)=> {
     });
 });
 
+const getFile = a => new Task((reject, resolve)=> {
+    try {
+        const e = readFileSync(a, {encoding:'utf8', flag:'r'});
+        resolve(e);
+    }
+    catch(er) {
+        reject(er)
+    }
+});
+
 // ask :: Function  -> String -> String
-export const ask = f => a => _readline(a)
-    .fork(()=> {}, f)
+export const ask = (f, g) => a => 
+    _readline(a)
+    .chain(x => getFile(x))
+    .fork(f, g)
