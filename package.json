@@ -15,6 +15,7 @@
     "linked": "nodemon --exec babel-node linked",
     "dom": "nodemon --exec babel-node dom",
     "task": "nodemon --exec babel-node task",
+    "task-e": "babel-node task",
     "hylomorphism": "nodemon --exec babel-node hylomorphism",
     "test": "mocha --require  @babel/register -w"
   },
