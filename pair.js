@@ -1,8 +1,11 @@
 // pair is
+const readline = require('readline');
 import {Pair}  from './fp/monad/pair';
+import IO from './fp/monad/io';
 import Maybe from './fp/monad/maybe';
 import {I} from './lambda';
 import Either from './fp/monad/either';
+import { map } from 'ramda';
 
 const { Just } = Maybe; 
 
@@ -76,7 +79,19 @@ console.log(login(11).bimap(x => ' soy '+ x, x => 'ella es' +x))
 
 // isPalindromo :: String -> Bool
 const isPalindromo = a => a === a.split('').reverse().join('');
+// main :: IO a => String -> Boolean
+const main = a =>  IO(()=> {
+    const rl = readline.createInterface({ input: process.stdin, output: process.stdout});
+    return rl.question(a, str => {
+        return str;
+        rl.close();
+    });
+});
+
 
 console.log(isPalindromo('tacoat'));
 console.log(isPalindromo('tacocat'));
+console.log(main('dame str')
+    .map(z => z + ' hola')
+    .unsafePerformIO());
 
