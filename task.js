@@ -9,10 +9,11 @@ const log = a => b => console.log(a , b)
 const isPalindromo = a => a === a.split('').reverse().join('');
 const continua = x =>  new IO(() => x)
     .map(isPalindromo)
-    .map(log(x + ' is a palindromo: '));
+    .map(log(x + ' is a palindromo: '))
+    .unsafePerformIO()
    
 
-const aa = ask(
-    x => continua(x).unsafePerformIO()
+ask(
+    continua
 )('introduce: \n');
 
