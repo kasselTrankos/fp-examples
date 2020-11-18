@@ -9,12 +9,12 @@ const log = a => b => console.log(a , b)
 // isPalindromo :: String -> Bool
 const isPalindromo = a => a === a.split('').reverse().join('');
 const continua = x =>  new IO(() => x)
-    .map(x => JSON.parse(x))
-    .map(x => x.name)
-    // .map(isPalindromo)
+    // .map(x => JSON.parse(x))
+    // .map(x => x.name)
+    // // .map(isPalindromo)
     .map(log(x + ' is a palindromo:  '))
     .unsafePerformIO()
-const error = ()=>  console.log('mierda mal')
+const error = (er)=>  console.log('mierda mal', er)
 
 ask(
     error,

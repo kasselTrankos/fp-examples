@@ -17,7 +17,6 @@ Task.prototype.chain = function(m) {
     return  new Task((reject, resolve)=> {
         this.fork(reject, x => m(x).fork(reject, resolve));
     });
-    //this.fork(x=> {}, x =>  m(x));
 }
 
 
