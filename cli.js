@@ -1,14 +1,28 @@
 // cli
-import Cli from './utils/cli';
+import {question, selectableList} from './utils/cli';
+import Stream from './fp/monad/stream';
+import { readdir } from 'fs';
 
-const cli = new Cli();
 
-const readLine = cli.question('hola mindo: ');
+const readDir = a  => new Stream(({next, error}) => {
+    readdir(a, (err, files) => { 
+        return err
+          ? error(err)
+          : next(files)
+      }) 
+});
+const getJSONs = x => Stream.of(x.filter(c => c.includes('.json')))
+const proc = 
+    question('hola mindo: ')
+    .chain(readDir)
+    .chain(getJSONs)
+    .chain(selectableList);
 
-readLine.subscribe({
+
+proc.subscribe({
     next: x => console.log(x, 'next'),
     error: x => console.log(x, 'error'),
-    complete: x => console.log(x, 'complete'),
+    complete: () => console.log('complete'),
 });
 
 

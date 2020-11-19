@@ -1,4 +1,4 @@
-const { readdirSync, lstatSync, readFileSync } = require('fs');
+const { readdirSync, readdir, lstatSync, readFileSync } = require('fs');
 
 export const pipe = (...fns) => x => fns.reduceRight((acc, fn)=> fn(acc) , x);
 export const ap = f => xs => xs.ap(f);
@@ -20,6 +20,8 @@ export const getFiles = a => {
     return [];
   }
 };
+
+
 
 
 // + :: isDirectory a => Bool
