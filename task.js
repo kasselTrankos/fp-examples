@@ -1,5 +1,5 @@
 // task test
-import {ask} from './util/readline';
+import {ask} from './utils/readline';
 import IO from './fp/monad/io';
 import { readFileSync } from 'fs';
 

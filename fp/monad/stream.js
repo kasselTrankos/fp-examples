@@ -11,6 +11,11 @@ function run ({next, complete, error}) {
       error: error || noop
     });
 }
+
+Stream.prototype.subscribe = function(o) {
+  return run.call(this, o);
+}
+
 // of :: Aplicative f => f ~> a -> f a
 Stream.of = function(x) {
     return new Stream(({next}) =>{
