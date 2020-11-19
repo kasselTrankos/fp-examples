@@ -3,6 +3,7 @@ import readline from 'readline';
 import Task from '../fp/monad/task';
 import { readFile , readdir} from 'fs';
 import { get } from 'https';
+import Stream from '../fp/monad/stream';
 
 /// _readline :: Task a => String -> Error String
 const _readline = a => new Task((_, resolve)=> {
