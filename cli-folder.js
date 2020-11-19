@@ -5,4 +5,7 @@ const fold = a => {
     console.log(a, '000000')
 }
 
-cliJSON()(fold, ()=> console.log('cmmmmm'), e => console.log('error is ',e))
+const ed = cliJSON()(fold, ()=> console.log('cmmmmm'), e => {
+    console.log('error is ',e)
+    ed()
+})

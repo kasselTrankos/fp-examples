@@ -21,15 +21,13 @@ const question = (a) => {
             output: process.stdout
         });
         rl.question(a, str => {
-            complete(str);
-            // rl.close();
+            next(str);
         });
-        () => {}
+        return ()=> rl.close()
     });
 }
 const selectableList = list => {
     let index = 0;
-    console.log('become hoero');
     return new Stream(({next, complete, error})=> {
         readline.emitKeypressEvents(process.stdin);
         const numberOfLines = list.length;
@@ -39,7 +37,7 @@ const selectableList = list => {
         process.stdin.on('keypress', (str, key) => {
             if (key.name === 'return') {
                 console.log('\x1b[0m\n')
-                complete() || next(list[index]);
+                next(list[index]);
                 process.exit();
             } else if(key.name==='up') {
                 index = getIndex(list, --index);

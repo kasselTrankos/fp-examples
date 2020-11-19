@@ -14,7 +14,10 @@ function run ({next, complete, error}) {
       completed = true;
       return complete() || noop()
     },
-    error: error || noop
+    error: () => {
+      completed = true;
+      return error() || noop();
+    }
   });
 } 
 
