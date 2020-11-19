@@ -1,12 +1,19 @@
 const noop = () => {};
+let completed = false;
 function Stream(constructor) {
   this._constructor = constructor;
+  this.completed = false;
 }
 
 function run ({next, complete, error}) {
   return this._constructor({
-    next: next || noop,
-    complete: complete || noop,
+    next: x =>  {
+      return !completed && next(x) || noop();
+    },
+    complete: () => {
+      completed = true;
+      return complete() || noop()
+    },
     error: error || noop
   });
 } 
@@ -119,12 +126,12 @@ Stream.empty = function() {
 }
 
 // from :: Stream ~> [a] ~> Stream a
-Stream.from = function(xs) {
+Stream.fromArray = function(xs) {
   return new Stream(stream => {
     for(let x of xs){
       stream.next(x);
     }
-    stream.complete();
+    // stream.complete();
     return ()=> {}// unsubs
   });
 }

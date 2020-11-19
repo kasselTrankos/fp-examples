@@ -1,7 +1,6 @@
 // task test
 import {ask} from './utils/readline';
 import IO from './fp/monad/io';
-import { readFileSync } from 'fs';
 
 
 // log :: a -> b -> console.log( a b)

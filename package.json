@@ -15,8 +15,9 @@
     "linked": "nodemon --exec babel-node linked",
     "dom": "nodemon --exec babel-node dom",
     "task": "nodemon --exec babel-node task",
+    "stream": "nodemon --exec babel-node stream",
     "task-e": "babel-node task",
-    "cli-e": "babel-node cli",
+    "cli-e": "babel-node cli-folder",
     "hylomorphism": "nodemon --exec babel-node hylomorphism",
     "test": "mocha --require  @babel/register -w"
   },
@@ -32,8 +33,10 @@
   },
   "homepage": "https://github.com/kasselTrankos/fp-examples#readme",
   "dependencies": {
+    "data.stream": "^0.1.0",
     "mocha": "^8.2.0",
     "nodemon": "^2.0.4",
+    "rxjs": "^6.6.3",
     "vdom-to-html": "^2.3.1",
     "virtual-dom": "^2.1.1"
   },

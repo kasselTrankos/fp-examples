@@ -2,8 +2,16 @@
 import readline from 'readline';
 import Stream from '../fp/monad/stream';
 
-const getList = (list, i) => list.reduce((acc, x, index)=> `${acc} ${index===i ? '\x1b[32m' : '\x1b[0m'}${x}\n`, '');
+const NONE = '\x1b[0m';
+const GREEN = '\x1b[32m';
+
+const getList = (list, i) => list.reduce((acc, x, index) => `${acc} ${index===i ? GREEN : NONE}${x}\n`, '');
 const getIndex = (list, i) => i < 0 ? list.length -1 : i >= list.length ? 0 : i
+const cleanLines = a => {
+    process.stdout.moveCursor(0, -a)      // moving two lines up
+    process.stdout.cursorTo(0)            // then getting cursor at the begining of the line
+    process.stdout.clearScreenDown() 
+}
 
 // question :: Cli a -> Stream next error complete 
 const question = (a) => {
@@ -12,17 +20,17 @@ const question = (a) => {
             input: process.stdin, 
             output: process.stdout
         });
-        return rl.question(a, str => {
-            next(str);
+        rl.question(a, str => {
+            complete(str);
             // rl.close();
         });
+        () => {}
     });
 }
 const selectableList = list => {
-    let index = -1;
-    return new Stream(({next, complete})=> {
-        const init = process.stdout.rows;
-        const a = getList(list) 
+    let index = 0;
+    console.log('become hoero');
+    return new Stream(({next, complete, error})=> {
         readline.emitKeypressEvents(process.stdin);
         const numberOfLines = list.length;
         if (process.stdin.isTTY) {
@@ -31,26 +39,20 @@ const selectableList = list => {
         process.stdin.on('keypress', (str, key) => {
             if (key.name === 'return') {
                 console.log('\x1b[0m\n')
-                next(list[index]);
+                complete() || next(list[index]);
                 process.exit();
             } else if(key.name==='up') {
-    
-                index = getIndex(list, ++index);
-                process.stdout.moveCursor(0, -numberOfLines)      // moving two lines up
-                process.stdout.cursorTo(0)            // then getting cursor at the begining of the line
-                process.stdout.clearScreenDown() 
+                index = getIndex(list, --index);
+                cleanLines(numberOfLines);
                 process.stdout.write( getList(list, index) )
             }else if(key.name==='down') {
-    
-                index = getIndex(list, --index);
-                process.stdout.moveCursor(0, -numberOfLines)      // moving two lines up
-                process.stdout.cursorTo(0)            // then getting cursor at the begining of the line
-                process.stdout.clearScreenDown() 
+                index = getIndex(list, ++index);
+                cleanLines(numberOfLines);
                 process.stdout.write( getList(list, index) )
             }
-        });
+        });cleanLines
         console.log('Selecciona uno');
-        process.stdout.write( getList(list) )
+        process.stdout.write( getList(list, index) )
     });
 }
 

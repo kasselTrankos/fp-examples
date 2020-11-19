@@ -4,25 +4,25 @@ import Stream from './fp/monad/stream';
 import { readdir } from 'fs';
 
 
-const readDir = a  => new Stream(({next, error}) => {
-    readdir(a, (err, files) => { 
-        return err
-          ? error(err)
-          : next(files)
-      }) 
+const readDir = a  => new Stream(({next, error, complete}) => {
+    readdir(a, (err, files) => err
+        ? error(err)
+        : complete () || next(files)
+    );
+    return ()=> {}
 });
 const getJSONs = x => Stream.of(x.filter(c => c.includes('.json')))
-const proc = 
-    question('hola mindo: ')
-    .chain(readDir)
-    .chain(getJSONs)
-    .chain(selectableList);
+    
 
 
-proc.subscribe({
-    next: x => console.log(x, 'next'),
-    error: x => console.log(x, 'error'),
-    complete: () => console.log('complete'),
-});
+export const cliJSON = (a, b)=> (f, g, e)=>  question('que folder: ')
+    // .chain(readDir)
+    // .chain(getJSONs)
+    // .chain(selectableList)
+    .subscribe({
+        next: f,
+        error: e,
+        complete: g,
+    });
 
 
