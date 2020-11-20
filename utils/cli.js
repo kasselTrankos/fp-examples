@@ -5,15 +5,20 @@ import Stream from '../fp/monad/stream';
 const NONE = '\x1b[0m';
 const GREEN = '\x1b[32m';
 
+// getList :: [a], Int -> [b]
 const getList = (list, i) => list.reduce((acc, x, index) => `${acc} ${index===i ? GREEN : NONE}${x}\n`, '');
+
+// getIndez :: [a], Int -> Int
 const getIndex = (list, i) => i < 0 ? list.length -1 : i >= list.length ? 0 : i
+
+// cleanLines :: [a] -> Nothing
 const cleanLines = a => {
     process.stdout.moveCursor(0, -a)      // moving two lines up
     process.stdout.cursorTo(0)            // then getting cursor at the begining of the line
     process.stdout.clearScreenDown() 
 }
 
-// question :: Cli a -> Stream next error complete 
+// question a -> Stream String 
 const question = (a) => {
     return new Stream(({next, complete, error}) => {
         const rl = readline.createInterface({ 
@@ -23,9 +28,10 @@ const question = (a) => {
         rl.question(a, str => {
             next(str);
         });
-        return ()=> rl.close()
+        return () => rl.close()
     });
 }
+// selectableList :: Stream [a] -> Stream [a]
 const selectableList = list => {
     let index = 0;
     return new Stream(({next, complete, error})=> {
@@ -42,21 +48,17 @@ const selectableList = list => {
             } else if(key.name==='up') {
                 index = getIndex(list, --index);
                 cleanLines(numberOfLines);
-                process.stdout.write( getList(list, index) )
+                process.stdout.write(getList(list, index) )
             }else if(key.name==='down') {
                 index = getIndex(list, ++index);
                 cleanLines(numberOfLines);
-                process.stdout.write( getList(list, index) )
+                process.stdout.write(getList(list, index) )
             }
-        });cleanLines
+        });
         console.log('Selecciona uno');
         process.stdout.write( getList(list, index) )
     });
 }
-
-
-
-
 
 module.exports = {
     question,

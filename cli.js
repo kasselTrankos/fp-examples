@@ -3,13 +3,14 @@ import {question, selectableList} from './utils/cli';
 import Stream from './fp/monad/stream';
 import { readdir } from 'fs';
 
-
-const readDir = a  => new Stream(({next, error, complete}) => {
-    readdir(a, (err, files) => err
+// readDir :: Stream a => String -> error Array complete
+const readDir = a => new Stream(({next, error, complete}) => {
+    let made = true;
+    made && readdir(a, (err, files) => err
         ? error(err)
         : next(files)
     );
-    return ()=> {}
+    return () => made = false;
 });
 const getJSONs = x => Stream.of(x.filter(c => c.includes('.json')))
     

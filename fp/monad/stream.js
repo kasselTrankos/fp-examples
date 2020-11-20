@@ -14,9 +14,9 @@ function run ({next, complete, error}) {
       completed = true;
       return complete() || noop()
     },
-    error: () => {
+    error: e=> {
       completed = true;
-      return error() || noop();
+      return error(e) || noop();
     }
   });
 } 

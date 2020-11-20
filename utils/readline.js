@@ -37,7 +37,6 @@ const readDir = a  => new Task((reject, resolve) => {
 
 const getList = (list, i) => list.reduce((acc, x, index)=> `${acc}\t ${index===i ? '\x1b[32m' : '\x1b[0m'}${x}${index%8===0 ? '\n' : ''}`, '');
 const getIndex = (list, i) => i < 0 ? list.length -1 : i >= list.length ? 0 : i
-console.log(process.stdout.columns)
 const drawList = list => new Task((_, resolve)=> {
     let index = -1;
     const init = process.stdout.rows;
