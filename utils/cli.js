@@ -57,7 +57,7 @@ const selectableList = list => {
         });
         console.log('Selecciona uno');
         process.stdout.write( getList(list, index) )
-    });
+    }, ()=> process.exit());
 }
 
 module.exports = {
