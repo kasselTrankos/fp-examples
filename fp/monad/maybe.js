@@ -38,6 +38,13 @@ Maybe.prototype.chain = function(m) {
     });
 }
 
+Maybe.prototype.bimap = function(f, g) {
+    return this.cata({
+        Nothing: f,
+        Just: g
+    })
+}
+
 Maybe.prototype.alt = function(b) {
     return this.cata({
         Just: _ => this,

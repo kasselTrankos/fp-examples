@@ -7,7 +7,7 @@ import {I} from './lambda';
 import Either from './fp/monad/either';
 import { map } from 'ramda';
 
-const { Just } = Maybe; 
+const { Just, Nothing } = Maybe; 
 
 // cardinalidad de Pair a, b => a * b
 // Task x => x = 1
@@ -78,7 +78,7 @@ const rtam = tam.toPair()
 // console.log(ta, '->', tam, '-> ', rtam, rtam.bimap(x => x +1, x=> x+2));
 const login = x => x == 1 ? Either.Right('alvaro') : Either.Left('Vera');
 
-console.log(login(11).bimap(x => ' soy '+ x, x => 'ella es' +x))
+// console.log(login(11).bimap(x => ' soy '+ x, x => 'ella es' +x))
 
 // isPalindromo :: String -> Bool
 const isPalindromo = a => a === a.split('').reverse().join('');
@@ -99,7 +99,7 @@ console.log(main('dame str')
     .unsafePerformIO());
 
 const pair = Pair(10, 'lisa');
-console.log(pair.toEither().bimap(x => ' soy '+ x, x => 'ella es ' +x))
+// console.log(pair.toEither().bimap(x => ' soy '+ x, x => 'ella es ' +x))
 // Boolean = {x : x ∈ {True, False}} => #Boolean = 2
 // UInt8 = {x : x ∈ {0, …, 255}} => #UInt8 = 256
 // Pair Bolean UInt = 2 * 256 = 512
@@ -120,3 +120,13 @@ console.log(pair.toEither().bimap(x => ' soy '+ x, x => 'ella es ' +x))
 // Pair a b = Pair a b
 const _p = Pair(1, void(0));
 console.log(_p.map(x => x + 8));
+
+// isPalindrome String -> Boolean
+const isPalindrome = a => a === a.split('').reverse().join(''); 
+
+// gga :: String  > Maybe
+const gga = a => a === ''?  Nothing: Just(isPalindrome(a));
+
+// al :: String -> String 
+const al = gga('oco').bimap(x=> ' Nada', y => y ? 'Si' : 'No');
+console.log(al);
