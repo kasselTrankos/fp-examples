@@ -122,11 +122,32 @@ const _p = Pair(1, void(0));
 console.log(_p.map(x => x + 8));
 
 // isPalindrome String -> Boolean
-const isPalindrome = a => a === a.split('').reverse().join(''); 
+const isPalindrome = a => a === a.split('').reverse().join('');
+
+// toLower :: Chat -> Char
+const toLower = a => a.toLowerCase();
+
+// allToLower :: String -> String
+const allToLower = a => a.split('').map(toLower).join('');
 
 // gga :: String  > Maybe
-const gga = a => a === ''?  Nothing: Just(isPalindrome(a));
+const gga = a => a === '' ?  Nothing : Just(isPalindrome(a));
 
-// al :: String -> String 
-const al = gga('oco').bimap(x=> ' Nada', y => y ? 'Si' : 'No');
-console.log(al);
+// verbose :: String -> String 
+const verbose = gga('oco')
+    .bimap(x=> 'Nada', y => y ? 'Si' : 'No');
+console.log(verbose);
+
+const adm = [1,2,3,4,5,65,6,67,7,78,8,8,9,12, 90,48,344544, 45,3, 23,42,12,235,56,2156,757843,43,1256,76,99];
+
+const group = (acc, x, k)=> x.length <= 0 ? acc : group([...acc, x.splice(0, k)], x, k);
+
+const append = x => xs  => [...xs, x]
+
+// groupBy :: [Function] -> Array -> [...[a]]
+const groupBy = (...fns) => a => fns.reduce((acc, f) => [...acc, a.filter(f)] , []);
+
+const lll = group([], [...adm], 3);
+console.log(lll);
+const gh = groupBy(x => x === 0 )(adm);
+console.log(gh);
