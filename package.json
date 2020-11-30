@@ -19,6 +19,7 @@
     "task-e": "babel-node task",
     "cli-e": "babel-node cli-folder",
     "hylomorphism": "nodemon --exec babel-node hylomorphism",
+    "parser": "nodemon --exec babel-node parser",
     "test": "mocha --require  @babel/register -w"
   },
   "repository": {
@@ -34,6 +35,7 @@
   "homepage": "https://github.com/kasselTrankos/fp-examples#readme",
   "dependencies": {
     "data.stream": "^0.1.0",
+    "esprima": "^4.0.1",
     "mocha": "^8.2.0",
     "nodemon": "^2.0.4",
     "rxjs": "^6.6.3",

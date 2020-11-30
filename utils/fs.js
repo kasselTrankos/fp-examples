@@ -1,7 +1,7 @@
 // readline
 import readline from 'readline';
 import Task from '../fp/monad/task';
-import { readFile , readdir} from 'fs';
+import fs from 'fs';
 import { get } from 'https';
 import Stream from '../fp/monad/stream';
 
@@ -14,19 +14,18 @@ const _readline = a => new Task((_, resolve)=> {
     });
 });
 
-const getFile = a => new Task((reject, resolve)=> {
-    try {
-        const e = readFile(a, {encoding:'utf8', flag:'r'});
-        resolve(e);
-    }
-    catch(er) {
-        reject(er)
-        console.log(er)
-    }
+// readFile :: String -> Task Error String
+export const readFile = a => new Task((reject, resolve)=> {
+    fs.readFile(a, 'utf8', (err, buf)=> {
+        err ? reject(err) : resolve(buf);
+    });
 });
 
+// readFileSync :: String -> String
+export const readFileSync = a => fs.readFileSync(a, 'utf-8');
+
 const readDir = a  => new Task((reject, resolve) => {
-    readdir(a, (err, files) => { 
+    fs.readdir(a, (err, files) => { 
         if (err) 
           reject(err); 
         else { 

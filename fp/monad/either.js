@@ -38,6 +38,13 @@ Either.prototype.alt = function (that) {
   });
 }
 
+Either.prototype.extract = function() {
+  return this.cata({
+    Left: x => x,
+    Right: x => x
+  });
+}
+
 Either.alt = Either.prototype.alt;
 
 Either.prototype.of = function _of(x) {

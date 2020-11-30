@@ -20,19 +20,7 @@ var readFile = filename => IO(() => fs.readFileSync(filename, 'utf-8'));
 //  toJSON :: String -> IO JSON
 var toJSON = x => IO.of(JSON.parse(x));
 
-
-
-
-
 var cat = B(map(prop('name')))(B(chain(toJSON))(readFile));
-
-
-
-
-
-
-
-
 
 
 // console.log(RoseTree.of( cat('package.json').unsafePerformIO()), RoseTree.of('poc'))
