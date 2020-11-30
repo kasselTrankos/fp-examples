@@ -1,12 +1,13 @@
 // parser
 import { pipe, } from 'ramda';
-import {readFile, parse, prop, compose} from './utils';
+import {readFile, parse, prop, compose, lift2} from './utils';
 import { Left, Right} from './fp/monad/either';
 import { taggedSum } from 'daggy';
 
 const element = taggedSum('element', {
     'Identifier': ['x'],
     'Literal': ['x'],
+    'Program': ['x'],
     'TemplateLiteral': ['x'],
     'MemberExpression': ['x'],
     'CallExpression': ['x'],
@@ -16,23 +17,32 @@ const element = taggedSum('element', {
     'ObjectPattern': ['x'],
     'BinaryExpression': ['x'],
     'ArrayExpression': ['x'],
-    'Nil': []
+    'AssignmentExpression': ['x'],
+    'ExpressionStatement': ['x'],
+    'FunctionExpression': ['x'],
+    'BlockStatement': ['x'],
+    'ReturnStatement': ['x'],
+    'ThisExpression': ['x'],
+    'ObjectExpression': ['x'],
+    'Property': ['x'],
+    'ConditionalExpression': ['x'],
+    'FunctionDeclaration': ['x'],
+    'Nil': [],
 });
-const getElement = x => (element[x.type] || element.Nil)(x);
-const getValueOr = (value, other) =>  value.lenght ? value :  other;
+const getElement = x => element[x.type] ? element[x.type](x) : element.Nil;
+const getValueOr = (value, other) =>  value.length ? value :  other;
 const elementToString = e => e.toString();
 const el = pipe(
     getElement,
     elementToString
 );
-const toElement = x => x.type 
-    ? console.log(JSON.stringify(x), '\ndfj.sdlkfj') || Left(el(x))
-    : x;
 element.prototype.toString = function() {
     return this.cata({
         'Identifier': x => `${x.name}`,
         'Literal': x => `${x.raw}`,
         'TemplateLiteral': x => x,
+        'ThisExpression': x => 'this',
+        'Program': x => x.body.map(el),
         'ArrowFunctionExpression': x => `${getValueOr(x.params.map(el), '()')} => ${el(x.body)}`,
         'MemberExpression': x => `${el(x.object)}.${el(x.property)}`,
         'CallExpression': x => `${el(x.callee)}(${(x.arguments || []).map(el)})`,
@@ -41,6 +51,15 @@ element.prototype.toString = function() {
         'ObjectPattern': x => x,
         'BinaryExpression': x => `${el(x.left)} ${x.operator} ${el(x.right)}`,
         'ArrayExpression': x => `[ ${x.elements.map(el)} ]`,
+        'ExpressionStatement': x => el(x.expression),
+        'AssignmentExpression': x => `${el(x.left)} = ${el(x.right)}`,
+        'FunctionExpression': x => `function(${x.params.map(el)}){${el(x.body)}}`,
+        'ReturnStatement': x => `return ${el(x.argument)}`,
+        'BlockStatement': x => x.body.map(el),
+        'ObjectExpression': x => x.properties.map(el),
+        'Property': x => `${el(x.key)}: ${el(x.value)}`,
+        'FunctionDeclaration': x => `function ${el(x.id)}(${x.params.map(el)}) {${el(x.body)}}`,
+        'ConditionalExpression': x => `${el(x.test)} ? ${el(x.consequent)} : ${el(x.alternate)}`,
         'Nil': () => ''
     })
 }
@@ -51,18 +70,21 @@ const secureProp = k => o => prop(k)(o)
     ? Right(o[k])
     : Left(' nop hay nada')
 
-const toStr = a => b => `${a} ${b} = `
-const toString = o => {
-    const declarations  = toElement(o)
-        // .chain(secureProp('callee'))
-    return  `${declarations}`
-    //`${prop('kind')(o)} ${declarations.id.name} = ${declarations.init.callee}`
+// getDeclarations :: Object -> Either String String
+const getDeclarations = x => x.type 
+    ? Right(el(x))
+    : Left(' Bad declaration');
+const toEither = o => {
+    return getDeclarations(o)
+    // o.map(getDeclarations)
+        // .reduce((acc, x)=>lift2(a => xs =>Right([...xs, a]))(x)(acc), Right([]));
 }
 
 readFile(FILE)
     .map(parse)
-    .map(x => x.body.filter(a => a.type ==='VariableDeclaration'))
-    .map(x => x.map(toString))
+    // .map(x => JSON.stringify(x))
+    // .map(x => x.body.filter(a => a.type ==='VariableDeclaration'))
+    .map(toEither)
     // .map(a=> a[0])
     // .map(x=> x.filter(a => a.type === 'Identifier'))
     .fork(
