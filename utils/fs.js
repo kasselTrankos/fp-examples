@@ -14,6 +14,12 @@ const _readline = a => new Task((_, resolve)=> {
     });
 });
 
+export const writeFile = name => data => {
+    return new Task((reject, resolve)=> fs.writeFile(name, data, err => 
+        err ? reject(err) : resolve('GENIAL')
+    ));
+}
+
 // readFile :: String -> Task Error String
 export const readFile = a => new Task((reject, resolve)=> {
     fs.readFile(a, 'utf8', (err, buf)=> {

@@ -1,6 +1,6 @@
 // parser
 import { pipe, } from 'ramda';
-import {readFile, parse, prop, compose, lift2} from './utils';
+import {readFile, parse, prop, compose, writeFile} from './utils';
 import { Left, Right} from './fp/monad/either';
 import { taggedSum } from 'daggy';
 
@@ -56,7 +56,7 @@ element.prototype.toString = function() {
         'FunctionExpression': x => `function(${x.params.map(el)}){${el(x.body)}}`,
         'ReturnStatement': x => `return ${el(x.argument)}`,
         'BlockStatement': x => x.body.map(el),
-        'ObjectExpression': x => x.properties.map(el),
+        'ObjectExpression': x => `{ ${x.properties.map(el)} }`,
         'Property': x => `${el(x.key)}: ${el(x.value)}`,
         'FunctionDeclaration': x => `function ${el(x.id)}(${x.params.map(el)}) {${el(x.body)}}`,
         'ConditionalExpression': x => `${el(x.test)} ? ${el(x.consequent)} : ${el(x.alternate)}`,
@@ -66,27 +66,19 @@ element.prototype.toString = function() {
 
 const FILE = 'demo-ex.js';
 
-const secureProp = k => o => prop(k)(o)
-    ? Right(o[k])
-    : Left(' nop hay nada')
-
 // getDeclarations :: Object -> Either String String
 const getDeclarations = x => x.type 
     ? Right(el(x))
     : Left(' Bad declaration');
-const toEither = o => {
-    return getDeclarations(o)
-    // o.map(getDeclarations)
-        // .reduce((acc, x)=>lift2(a => xs =>Right([...xs, a]))(x)(acc), Right([]));
-}
 
+const toString = arr => arr.reduce((acc, x)=> `${acc}${x}\n`, '')
 readFile(FILE)
     .map(parse)
     // .map(x => JSON.stringify(x))
-    // .map(x => x.body.filter(a => a.type ==='VariableDeclaration'))
-    .map(toEither)
-    // .map(a=> a[0])
-    // .map(x=> x.filter(a => a.type === 'Identifier'))
+    .map(getDeclarations)
+    .map(x => x.map(toString))
+    .map(x => x.extract())
+    .chain(writeFile('cog.js'))
     .fork(
         e => console.log('Error', e),
         x => console.log(x)

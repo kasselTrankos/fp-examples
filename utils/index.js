@@ -1,13 +1,10 @@
 
-export { readFile } from './fs';
+export { readFile, writeFile } from './fs';
 const { readdirSync, readdir, lstatSync, readFileSync } = require('fs');
 import { parseModule } from 'esprima';
 
 // parse :: Strig -> Esprima Object
 export const parse = a => parseModule(a, {comment: true});
-
-export const compose = (...fns) => x => fns.reduce((acc, fn)=> fn(acc) , x);
-
 export const pipe = (...fns) => x => fns.reduceRight((acc, fn)=> fn(acc) , x);
 export const ap = f => xs => xs.ap(f);
 export const reduce = (f, acc) => xs => xs.reduce(f, acc);

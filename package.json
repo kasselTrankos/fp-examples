@@ -20,6 +20,7 @@
     "cli-e": "babel-node cli-folder",
     "hylomorphism": "nodemon --exec babel-node hylomorphism",
     "parser": "nodemon --exec babel-node parser",
+    "parser-ex": "babel-node parser",
     "test": "mocha --require  @babel/register -w"
   },
   "repository": {
