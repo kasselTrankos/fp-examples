@@ -16,22 +16,22 @@ const getDeclarations = x => x.type
 const toString = arr => arr.reduce((acc, x)=> `${acc}${x}\n`, '')
 const parser = readFile(FILE)
     .map(parse)
-    .map(Parser.fromEsprima)
     // .map(x => x.find( {
-    //     "type": "MemberExpression",
+        //     "type": "MemberExpression",
     //     "object": {
-    //       "type": "Identifier",
-    //       "name": "Parser"
-    //     }
-    //   }))
-    // .map(parse)
-    // .map(x => x.map(g => g === 'var' ? 'const': g))
-    // .map(x => JSON.stringify(x))
-    // .map(x => x.map(c => c.toString()))
-    // .map(x => x.map(toString))
-    // .map(x => x.extract())
-    // .chain(writeFile('cog.js'))
-    // .map(x => x.map(x => x === 'var' ? 'const' : x))
+        //       "type": "Identifier",
+        //       "name": "Parser"
+        //     }
+        //   }))
+        // .map(parse)
+        // .map(x => x.map(g => g === 'var' ? 'const': g))
+        // .map(x => JSON.stringify(x))
+        // .map(x => x.map(c => c.toString()))
+        // .map(x => x.map(toString))
+        // .map(x => x.extract())
+        // .chain(writeFile('cog.js'))
+    .map(Parser.fromEsprima)
+    .map(x =>x.map(g => g === 'var' ? 'const' : g))
     .map(x => x.toString())
 parser.fork(
     e => console.log('Error', e),

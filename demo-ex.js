@@ -1,1 +1,1 @@
-var a = 1;
+const parse = a => parseModule(a, {comment: true});
