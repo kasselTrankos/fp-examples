@@ -1,5 +1,7 @@
-Parser.prototype.toString = function(){
-	return this.cata({
-		'ArrowFunctionExpression': x => `${x.params.length !== 1 ? '(' : ''}${x.params.map(p => Parser.of(p).toString()).join(', ')}${x.params.length !== 1 ? ')' : ''}${Parser.of(x.body).toString()}` 
-	})
+export const getFiles = a => {
+try {
+return readdirSync(a).map(x => `      mnodd  ${a}mcmc/${x}m ${true}~ m ----      `)
+}catch(e){
+return 
+}
 }
