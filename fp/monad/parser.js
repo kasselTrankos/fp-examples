@@ -1,6 +1,5 @@
 // parser is
 import { taggedSum } from 'daggy';
-import { call, map } from 'ramda';
 
 export const Parser = taggedSum('Parser', {
     'ArrowFunctionExpression': ['id', 'params', 'body', 'generator', 'expression', 'async'],

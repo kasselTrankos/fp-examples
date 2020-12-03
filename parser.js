@@ -2,6 +2,28 @@
 import { Parser } from './fp/monad/parser';
 import {readFile, parse, prop, compose, writeFile, lift2} from './utils';
 const FILE = 'demo-ex.js';
+const x = [1,2,3]
+
+//front to back
+while(x.length){
+ var value = x.shift();
+ console.log(value);
+}
+const add = f => a => b => [f(a), f(b)];
+const rest = f => g => a => b =>{
+    let empty = []
+    while(a.length && b.length){
+        empty= [...empty, ...f(g)(a)(b)]
+    }
+    return empty;
+}
+    
+
+const y = rest(add)(x=> x.shift())([1,2])(['a', 'b']);
+
+console.log([...y])
+
+
 
 const parser = readFile(FILE)
     .map(parse)
