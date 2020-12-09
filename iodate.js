@@ -43,6 +43,9 @@ class NatF {
         return `NatF(Pair( ${this.x.fst()}, ${this.x.snd()})) `
     }
 }
+// https://bartoszmilewski.com/2017/02/28/f-algebras/
+// unFix :: Fix f -> f (Fix f)
+// unFix (Fix x) = x
 // cata :: Functor f => (f a -> a) -> Fix f -> a
 // cata alg = alg . fmap (cata alg) . unFix
 // need unfix
