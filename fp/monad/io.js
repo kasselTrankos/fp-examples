@@ -20,6 +20,11 @@ IO.prototype.chain = function(f) {
 IO.of = function (x) {
   return IO(() => x);
 }
+// fantasy-land/ap :: Apply f => f a ~> f (a -> b) -> f b
+IO.prototype.ap = function(that) {
+  const b = that.unsafePerformIO();
+  return IO(()=> b(this.unsafePerformIO()));
+}
 
 module.exports = IO;
 

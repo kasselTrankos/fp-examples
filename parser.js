@@ -5,12 +5,8 @@ const FILE = 'demo-ex.js';
 const x = [1,2,3]
 
 //front to back
-while(x.length){
- var value = x.shift();
- console.log(value);
-}
 const add = f => a => b => [f(a), f(b)];
-const rest = f => g => a => b =>{
+const parallel = f => g => a => b =>{
     let empty = []
     while(a.length && b.length){
         empty= [...empty, ...f(g)(a)(b)]
@@ -19,7 +15,7 @@ const rest = f => g => a => b =>{
 }
     
 
-const y = rest(add)(x=> x.shift())([1,2])(['a', 'b']);
+const y = parallel(add)(x=> x.shift())([1,2, 3])(['a', 'b', 'c']);
 
 console.log([...y])
 

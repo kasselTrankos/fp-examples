@@ -20,6 +20,8 @@
     "cli-e": "babel-node cli-folder",
     "hylomorphism": "nodemon --exec babel-node hylomorphism",
     "parser": "nodemon --exec babel-node parser",
+    "falgebra": "nodemon --exec babel-node falgebra",
+    "iodate": "nodemon --exec babel-node iodate",
     "parser-ex": "babel-node parser",
     "test": "mocha --require  @babel/register -w"
   },
