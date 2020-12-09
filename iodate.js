@@ -26,16 +26,6 @@ console.log(gp.fst() + gp.snd())
 
 console.log(5*5 - 8*8 + (5 * 8));
 
-// newtype Fix f = Fx (f (Fix f))
-const Fix = f => Fix(f(Fix(f)));
-// fmap :: f -> (a -> b) -> f a -> f b 
-const fmap = f => a => f(a);
-// cata :: Functor f => (f a -> a) -> Fix f -> a
-const cata = f => fmap(f) 
-// const cata = 
-// unFix :: Fix f -> f (Fix f)
-const unFix = Fix => x
-
 class NatF {
     constructor(x) {
         this.x = x;
@@ -46,9 +36,36 @@ class NatF {
     static SuccF(p) {
         return new NatF(Pair(p.snd(), p.snd() + p.fst()))
     }
+    map(f) {
+        return NatF.SuccF(this.x.map(f))
+    }
     toString() {
         return `NatF(Pair( ${this.x.fst()}, ${this.x.snd()})) `
     }
 }
+// cata :: Functor f => (f a -> a) -> Fix f -> a
+// cata alg = alg . fmap (cata alg) . unFix
+// need unfix
+const cata = p => p.x.snd() > 50 ? p : cata(p.map(I));
+// fibonacci :: Integer -> Integer
+const fibonacci = n => 
+    n == 0 ? 0 : n == 1 ? 1 : fibonacci (n - 2) + fibonacci (n - 1);
 // fib :: Int -> Int
-console.log(NatF.SuccF(Pair( 1, 2)).toString())
+console.log(NatF.SuccF(Pair( 1, 1))
+    .map(x => x) // aqui viene cata
+    .map(x => x) // cata
+    .map(x => x) // cata
+    .map(x => x) // cata
+    .map(x => x)
+    .map(x => x)
+    .toString(), fibonacci(11), cata(NatF.ZeroF))
+const _0 = 0;
+const _1 = 1;
+const _2 = _0 + _1;
+const _3 = _2 + _1;
+const _4 = _2 + _3;
+const _5 = _3 + _4;
+const _6 = _4 + _5;
+const _7 = _5 + _6;
+const _8 = _6 + _7;
+console.log(_2, _3, _4, _5, _6, _7, _8)
