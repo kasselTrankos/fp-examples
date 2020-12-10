@@ -25,6 +25,28 @@ Maybe.prototype.ap = function(that) {
     Nothing:_=> Maybe.Nothing
   });
 }
+
+// coof:: w a -> a
+Maybe.prototype.extract = function() {
+    return this.cata({
+        Just: _=> _,
+        Nothing: ()=> undefined
+    })
+}
+// coChain :: w a -> (w a -> b ) -> w b
+Maybe.prototype.coChain = function(that) {
+    return this.cata({
+        Just: f => that.cata({
+            Just: x => f(x),
+            Nothing: Maybe.Nothing
+        }),
+        Nothing: ()=> Maybe.Nothing
+    });
+}
+
+Maybe.prototype.id = function() {
+    return this;
+}
 Maybe.prototype.empty = function(){
     return this.cata({
         Just: Maybe.Nothing,

@@ -1,0 +1,74 @@
+// io date
+import { F } from 'ramda';
+import  IO from './fp/monad/io';
+import {Pair} from './fp/monad/pair';
+import {I} from './lambda';
+import {taggedSum} from 'daggy';
+const lift = f => a => b => b.ap(a.map(f))
+const date = x => IO(() => new Date(x));
+const k = date(new Date().getTime())
+    // .map(x => new Date(x.getTime() + ( 2 * 60 * 60 * 1000)))
+    .map(x => `${x.getHours()}:${x.getMinutes()}:${x.getSeconds()}`)
+
+const ga = m => IO(() => m + 1);
+console.log(k.unsafePerformIO(), ga(1).unsafePerformIO())
+const append = a => b => [a, b];
+
+const h = lift(append)(lift(append)(k)(ga(1)))(ga(9));
+console.log(h.unsafePerformIO())
+
+const p = Pair(0, ga(1))
+    .bimap(x => 3, x => x.map(y => y + 3))
+
+console.log(p.snd().unsafePerformIO(), p.fst())
+const gp = Pair(8, 13);
+console.log(gp.fst() + gp.snd())
+
+console.log(5*5 - 8*8 + (5 * 8));
+
+class NatF {
+    constructor(x) {
+        this.x = x;
+    }
+    static get ZeroF () {
+        return new NatF(Pair(1 ,1))
+    }
+    static SuccF(p) {
+        return new NatF(Pair(p.snd(), p.snd() + p.fst()))
+    }
+    map(f) {
+        return NatF.SuccF(this.x.map(f))
+    }
+    toString() {
+        return `NatF(Pair( ${this.x.fst()}, ${this.x.snd()})) `
+    }
+}
+// https://bartoszmilewski.com/2017/02/28/f-algebras/
+// unFix :: Fix f -> f (Fix f)
+// unFix (Fix x) = x
+// cata :: Functor f => (f a -> a) -> Fix f -> a
+// cata alg = alg . fmap (cata alg) . unFix
+// need unfix
+const cata = p => p.x.snd() > 50 ? p : cata(p.map(I));
+// fibonacci :: Integer -> Integer
+const fibonacci = n => 
+    n == 0 ? 0 : n == 1 ? 1 : fibonacci (n - 2) + fibonacci (n - 1);
+// fib :: Int -> Int
+console.log(NatF.SuccF(Pair( 1, 1))
+    .map(x => x) // aqui viene cata
+    .map(x => x) // cata
+    .map(x => x) // cata
+    .map(x => x) // cata
+    .map(x => x)
+    .map(x => x)
+    .toString(), fibonacci(11), cata(NatF.ZeroF))
+const _0 = 0;
+const _1 = 1;
+const _2 = _0 + _1;
+const _3 = _2 + _1;
+const _4 = _2 + _3;
+const _5 = _3 + _4;
+const _6 = _4 + _5;
+const _7 = _5 + _6;
+const _8 = _6 + _7;
+console.log(_2, _3, _4, _5, _6, _7, _8)

@@ -15,13 +15,14 @@ Either.prototype.chain = function(f) {
 // ap :: Apply f => f a ~> f (a -> b) -> f b
 Either.prototype.ap = function(that) {
   return this.cata({
-    Left: ()=> this,
+    Left: () => this,
     Right: x => that.x(x)
   });
 }
 
 // map:: Functor f => f a ~>(a -> b) -> b 
 Either.prototype.map = function (f) {
+  
   return this.cata({
     Right: x => Either.Right(f(x)),
     Left: () => this
@@ -38,6 +39,13 @@ Either.prototype.alt = function (that) {
   });
 }
 
+Either.prototype.extract = function() {
+  return this.cata({
+    Left: x => x,
+    Right: x => x
+  });
+}
+
 Either.alt = Either.prototype.alt;
 
 Either.prototype.of = function _of(x) {
@@ -46,6 +54,7 @@ Either.prototype.of = function _of(x) {
     Left: () => x
   });
 }
+
 Either.of = Either.prototype.of;
 Either.prototype.bimap = function(f, g) {
   return this.cata({
