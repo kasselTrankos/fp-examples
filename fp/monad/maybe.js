@@ -13,7 +13,7 @@ Maybe.of = function(x) {
 Maybe.prototype.map = function(f) {
     return this.cata({
         Just: x =>  Maybe.Just(f(x)),
-        Nothing: Maybe.Nothing
+        Nothing:()=>  Maybe.Nothing
     });
 }
 Maybe.prototype.ap = function(that) {
@@ -30,7 +30,7 @@ Maybe.prototype.ap = function(that) {
 Maybe.prototype.extract = function() {
     return this.cata({
         Just: _=> _,
-        Nothing: ()=> undefined
+        Nothing: () => undefined
     })
 }
 // coChain :: w a -> (w a -> b ) -> w b

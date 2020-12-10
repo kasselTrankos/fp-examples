@@ -4,6 +4,7 @@ import  IO from './fp/monad/io';
 import {Pair} from './fp/monad/pair';
 import {I} from './lambda';
 import {taggedSum} from 'daggy';
+import  {Just, Nothing} from './fp/monad/maybe'
 const lift = f => a => b => b.ap(a.map(f))
 const date = x => IO(() => new Date(x));
 const k = date(new Date().getTime())
@@ -36,32 +37,46 @@ class NatF {
     static SuccF(p) {
         return new NatF(Pair(p.snd(), p.snd() + p.fst()))
     }
-    map(f) {
-        return NatF.SuccF(this.x.map(f))
+    next() {
+        return NatF.SuccF(this.x)
     }
     toString() {
         return `NatF(Pair( ${this.x.fst()}, ${this.x.snd()})) `
     }
+
 }
 // https://bartoszmilewski.com/2017/02/28/f-algebras/
+// newtype Fix f = Fix (f (Fix f))
+const Fix = f => Fix(f(Fix(f)));
 // unFix :: Fix f -> f (Fix f)
 // unFix (Fix x) = x
 // cata :: Functor f => (f a -> a) -> Fix f -> a
 // cata alg = alg . fmap (cata alg) . unFix
+// como puedo ver la traduccion a cata es diferente, necesito un unfix
+// T.map(cata(T)) pinta muy muy loco, donde está el acumulador
+const cata = (T, f) => T.extract() > 12 
+    ? T.extract()
+    : cata(T.map(f), f);
+
+// Veo patrones a mi alrredeor
+// 
+const fact = (T, f) => T.extract() === 0
+    ? 1
+    : T.extract() * fact(T.map(f), f);
+// cata alg = alg . fmap (cata alg) . unFix
 // need unfix
-const cata = p => p.x.snd() > 50 ? p : cata(p.map(I));
 // fibonacci :: Integer -> Integer
 const fibonacci = n => 
     n == 0 ? 0 : n == 1 ? 1 : fibonacci (n - 2) + fibonacci (n - 1);
 // fib :: Int -> Int
 console.log(NatF.SuccF(Pair( 1, 1))
-    .map(x => x) // aqui viene cata
-    .map(x => x) // cata
-    .map(x => x) // cata
-    .map(x => x) // cata
-    .map(x => x)
-    .map(x => x)
-    .toString(), fibonacci(11), cata(NatF.ZeroF))
+    .next() // aqui viene cata
+    .next() // cata
+    .next() // cata
+    .next() // cata
+    .next()
+    .next()
+    .toString(), fibonacci(11))
 const _0 = 0;
 const _1 = 1;
 const _2 = _0 + _1;
@@ -72,3 +87,8 @@ const _6 = _4 + _5;
 const _7 = _5 + _6;
 const _8 = _6 + _7;
 console.log(_2, _3, _4, _5, _6, _7, _8)
+
+// part 2
+// to use Fix f must be a Type
+const calculo = 1;
+console.log(Just(1).map(x => x +1), Nothing.map(x => x +1), fact(Just(11), x => x -1))
