@@ -16,6 +16,7 @@
     "dom": "nodemon --exec babel-node dom",
     "task": "nodemon --exec babel-node task",
     "stream": "nodemon --exec babel-node stream",
+    "mahoma": "nodemon --exec babel-node mahoma",
     "task-e": "babel-node task",
     "cli-e": "babel-node cli-folder",
     "hylomorphism": "nodemon --exec babel-node hylomorphism",
