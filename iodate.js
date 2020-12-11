@@ -127,11 +127,17 @@ console.log(
     result
 );
 const aad = cata(_NatF)(match({Zero: Pair(1, 1), Succ: m => Pair(m.snd(), m.fst() + m.snd())}))
+
 console.log('ARRANGE', 
 // Succ(Pair(1, 1)), 
 // 'ZERO IS',
 // Zero, 
 // 'KOKO',
-aad(Succ(Pair(1,2))),
+    aad(Succ(Pair(1,2))),
 
 );
+
+const toN = Array.from({length: 14});
+// sequence
+console.log(fibonacci(15));
+console.log(toN.reduce((acc, x) => aad(Succ(acc)) ,Pair(0,1)))
