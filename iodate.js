@@ -23,11 +23,11 @@ console.log(h.unsafePerformIO())
 const p = Pair(0, ga(1))
     .bimap(x => 3, x => x.map(y => y + 3))
 
-console.log(p.snd().unsafePerformIO(), p.fst())
+// console.log(p.snd().unsafePerformIO(), p.fst())
 const gp = Pair(8, 13);
-console.log(gp.fst() + gp.snd())
+// console.log(gp.fst() + gp.snd())
 
-console.log(5*5 - 8*8 + (5 * 8));
+// console.log(5*5 - 8*8 + (5 * 8));
 
 class NatF {
     constructor(x) {
@@ -113,14 +113,25 @@ const { Nil, Cons } = ListF;
 
 const _NatF = (()=> {
     const {Zero, Succ } = adt({Zero: [], Succ: ['a']});
-    const map = f => match({Zero, Succ: x => Pair(x.snd(), x.fst() + x.snd())});
-    return { Zero, Succ, map};
+    const map = f => match({Zero, Succ: x => Succ(x)});
+    const bimap = (f, g) => match({Zero, Succ: x => Succ(x.bimap(f, g))});
+    return { Zero, Succ, map, bimap};
 })();
 
 const {Zero, Succ} = _NatF;
 
 const length = cata(ListF)(match({ Nil: 0, Cons: x => y => `${x}+ 1 + ${y}` }));
 const result = length(ListF.fromArray([1, 2, 3, 4, 5, 6, undefined]));
-console.log(result);
-const aad = cta(_NatF)({Zero: Pair(1, 1), Succ: x => x})
-console.log('ARRANGE', Succ(Pair(1, 1)), Zero, aad);
+console.log(
+    ListF.fromArray([1, 2, 3, 4, 5, 6, undefined]),
+    result
+);
+const aad = cata(_NatF)(match({Zero: Pair(1, 1), Succ: m => Pair(m.snd(), m.fst() + m.snd())}))
+console.log('ARRANGE', 
+// Succ(Pair(1, 1)), 
+// 'ZERO IS',
+// Zero, 
+// 'KOKO',
+aad(Succ(Pair(1,2))),
+
+);
