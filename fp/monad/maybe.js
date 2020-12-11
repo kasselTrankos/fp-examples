@@ -16,6 +16,16 @@ Maybe.prototype.map = function(f) {
         Nothing:()=>  Maybe.Nothing
     });
 }
+
+Maybe.prototype.concat = function(that) {
+    return that.cata({
+        Just: x => x.concat(that.cata({
+            Just: y => y,
+            Nothing: () => x
+        })),
+        Nothing: ()=> Maybe.Just(this.x)
+    });
+}
 Maybe.prototype.ap = function(that) {
   return this.cata({
     Just: x=> that.cata({

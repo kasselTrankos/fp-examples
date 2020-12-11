@@ -45,7 +45,6 @@
     "data.stream": "^0.1.0",
     "esprima": "^4.0.1",
     "folktale": "^2.3.2",
-    "inquirer": "^7.3.3",
     "mocha": "^8.2.0",
     "nodemon": "^2.0.4",
     "rxjs": "^6.6.3",
