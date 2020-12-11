@@ -15,7 +15,7 @@ const _readline = a => Async((_, resolve)=> {
 export const writeFile = name => data => Async((reject, resolve)=> fs.writeFile(name, data, err => 
   err
     ? reject(err)
-    : resolve('GENIAL')
+    : resolve(data)
 ));
 
 

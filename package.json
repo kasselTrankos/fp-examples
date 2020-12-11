@@ -41,11 +41,13 @@
   "dependencies": {
     "@masaeedu/adt": "^1.1.1",
     "@masaeedu/fp": "^10.1.1",
+    "cli-spinners": "^2.5.0",
     "crocks": "^0.12.4",
     "data.stream": "^0.1.0",
     "esprima": "^4.0.1",
     "folktale": "^2.3.2",
     "inquirer": "^7.3.3",
+    "json-formatter-js": "^2.3.4",
     "mocha": "^8.2.0",
     "nodemon": "^2.0.4",
     "rxjs": "^6.6.3",

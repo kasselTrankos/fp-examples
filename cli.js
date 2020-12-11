@@ -7,7 +7,7 @@ import inquirer from 'inquirer';
 // 
 
 // getFromList :: String -> Array -> Async String Error 
-export const getFromList = question => list => console.log(list) || Async((rej, res)=> {
+export const getFromList = question => list => Async((rej, res)=> {
   return inquirer
     .prompt([{
       name: 'element',

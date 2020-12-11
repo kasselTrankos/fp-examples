@@ -11,7 +11,7 @@ export const getFileByExtension = ext => file => ext === path.extname(file).subs
 export const toJSON = str => JSON.parse(str);
 
 // stringify :: Object -> String
-export const stringify = o => JSON.stringify(o); 
+export const stringify = o => JSON.stringify(o, null, 2); 
 
 // ignoreHidden :: String -> Boolean
 export const ignoreHidden = x =>  x.substring(0, 1) !== '.';
