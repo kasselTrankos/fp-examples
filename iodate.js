@@ -1,4 +1,6 @@
 // io date
+const { adt, match } = require("@masaeedu/adt");
+const { cata, ana, Arr } = require("@masaeedu/fp");
 import { F } from 'ramda';
 import  IO from './fp/monad/io';
 import {Pair} from './fp/monad/pair';
@@ -50,13 +52,18 @@ class NatF {
 const Fix = f => Fix(f(Fix(f)));
 // unFix :: Fix f -> f (Fix f)
 // unFix (Fix x) = x
-// cata :: Functor f => (f a -> a) -> Fix f -> a
 // cata alg = alg . fmap (cata alg) . unFix
 // como puedo ver la traduccion a cata es diferente, necesito un unfix
 // T.map(cata(T)) pinta muy muy loco, donde está el acumulador
-const cata = (T, f) => T.extract() > 12 
-    ? T.extract()
-    : cata(T.map(f), f);
+// const cata = (T, f) => T.extract() > 12 
+//     ? T.extract()
+//     : cata(T.map(f), f);
+// like @masaeedu Asad Saeeduddin
+// cata :: Functor f => (f a -> a) -> Fix f -> a
+// const cata = F => alg => {
+//     const rec = x => alg(F.map(rec)(x));
+//     return rec;
+//   };
 
 // Veo patrones a mi alrredeor
 // 
@@ -69,14 +76,14 @@ const fact = (T, f) => T.extract() === 0
 const fibonacci = n => 
     n == 0 ? 0 : n == 1 ? 1 : fibonacci (n - 2) + fibonacci (n - 1);
 // fib :: Int -> Int
-console.log(NatF.SuccF(Pair( 1, 1))
-    .next() // aqui viene cata
-    .next() // cata
-    .next() // cata
-    .next() // cata
-    .next()
-    .next()
-    .toString(), fibonacci(11))
+// console.log(NatF.SuccF(Pair( 1, 1))
+//     .next() // aqui viene cata
+//     .next() // cata
+//     .next() // cata
+//     .next() // cata
+//     .next()
+//     .next()
+//     .toString(), fibonacci(11))
 const _0 = 0;
 const _1 = 1;
 const _2 = _0 + _1;
@@ -86,9 +93,34 @@ const _5 = _3 + _4;
 const _6 = _4 + _5;
 const _7 = _5 + _6;
 const _8 = _6 + _7;
-console.log(_2, _3, _4, _5, _6, _7, _8)
+// console.log(_2, _3, _4, _5, _6, _7, _8)
 
 // part 2
 // to use Fix f must be a Type
 const calculo = 1;
-console.log(Just(1).map(x => x +1), Nothing.map(x => x +1), fact(Just(11), x => x -1))
+// console.log(cata(Just(1))(x=> x +1));
+// console.log(Just(1).map(x => x +1), Nothing.map(x => x +1), fact(Just(11), x => x -1))
+
+const ListF = (() => {
+    const { Nil, Cons } = adt({ Nil: [], Cons: ["a", "b"] });
+    const map = f => match({ Nil, Cons: x => xs => Cons(x)(f(xs)) });
+    const fromArray = ana({ map })(Arr.match({ Nil, Cons }));
+
+    return { Nil, Cons, map, fromArray };
+})();
+const { Nil, Cons } = ListF;
+
+
+const _NatF = (()=> {
+    const {Zero, Succ } = adt({Zero: [], Succ: ['a']});
+    const map = f => match({Zero, Succ: x => Pair(x.snd(), x.fst() + x.snd())});
+    return { Zero, Succ, map};
+})();
+
+const {Zero, Succ} = _NatF;
+
+const length = cata(ListF)(match({ Nil: 0, Cons: x => y => `${x}+ 1 + ${y}` }));
+const result = length(ListF.fromArray([1, 2, 3, 4, 5, 6, undefined]));
+console.log(result);
+const aad = cta(_NatF)({Zero: Pair(1, 1), Succ: x => x})
+console.log('ARRANGE', Succ(Pair(1, 1)), Zero, aad);

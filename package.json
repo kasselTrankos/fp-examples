@@ -38,6 +38,8 @@
   },
   "homepage": "https://github.com/kasselTrankos/fp-examples#readme",
   "dependencies": {
+    "@masaeedu/adt": "^1.1.1",
+    "@masaeedu/fp": "^10.1.1",
     "data.stream": "^0.1.0",
     "esprima": "^4.0.1",
     "mocha": "^8.2.0",
