@@ -24,13 +24,14 @@ const onEndRead = name => maybe => maybe.matchWith({
 })
 
 
+
 // proc :: String -> Async Nothing Just String
 const proc = x => readdir(x)
   .map(x => x.filter(getFileByExtension('json')))
   .chain(getFromList('Select file: '))
   .map(prop('element'))
   .chain(readFile)
-  .map(compose(stringify, prop('devDependencies'), toJSON))
+  .map(compose(stringify, prop('dependencies'), toJSON))
   .bimap(() => Maybe.Nothing(), toMaybe);
 
-proc('.').fork(onEndRead, onEndRead('malaje.json'));
+export const cliJSON  = path => filename => proc(path).fork(onEndRead, onEndRead(filename));

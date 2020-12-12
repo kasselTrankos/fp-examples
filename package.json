@@ -25,7 +25,9 @@
     "falgebra": "nodemon --exec babel-node falgebra",
     "iodate": "nodemon --exec babel-node iodate",
     "parser-ex": "babel-node parser",
-    "test": "mocha --require  @babel/register -w"
+    "test": "mocha --require  @babel/register -w",
+    "cli-fp": "nodemon --exec babel-node fp-cli",
+    "cli-fp-e": "babel-node fp-cli"
   },
   "repository": {
     "type": "git",
@@ -42,17 +44,17 @@
     "@masaeedu/adt": "^1.1.1",
     "@masaeedu/fp": "^10.1.1",
     "cli-spinners": "^2.5.0",
+    "command-line-args": "^5.1.1",
     "crocks": "^0.12.4",
-    "data.stream": "^0.1.0",
     "esprima": "^4.0.1",
     "folktale": "^2.3.2",
     "inquirer": "^7.3.3",
     "json-formatter-js": "^2.3.4",
     "mocha": "^8.2.0",
     "nodemon": "^2.0.4",
-    "rxjs": "^6.6.3",
     "vdom-to-html": "^2.3.1",
-    "virtual-dom": "^2.1.1"
+    "virtual-dom": "^2.1.1",
+    "yargs": "^16.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.3",
