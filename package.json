@@ -27,6 +27,7 @@
     "parser-ex": "babel-node parser",
     "test": "mocha --require  @babel/register -w",
     "cli-fp": "nodemon --exec babel-node fp-cli",
+    "covariant": "nodemon --exec babel-node covariant",
     "cli-fp-e": "babel-node fp-cli"
   },
   "repository": {
@@ -52,6 +53,7 @@
     "json-formatter-js": "^2.3.4",
     "mocha": "^8.2.0",
     "nodemon": "^2.0.4",
+    "pointfree-fantasy": "^0.1.3",
     "vdom-to-html": "^2.3.1",
     "virtual-dom": "^2.1.1",
     "yargs": "^16.2.0"

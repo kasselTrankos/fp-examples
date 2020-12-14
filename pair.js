@@ -151,3 +151,27 @@ const lll = group([], [...adm], 3);
 console.log(lll);
 const gh = groupBy(x => x === 0 )(adm);
 console.log(gh);
+
+
+// dr booolean from to br
+const _Pair = (x, y) =>
+({
+ _0: x,
+ _1: y,
+ map: f => _Pair(x, f(y))
+})
+
+// to :: Pair a -> (Bool -> a)
+const to = ({_0, _1}) =>
+ bool => bool ? _0 : _1
+
+// from :: (Bool -> a) -> Pair a
+const from = f =>
+ _Pair(f(true), f(false))
+
+
+const from_ = from(to(_Pair('hot', 'cold'))) // Pair(‘hot’, ‘cold’)
+
+const to_ = to(from(x => !x ? 'cold' : 'hot')) // bool => bool ? _0 : _1
+
+console.log(from_, '-----------', to_)

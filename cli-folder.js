@@ -34,4 +34,4 @@ const proc = x => readdir(x)
   .map(compose(stringify, prop('dependencies'), toJSON))
   .bimap(() => Maybe.Nothing(), toMaybe);
 
-export const cliJSON  = path => filename => proc(path).fork(onEndRead, onEndRead(filename));
+export const cliJSON = path => filename => proc(path).fork(onEndRead, onEndRead(filename));

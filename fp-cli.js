@@ -1,29 +1,39 @@
 // fp-cli
 import {cliJSON} from './cli-folder';
-import Maybe from 'folktale/maybe';
-import { exclude } from 'inquirer/lib/objects/separator';
+import IO from './fp/monad/io';
+import {Executor, Action} from './fp/monad/executor';
+import { mergeRight, dissoc} from 'ramda';
+import yargs from 'yargs/yargs';
 
-const defOptions = [
-    { action: 'action'},
-    { path: './'},
-    { file: 'malaje.json'}
-];
+const defOptions = {
+    action: 'cli-json',
+    path: './',
+    file: 'malaje.json'
+};
+
+
 const actions = {
-    cliJSON: path => file =>cliJSON(path)(file)
+    [Action('cli-json')]: (path, file) => cliJSON(path)(file)
 }
 
+// withDefaults :: Object -> Object
+const withDefaults = mergeRight(defOptions);
+// removeUnnecesary :: Object -> Object
+const removeUnnecesary = o => dissoc('$0', dissoc('_', o));
+// Args:: object -> IO
+const Args = argv => IO(() =>  yargs(argv));
 
-const argv = require('yargs/yargs')(process.argv.slice(2))
-    .default(defOptions)
-    .argv;
+// getArgs :: Object -> object 
+const getArgs = argv => Args(argv)
+    .map(x => x.argv)
+    .map(removeUnnecesary)
+    .map(withDefaults)
+    .unsafePerformIO();
 
-function Executor(action) {
-    this.action = action;
-}
+// proc :: Object -> void
+const proc = args => 
+    Executor(actions)
+    .action(Action(args.action))
+    .run(args.path, args.file);
 
-Executor.prototype.apply = function() {
-
-}
-
-
-actions[argv.action](argv.path)(argv.file)
+proc(getArgs(process.argv))
