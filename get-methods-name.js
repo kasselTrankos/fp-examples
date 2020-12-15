@@ -26,13 +26,13 @@ const highLighter = code => Pair(code, hightLigt(code));
 const isMap = x => equals(props(['type', 'value'], x), ['Identifier', 'map'])
 
 
-// getLines :: Pair
-const getLines = pair => {
-  const lines = pair.fst().split('\n');
-  const getLines = x => lines[prop('line', prop('start', prop('loc', x))) - 1];
-  // console.log(lines, '0asdas')
-  return pair.map(map(map(getLines)))
-}
+// filterLines :: [String] -> Object ->  [String]
+const filterLines = lines => obj => lines[prop('line', prop('start', prop('loc', obj))) - 1];
+
+
+
+// getLines :: Pair -> Pair
+const getLines = pair => pair.map(map(map(filterLines(pair.fst().split('\n')))))
 
 // filterIdenfiedMap :: [IO] -> [IO]
 const filterIdenfiedMap = x => x.filter(isMap)
