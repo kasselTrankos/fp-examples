@@ -1,5 +1,5 @@
 // read files cli
-import { getFromList } from './cli';
+import { getFromList } from './utils/cli';
 import Maybe from 'folktale/maybe';
 import { prop, compose, map, filter, pipeK } from  'ramda';
 import { getFileByExtension, toJSON, stringify } from './utils'; 

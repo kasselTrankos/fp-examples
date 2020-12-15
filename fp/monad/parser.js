@@ -124,6 +124,40 @@ Parser.prototype.toString = function() {
         'Nil': () => ''
     })
 }
+Parser.prototype.find = function() {
+    
+    return this.cata({
+        'ArrowFunctionExpression': (id, params, body, generator, expression, async) => `${async ? 'async ': ''}${params.length !== 1 ? '(' : ''}${params.map(p=> p.toString()).join(', ')}${params.length !== 1 ? ')' : ''} => ${body.toString()}`,
+        'ArrayExpression': x => `[ ${x.elementprototypeprototypes.map(p=> Parser.of(p).toString())} ]`,
+        'AssignmentExpression': x => `${Parser.of(x.left).toString()} = ${Parser.of(x.right).toString()}`,
+        'BinaryExpression': x => `${Parser.of(x.left).toString()} ${x.operator} ${Parser.of(x.right).toString()}`,
+        'BlockStatement': (body, generator, expression, async) => `{\n${body.map(p=> p.toString()).join('\n')}\n}`,
+        'CallExpression': (callee, args) => `${callee.toString()}(${args.map(p => p.toString()).join(', ')})`,
+        'CatchClause': (param, body) => `catch(${param.toString()})${body.toString()}`,
+        'ConditionalExpression': x => `${Parser.of(x.test).toString()} ? ${Parser.of(x.consequent).toString()} : ${Parser.of(x.alternate).toString()}`,
+        'ExpressionStatement': expression => expression.toString(),
+        'ExportNamedDeclaration': declaration => `export ${declaration.toString()}`,
+        'FunctionExpression': x => `function(${x.params.map(p=> Parser.of(p).toString())}){\n\t${Parser.of(x.body).toString()}\n}`,
+        'FunctionDeclaration': x => `function ${Parser.of(x.id).toString()}(${x.params.map(p=> Parser.of(p).toString())}) {${Parser.of(x.body).toString()}\n}`,
+        'TemplateValue': name => `\$\{${name.toString()}\}`,
+        'Identifier': name => name,
+        'Literal': (_, raw) => raw,
+        'MemberExpression': (object, property, computed) => `${object.toString()}.${property.toString()}`,
+        'ObjectPattern': x => x,
+        'ObjectExpression': properties => `{${properties.map(p => p.toString()).join(', ')}}`,
+        'Program': (body, sourceType, comments) => body.map(p=> p.toString()),
+        'Property': (key, composed, value) => `${key.toString()}: ${value.toString()}`,
+        'RestElement': argument => `...${argument.toString()}`,
+        'ReturnStatement': argument => `return ${argument.toString()}`,
+        'TryStatement': (block, handler) => `try ${block.toString()}${handler.toString()}`,
+        'TemplateLiteral': both => `\`${both.map(p => p.toString()).join('')}\``,
+        'TemplateElement': (value, tail) => value.raw,
+        'ThisExpression': _ => 'this',
+        'VariableDeclaration': (declarations, kind) => `${kind} ${declarations.map(p=> p.toString())}`,
+        'VariableDeclarator': (id, init) => `${id.toString()} = ${init.toString()}`,
+        'Nil': () => ''
+    })
+}
 
 // Parser.prototype.find = function(m) {
 //     return this.cata({

@@ -1,6 +1,50 @@
 //Cli
 import readline from 'readline';
 import Stream from '../fp/monad/stream';
+import Async from 'crocks/Async';
+import inquirer from 'inquirer';
+
+
+// getFromList :: String -> Array -> Async String Error 
+export const getFromList = question => list => Async((rej, res)=> {
+    return inquirer
+      .prompt([{
+        name: 'element',
+        type: "list",
+        message: question,
+        choices: list,
+        },])
+      .then(res)
+      .catch(rej);
+  });
+
+  // question :: String -> ASync String Error
+  export const question = q =>  Async((rej, res) =>inquirer
+    .prompt([
+    {
+      name: 'element',
+      type: "input",
+      message: q,
+    },])
+    .then(res)
+    .catch(rej)
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 const NONE = '\x1b[0m';
 const GREEN = '\x1b[32m';
@@ -18,21 +62,8 @@ const cleanLines = a => {
     process.stdout.clearScreenDown() 
 }
 
-// question a -> Stream String 
-const question = (a) => {
-    return new Stream(({next, complete, error}) => {
-        const rl = readline.createInterface({ 
-            input: process.stdin, 
-            output: process.stdout
-        });
-        rl.question(a, str => {
-            next(str);
-        });
-        return () => rl.close()
-    });
-}
 // selectableList :: Stream [a] -> Stream [a]
-const selectableList = list => {
+export const selectableList = list => {
     let index = 0;
     return new Stream(({next, complete, error})=> {
         readline.emitKeypressEvents(process.stdin);
@@ -59,8 +90,3 @@ const selectableList = list => {
         process.stdout.write( getList(list, index) )
     }, ()=> process.exit());
 }
-
-module.exports = {
-    question,
-    selectableList
-};

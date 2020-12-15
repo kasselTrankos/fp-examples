@@ -5,7 +5,7 @@
 
 
 ## Cli 
-* obtain the "dependencies" property for search *.json ```fp-cli-e``` using ```npm run fp-cli-e -- --action cli-json```  
+* obtain the "dependencies" property for search *.json using ```npm run fp-cli-e -- --action cli-json```  
 
 Its beatiful think thath this model data [Tupla, Tupla, ...], can be made like this
 ```pipe(map, map)(f)(xs)``` and then access to child Tupla.map to run f, then return again [Tupla, Tupla, ....]

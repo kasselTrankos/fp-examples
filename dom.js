@@ -5,7 +5,7 @@ import {compose, lensProp, prop, set, view} from 'ramda';
 import createElement from 'virtual-dom/create-element';
 
 
-const DOM = (tag, attrs) => IO(()=> h(tag, {...attrs}));
+const DOM = (tag, attrs) => IO(()=> h(tag, attrs));
 
 const p = DOM('p', {value: 'hola'});
 const properties = lensProp('properties');

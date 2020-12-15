@@ -19,8 +19,9 @@ export const writeFile = name => data => Async((reject, resolve)=> fs.writeFile(
 ));
 
 
-// readFileSync :: String -> Async String Error
-export const readFile = file => Async((rej, res) => fs.readFile(file, 'utf8', (err, data)=> err ? rej(err) : res(data)));
+// readfile :: String -> Async String Error
+export const readfile = file => 
+    Async((rej, res) => fs.readFile(file, 'utf8', (err, data)=> err ? rej(err) : res(data)));
 
 // read :: String -> ASync Array Error
 export const readdir = dir => Async((rej, res) => fs.readdir(dir, (err, files) => err

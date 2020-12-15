@@ -28,7 +28,8 @@
     "test": "mocha --require  @babel/register -w",
     "cli-fp": "nodemon --exec babel-node fp-cli",
     "covariant": "nodemon --exec babel-node covariant",
-    "cli-fp-e": "babel-node fp-cli"
+    "cli-fp-e": "babel-node fp-cli",
+    "m-name": "nodemon --exec babel-node get-methods-name"
   },
   "repository": {
     "type": "git",
