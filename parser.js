@@ -36,19 +36,19 @@ console.log([...y])
 
 const parser = readfile(FILE)
     .map(parse)
-    // .map(x => x.find( {
-        //     "type": "MemberExpression",
-    //     "object": {
-    //       "type": "Identifier",
-    //       "name": "Parser"
-    //     }
-    //   }))
     // .map(parse)
     // .map(x => x.map(g => g === 'var' ? 'const': g))
     // .map(x => JSON.stringify(x))
     // .map(x => x.map(c => c.toString()))
     // .map(x => x.map(toString))
     .map(Parser.fromEsprima)
+    .map(x => x.find( {
+        "type": "MemberExpression",
+        "object": {
+        "type": "Identifier",
+        "name": "Parser"
+        }
+    }))
     // .map(x =>x.map(g => g === 'var' ? 'const' : g))
     .map(x => x.toString())
     // .map(x => x.join(''))

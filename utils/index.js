@@ -4,6 +4,10 @@ const { readdirSync, readdir, lstatSync, readFileSync } = require('fs');
 import { parseModule } from 'esprima';
 import path from 'path';
 
+
+export const map = f => xs => xs.map(f);
+export const filter = f => xs => xs.filter(f);
+
 // getFileByExtension :: String -> String -> Boolean
 export const getFileByExtension = ext => file => ext === path.extname(file).substring(1);
 

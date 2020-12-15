@@ -9,6 +9,12 @@ IO.prototype.map = function(f) {
   return IO(()=>f(this.unsafePerformIO()));
 }
 
+IO.prototype.filter = function(f) {
+  return IO(()=> this.unsafePerformIO().filter(f));
+}
+
+
+
 IO.of = function(x) {
   return IO(()=> x)
 }

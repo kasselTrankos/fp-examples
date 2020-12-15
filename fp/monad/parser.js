@@ -124,8 +124,8 @@ Parser.prototype.toString = function() {
         'Nil': () => ''
     })
 }
-Parser.prototype.find = function() {
-    
+Parser.prototype.find = function(pattern) {
+    console.log(pattern)
     return this.cata({
         'ArrowFunctionExpression': (id, params, body, generator, expression, async) => `${async ? 'async ': ''}${params.length !== 1 ? '(' : ''}${params.map(p=> p.toString()).join(', ')}${params.length !== 1 ? ')' : ''} => ${body.toString()}`,
         'ArrayExpression': x => `[ ${x.elementprototypeprototypes.map(p=> Parser.of(p).toString())} ]`,
