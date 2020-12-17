@@ -6,7 +6,7 @@ import { getFileByExtension, filter, stringify, map } from './utils';
 import compose from 'crocks/helpers/compose'
 import Pair from 'crocks/Pair'
 import merge from 'crocks/pointfree/merge'
-import { prop, trim, props, equals, flatten, isEmpty, not } from 'ramda';
+import { prop, trim, props, equals, flatten, isEmpty, not, add } from 'ramda';
 import Maybe from 'crocks/Maybe';
 import maybeToAsync from 'crocks/Async/maybeToAsync'
 import { all } from 'crocks/Async';
@@ -20,25 +20,29 @@ const getMaybe = f => x => f(x) ? Just(x) : Nothing();
 
 const error = x => console.log(`Vaya error feo: ${x}`);
 
-// getIdenfier :: String -> {} -> Boolean
-const getIdenfier = pattern => obj => 
+// getIdentifier :: String -> {} -> Boolean
+const getIdentifier = pattern => obj => 
   equals(props(['type', 'value'], obj), ['Identifier', pattern]);
 
 const setMarkDown = m => x => `${m} ${x}`
 
 const getLoc = o => prop('loc', o);
-const getLineNumber = loc => prop('line', prop('start', loc)) - 1;
 
-const addList = files => loc => line => line;
+// getLineNumber :: String -> {} -> Int 
+const getLineNumber = position => loc => prop('line', prop(position, loc));
+
+// getColumnNumber :: String -> {} -> Int 
+const getColumnNumber = position => loc => prop('column', prop(position, loc));
+
 
 // // getLine :: [String] -> Object ->  [String]
-const getLine = lines => loc => lines[getLineNumber(loc)];
+const getLine = lines => loc => lines[add(getLineNumber('start')(loc))(-1)];
 
 // setNegrita :: {} -> String -> String
 const setNegrita = loc => line => {
-  const start = prop('column', prop('start', loc));
-  const end = prop('column', prop('end', loc));
-  return `line ${prop('line', prop('start', loc))}: ${line.substring(0, start)}**${line.substring(start, end)}**${line.substring(end)}`
+  const start = getColumnNumber('start')(loc);
+  const end = getColumnNumber('end')(loc);
+  return `line ${getLineNumber('start')(loc)}: ${line.substring(0, start)}**${line.substring(start, end)}**${line.substring(end)}`
 }
 
 // // gotWhiteSpaces :: String -> Maybe a b
@@ -59,7 +63,7 @@ const tokenizePair = code => Pair(
 );
 
 const getLinePattern = pattern => arr =>  
-  compose(map(getLoc), getUnsafeProp, filter(getIdenfier(pattern))
+  compose(map(getLoc), getUnsafeProp, filter(getIdentifier(pattern))
 )(arr);
 const getUnsafeProp = x => x.unsafePerformIO();
 
@@ -123,4 +127,4 @@ madeQuestionMaybe(
       'Nombre del archivo: '
     ).chain(name => writefile(`${name}.md`)(str))
   )
-  .fork(error, x => console.log('enhorabuena ya tienes tu archivo'))
+  .fork(error, x => console.log('enhorabuena ya tienes tu MARKDOWN'))
