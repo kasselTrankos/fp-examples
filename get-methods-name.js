@@ -1,67 +1,124 @@
 //get-methods-name
 
-import Pair from 'crocks/Pair'
-import { Parser } from './fp/monad/parser'; 
 import { question } from './utils/cli';
-import { prop, trim, compose, props, equals } from 'ramda';
+import { readdir, readfile, writefile} from './utils/fs';
+import { getFileByExtension, filter, stringify, map } from './utils'; 
+import compose from 'crocks/helpers/compose'
+import Pair from 'crocks/Pair'
+import merge from 'crocks/pointfree/merge'
+import { prop, trim, props, equals } from 'ramda';
 import Maybe from 'crocks/Maybe';
-import Async, { Resolved } from 'crocks/Async';
+import maybeToAsync from 'crocks/Async/maybeToAsync'
+import { all } from 'crocks/Async';
+
 import { tokenize } from 'esprima';
 import IO from './fp/monad/io';
-import maybeToAsync from 'crocks/Async/maybeToAsync'
-import { getFileByExtension, map, filter, parse, stringify } from './utils'; 
-import { readdir, readfile, writeFile} from './utils/fs';
 
 const { Just, Nothing } = Maybe;
-const { Resolve, all } = Async
 
 
-const hightLigt = code => IO(() => tokenize(code, { comment: true, loc: true }));
-
-// hightLighter :: String -> Pair( String, IO String )
-const highLighter = code => Pair(code, hightLigt(code));
-
-
-// isMap :: Object -> Boolean
-const isMap = x => equals(props(['type', 'value'], x), ['Identifier', 'map'])
-
-
-// filterLines :: [String] -> Object ->  [String]
-const filterLines = lines => obj => lines[prop('line', prop('start', prop('loc', obj))) - 1];
-
-
-
-// getLines :: Pair -> Pair
-const getLines = pair => pair.map(map(map(filterLines(pair.fst().split('\n')))))
-
-// filterIdenfiedMap :: [IO] -> [IO]
-const filterIdenfiedMap = x => x.filter(isMap)
-// readFiles :: [String] -> Async e [String]
-const readFiles = folders => all(folders.map(readfile));
-const hightLigthFiles = files => files.map(highLighter)
 
 const error = x => console.log(`Vaya error feo: ${x}`);
 
-// gotWhiteSpaces :: String -> Maybe a b
+// getIdenfier :: String -> {} -> Boolean
+const getIdenfier = pattern => obj => 
+  equals(props(['type', 'value'], obj), ['Identifier', pattern]);
+
+const setMarkDown = m => x => `${m} ${x}`
+
+const getLoc = o => prop('loc', o);
+const getLineNumber = loc => prop('line', prop('start', loc)) - 1;
+
+const addList = files => loc => line => line;
+
+// // getLine :: [String] -> Object ->  [String]
+const getLine = lines => loc => lines[getLineNumber(loc)];
+
+// setNegrita :: {} -> String -> String
+const setNegrita = loc => line => {
+  const start = prop('column', prop('start', loc));
+  const end = prop('column', prop('end', loc));
+  return `line ${prop('line', prop('start', loc))}: ${line.substring(0, start)}**${line.substring(start, end)}**${line.substring(end)}`
+}
+
+// // gotWhiteSpaces :: String -> Maybe a b
 const gotWhiteSpaces = x => /\s/g.test(x) ? Nothing() : Just(x);
+
+// splitCodeLines :: String -> [ String ]
+const splitCodeLines = code => code.split('\n');
+
+
+// tokenizeIO : String -> IO {}
+const tokenizeIO = code => IO(() => tokenize(code, { comment: true, loc: true }));
+
+
+// tokenizePair :: String -> Pair( String, IO String )
+const tokenizePair = code => Pair(
+  splitCodeLines(code), 
+  tokenizeIO(code)
+);
+
+const getLinePattern = pattern => arr =>  
+  compose(map(getLoc), getUnsafeProp, filter(getIdenfier(pattern))
+)(arr);
+const getUnsafeProp = x => x.unsafePerformIO();
+
+// tokenizeFiles :: [ String ] -> [ String ]
+const tokenizeFiles = files => files.map(tokenizePair)
+
+// readFiles :: [String] -> Async e [String]
+const readFiles = files => all(files.map(readfile));
+
+// joinIntoLines :: [ * ] -> String
+const joinIntoLines = arr => arr.join('\n');
+
+
+const setTitle = title => content => [`#${title}`, ...content];
+
+const getFileContentListMarkDown = lines => loc =>
+  compose( setMarkDown('*'), setNegrita(loc) ,getLine(lines))(loc)
+
+const getFileMarkdown = file => (lines, locs) => locs.length ? [
+  '', 
+  ...file.map(setMarkDown('##')), 
+  ...locs.map(getFileContentListMarkDown(lines))
+] : [];
+
+// getFilesMarkdownCoincidences :: [ String ] -> [ Pair String {}] -> [ String ]
+const getFilesMarkdownCoincidences = files => pairs =>
+  compose(
+    map(joinIntoLines),
+    map(merge((lines, locs) => getFileMarkdown(files.splice(0, 1))(lines, locs)))
+  )
+(pairs)
+
+// parser :: String -> [ String ] -> [String] 
+const parser = pattern => files => 
+  readFiles(files)
+  .map(tokenizeFiles)
+  .map(map(map(getLinePattern(pattern))))
+  .map(getFilesMarkdownCoincidences(files))
+  .map(setTitle(pattern))
+  .map(joinIntoLines)
+
+// getJsFiles :: String -> [ String]
+const getJsFiles = x => readdir('./')
+  .map(filter(getFileByExtension('js')));
+
 // proc :: String -> Async e String
 const proc = q => question(q)
     .map(compose(trim, prop('element')))
     .chain(maybeToAsync('Can\'t contains space', gotWhiteSpaces))
+    
 
-// findInFiles :: String -> Async Error Stringmap
-const findInFiles = pattern => readdir('./')
-  .map(x => x.filter(getFileByExtension('js')))
-  // .map(x => x.map(v => console.log(v) || v))
-  .chain(readFiles)
-  .map((hightLigthFiles))
-  .map(map(map(filterIdenfiedMap)))
-  .map(map(getLines))
-  // .map(map(map(x => console.log(x.unsafePerformIO() || x ))))
-  // .map(x => x.map(Parser.fromEsprima))
-//   .map(x => x.map(c => c.toString()))
-  .fork(console.error, x => console.log(x.map(c => c.snd().unsafePerformIO())))
 
-proc('Que méthod buscas?')
-    .fork(error, findInFiles)
-
+proc(
+  'Que méthod buscas?'
+  )
+  .chain(
+    a => getJsFiles(a).chain(b => parser(a)(b))
+  )
+  .chain(str => proc(
+    'Nombre del archivo: '
+  ).chain(name => writefile(`${name}.md`)(str)))
+  .fork(error, x => console.log(0, 'asd', x))

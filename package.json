@@ -29,7 +29,10 @@
     "cli-fp": "nodemon --exec babel-node fp-cli",
     "covariant": "nodemon --exec babel-node covariant",
     "cli-fp-e": "babel-node fp-cli",
-    "m-name": "nodemon --exec babel-node get-methods-name"
+    "m-name": "nodemon --exec babel-node get-methods-name",
+    "m-name-e": "babel-node get-methods-name",
+
+    "state": "nodemon --exec babel-node state"
   },
   "repository": {
     "type": "git",
