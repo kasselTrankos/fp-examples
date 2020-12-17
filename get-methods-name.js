@@ -6,7 +6,7 @@ import { getFileByExtension, filter, stringify, map } from './utils';
 import compose from 'crocks/helpers/compose'
 import Pair from 'crocks/Pair'
 import merge from 'crocks/pointfree/merge'
-import { prop, trim, props, equals } from 'ramda';
+import { prop, trim, props, equals, flatten, isEmpty, not } from 'ramda';
 import Maybe from 'crocks/Maybe';
 import maybeToAsync from 'crocks/Async/maybeToAsync'
 import { all } from 'crocks/Async';
@@ -16,7 +16,7 @@ import IO from './fp/monad/io';
 
 const { Just, Nothing } = Maybe;
 
-
+const getMaybe = f => x => f(x) ? Just(x) : Nothing();
 
 const error = x => console.log(`Vaya error feo: ${x}`);
 
@@ -42,7 +42,7 @@ const setNegrita = loc => line => {
 }
 
 // // gotWhiteSpaces :: String -> Maybe a b
-const gotWhiteSpaces = x => /\s/g.test(x) ? Nothing() : Just(x);
+const gotWhiteSpaces = x => /\s/g.test(x);
 
 // splitCodeLines :: String -> [ String ]
 const splitCodeLines = code => code.split('\n');
@@ -73,11 +73,12 @@ const readFiles = files => all(files.map(readfile));
 const joinIntoLines = arr => arr.join('\n');
 
 
-const setTitle = title => content => [`#${title}`, ...content];
+const addTitleMarkDown = title => content => [`#${title}`, ...content];
 
 const getFileContentListMarkDown = lines => loc =>
   compose( setMarkDown('*'), setNegrita(loc) ,getLine(lines))(loc)
 
+// aqui necesito un maybe y concat o left y right mas bien
 const getFileMarkdown = file => (lines, locs) => locs.length ? [
   '', 
   ...file.map(setMarkDown('##')), 
@@ -86,10 +87,7 @@ const getFileMarkdown = file => (lines, locs) => locs.length ? [
 
 // getFilesMarkdownCoincidences :: [ String ] -> [ Pair String {}] -> [ String ]
 const getFilesMarkdownCoincidences = files => pairs =>
-  compose(
-    map(joinIntoLines),
-    map(merge((lines, locs) => getFileMarkdown(files.splice(0, 1))(lines, locs)))
-  )
+  map(merge((lines, locs) => getFileMarkdown(files.splice(0, 1))(lines, locs)))
 (pairs)
 
 // parser :: String -> [ String ] -> [String] 
@@ -98,27 +96,31 @@ const parser = pattern => files =>
   .map(tokenizeFiles)
   .map(map(map(getLinePattern(pattern))))
   .map(getFilesMarkdownCoincidences(files))
-  .map(setTitle(pattern))
+  .map(flatten)
+  .chain(maybeToAsync('No hay ningún resultado', getMaybe(compose(not, isEmpty))))
+  .map(addTitleMarkDown(pattern))
   .map(joinIntoLines)
 
 // getJsFiles :: String -> [ String]
 const getJsFiles = x => readdir('./')
   .map(filter(getFileByExtension('js')));
 
-// proc :: String -> Async e String
-const proc = q => question(q)
-    .map(compose(trim, prop('element')))
-    .chain(maybeToAsync('Can\'t contains space', gotWhiteSpaces))
+// madeQuestionMaybe :: String -> Async e String
+const madeQuestionMaybe = q => question(q)
+  .map(compose(trim, prop('element')))
+  .chain(maybeToAsync('Pattern can\'t contains spaces', getMaybe(compose(not, gotWhiteSpaces))))
     
 
 
-proc(
+madeQuestionMaybe(
   'Que méthod buscas?'
   )
   .chain(
     a => getJsFiles(a).chain(b => parser(a)(b))
   )
-  .chain(str => proc(
-    'Nombre del archivo: '
-  ).chain(name => writefile(`${name}.md`)(str)))
-  .fork(error, x => console.log(0, 'asd', x))
+  .chain(
+    str => madeQuestionMaybe(
+      'Nombre del archivo: '
+    ).chain(name => writefile(`${name}.md`)(str))
+  )
+  .fork(error, x => console.log('enhorabuena ya tienes tu archivo'))
