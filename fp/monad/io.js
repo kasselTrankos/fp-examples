@@ -13,6 +13,10 @@ IO.prototype.filter = function(f) {
   return IO(()=> this.unsafePerformIO().filter(f));
 }
 
+IO.prototype.equals = function(a) {
+  return this.unsafePerformIO() === a;
+}
+
 
 
 IO.of = function(x) {

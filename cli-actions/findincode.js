@@ -1,48 +1,34 @@
 //get-methods-name
 
-import { question } from './utils/cli';
-import { readdir, readfile, writefile} from './utils/fs';
-import { getFileByExtension, filter, stringify, map } from './utils'; 
+import { question } from './../utils/cli';
+import { readdir, readfile, writefile} from './../utils/fs';
+import { tokenizeIO, getIdentifier, getEndColumnNumber,getStartLineNumber, getStartColumnNumber } from './../utils/tokenize' 
+import { getFileByExtension, filter, map, getIndexValue } from './../utils'; 
 import compose from 'crocks/helpers/compose'
 import Pair from 'crocks/Pair'
 import merge from 'crocks/pointfree/merge'
-import { prop, trim, props, equals, flatten, isEmpty, not, add } from 'ramda';
+import { prop, trim, flatten, isEmpty, not, add, curry } from 'ramda';
 import Maybe from 'crocks/Maybe';
 import maybeToAsync from 'crocks/Async/maybeToAsync'
 import { all } from 'crocks/Async';
-
-import { tokenize } from 'esprima';
-import IO from './fp/monad/io';
-
 const { Just, Nothing } = Maybe;
 
 const getMaybe = f => x => f(x) ? Just(x) : Nothing();
 
 const error = x => console.log(`Vaya error feo: ${x}`);
 
-// getIdentifier :: String -> {} -> Boolean
-const getIdentifier = pattern => obj => 
-  equals(props(['type', 'value'], obj), ['Identifier', pattern]);
-
-const setMarkDown = m => x => `${m} ${x}`
-
-const getLoc = o => prop('loc', o);
-
-// getLineNumber :: String -> {} -> Int 
-const getLineNumber = position => loc => prop('line', prop(position, loc));
-
-// getColumnNumber :: String -> {} -> Int 
-const getColumnNumber = position => loc => prop('column', prop(position, loc));
-
+const setMarkDown = m => x => `${m} ${x}`;
 
 // // getLine :: [String] -> Object ->  [String]
-const getLine = lines => loc => lines[add(getLineNumber('start')(loc))(-1)];
+const getLine = lines => loc =>  compose(getIndexValue(lines), add(-1), getStartLineNumber)
+(loc)
+
 
 // setNegrita :: {} -> String -> String
 const setNegrita = loc => line => {
-  const start = getColumnNumber('start')(loc);
-  const end = getColumnNumber('end')(loc);
-  return `line ${getLineNumber('start')(loc)}: ${line.substring(0, start)}**${line.substring(start, end)}**${line.substring(end)}`
+  const start = getStartColumnNumber(loc);
+  const end = getEndColumnNumber(loc);
+  return `line ${getStartLineNumber(loc)}: ${line.substring(0, start)}**${line.substring(start, end)}**${line.substring(end)}`
 }
 
 // // gotWhiteSpaces :: String -> Maybe a b
@@ -52,8 +38,7 @@ const gotWhiteSpaces = x => /\s/g.test(x);
 const splitCodeLines = code => code.split('\n');
 
 
-// tokenizeIO : String -> IO {}
-const tokenizeIO = code => IO(() => tokenize(code, { comment: true, loc: true }));
+
 
 
 // tokenizePair :: String -> Pair( String, IO String )
@@ -63,9 +48,12 @@ const tokenizePair = code => Pair(
 );
 
 const getLinePattern = pattern => arr =>  
-  compose(map(getLoc), getUnsafeProp, filter(getIdentifier(pattern))
+  compose(
+      map(map(curry(prop)('loc'))), 
+      // x => x.unsafePerformIO(), 
+      filter(getIdentifier(pattern)
+    )
 )(arr);
-const getUnsafeProp = x => x.unsafePerformIO();
 
 // tokenizeFiles :: [ String ] -> [ String ]
 const tokenizeFiles = files => files.map(tokenizePair)
@@ -80,14 +68,16 @@ const joinIntoLines = arr => arr.join('\n');
 const addTitleMarkDown = title => content => [`#${title}`, ...content];
 
 const getFileContentListMarkDown = lines => loc =>
-  compose( setMarkDown('*'), setNegrita(loc) ,getLine(lines))(loc)
+  compose(setMarkDown('*'), setNegrita(loc) ,getLine(lines))
+(loc)
 
 // aqui necesito un maybe y concat o left y right mas bien
-const getFileMarkdown = file => (lines, locs) => locs.length ? [
-  '', 
-  ...file.map(setMarkDown('##')), 
-  ...locs.map(getFileContentListMarkDown(lines))
-] : [];
+const getFileMarkdown = file => (lines, locs) => locs.map(compose(not, isEmpty)).equals(true) 
+  ? [
+    '',
+    ...file.map(setMarkDown('##')), 
+    ...locs.map(map(getFileContentListMarkDown(lines))).unsafePerformIO()
+  ] : [];
 
 // getFilesMarkdownCoincidences :: [ String ] -> [ Pair String {}] -> [ String ]
 const getFilesMarkdownCoincidences = files => pairs =>
@@ -116,15 +106,18 @@ const madeQuestionMaybe = q => question(q)
     
 
 
-madeQuestionMaybe(
+export const findinfiles = () => madeQuestionMaybe(
   'Que méthod buscas?'
   )
   .chain(
-    a => getJsFiles(a).chain(b => parser(a)(b))
+    pattern => getJsFiles(pattern).chain(files => parser(pattern)(files))
   )
   .chain(
     str => madeQuestionMaybe(
       'Nombre del archivo: '
-    ).chain(name => writefile(`${name}.md`)(str))
+    ).chain(
+      name => writefile(`${name}.md`)(str)
+      .map(() => `${name}.md File saved`)
+    )
   )
-  .fork(error, x => console.log('enhorabuena ya tienes tu MARKDOWN'))
+  .fork(error, console.log)

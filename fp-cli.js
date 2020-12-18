@@ -1,5 +1,6 @@
 // fp-cli
-import {cliJSON} from './cli-folder';
+import {cliJSON} from './cli-actions/cli-folder';
+import { findinfiles } from './cli-actions/findincode';
 import IO from './fp/monad/io';
 import {Executor, Action} from './fp/monad/executor';
 import { mergeRight, dissoc} from 'ramda';
@@ -13,7 +14,9 @@ const defOptions = {
 
 
 const actions = {
-    [Action('cli-json')]: (path, file) => cliJSON(path)(file)
+    [Action('cli-json')]: (path, file) => cliJSON(path),
+    [Action('find-in-code')]: () => findinfiles(),
+
 }
 
 // withDefaults :: Object -> Object
@@ -30,7 +33,7 @@ const getArgs = argv => Args(argv)
     .map(withDefaults)
     .unsafePerformIO();
 
-// proc :: Object -> void
+// proc :: {} -> void
 const proc = args => 
     Executor(actions)
     .action(Action(args.action))

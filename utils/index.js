@@ -3,6 +3,12 @@ export { readFile, writeFile } from './fs';
 const { readdirSync, readdir, lstatSync, readFileSync } = require('fs');
 import { parseModule } from 'esprima';
 import path from 'path';
+import { prop, flip, curry } from 'ramda';
+
+
+// getIndexValue :: [] -> Int -> *
+export const getIndexValue = arr => index=> flip(curry(prop))(arr)(index);
+
 
 
 export const map = f => xs => xs.map(f);
@@ -48,7 +54,3 @@ export const isFile = a =>
     return false;
   }
 };
-
-// prop :: String -> Object -> *
-export const prop = k => o =>  o[k];
-
