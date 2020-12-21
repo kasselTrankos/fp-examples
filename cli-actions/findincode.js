@@ -3,24 +3,23 @@
 import { question } from './../utils/cli';
 import { readdir, readfile, writefile} from './../utils/fs';
 import { tokenizeIO, getIdentifier, getEndColumnNumber,getStartLineNumber, getStartColumnNumber } from './../utils/tokenize' 
-import { getFileByExtension, filter, map, getIndexValue } from './../utils'; 
+import { getFileByExtension, filter, map, getIndexValue, gotWhiteSpaces, getMaybe } from './../utils'; 
 import compose from 'crocks/helpers/compose'
 import Pair from 'crocks/Pair'
 import merge from 'crocks/pointfree/merge'
 import { prop, trim, flatten, isEmpty, not, add, curry } from 'ramda';
-import Maybe from 'crocks/Maybe';
+
 import maybeToAsync from 'crocks/Async/maybeToAsync'
 import { all } from 'crocks/Async';
-const { Just, Nothing } = Maybe;
 
-const getMaybe = f => x => f(x) ? Just(x) : Nothing();
 
 const error = x => console.log(`Vaya error feo: ${x}`);
 
 const setMarkDown = m => x => `${m} ${x}`;
 
 // // getLine :: [String] -> Object ->  [String]
-const getLine = lines => loc =>  compose(getIndexValue(lines), add(-1), getStartLineNumber)
+const getLine = lines => loc => 
+  compose(getIndexValue(lines), add(-1), getStartLineNumber)
 (loc)
 
 
@@ -30,9 +29,6 @@ const setNegrita = loc => line => {
   const end = getEndColumnNumber(loc);
   return `line ${getStartLineNumber(loc)}: ${line.substring(0, start)}**${line.substring(start, end)}**${line.substring(end)}`
 }
-
-// // gotWhiteSpaces :: String -> Maybe a b
-const gotWhiteSpaces = x => /\s/g.test(x);
 
 // splitCodeLines :: String -> [ String ]
 const splitCodeLines = code => code.split('\n');
@@ -54,9 +50,6 @@ const getLinePattern = pattern => arr =>
       filter(getIdentifier(pattern)
     )
 )(arr);
-
-// tokenizeFiles :: [ String ] -> [ String ]
-const tokenizeFiles = files => files.map(tokenizePair)
 
 // readFiles :: [String] -> Async e [String]
 const readFiles = files => all(files.map(readfile));
@@ -87,7 +80,7 @@ const getFilesMarkdownCoincidences = files => pairs =>
 // parser :: String -> [ String ] -> [String] 
 const parser = pattern => files => 
   readFiles(files)
-  .map(tokenizeFiles)
+  .map(map(tokenizePair))
   .map(map(map(getLinePattern(pattern))))
   .map(getFilesMarkdownCoincidences(files))
   .map(flatten)
