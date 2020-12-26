@@ -3,7 +3,8 @@
 import { question } from './../utils/cli';
 import { readdir, readfile, writefile} from './../utils/fs';
 import { tokenizeIO, getIdentifier, getEndColumnNumber,getStartLineNumber, getStartColumnNumber } from './../utils/tokenize' 
-import { getFileByExtension, filter, map, getIndexValue, gotWhiteSpaces, getMaybe } from './../utils'; 
+import { getFileByExtension, filter, map, getIndexValue,
+  splitCodeLines, gotWhiteSpaces, getMaybe } from './../utils'; 
 import compose from 'crocks/helpers/compose'
 import Pair from 'crocks/Pair'
 import merge from 'crocks/pointfree/merge'
@@ -17,7 +18,7 @@ const error = x => console.log(`Vaya error feo: ${x}`);
 
 const setMarkDown = m => x => `${m} ${x}`;
 
-// // getLine :: [String] -> Object ->  [String]
+// getLine :: [String] -> Object ->  [String]
 const getLine = lines => loc => 
   compose(getIndexValue(lines), add(-1), getStartLineNumber)
 (loc)
@@ -30,11 +31,6 @@ const setNegrita = loc => line => {
   return `line ${getStartLineNumber(loc)}: ${line.substring(0, start)}**${line.substring(start, end)}**${line.substring(end)}`
 }
 
-// splitCodeLines :: String -> [ String ]
-const splitCodeLines = code => code.split('\n');
-
-
-
 
 
 // tokenizePair :: String -> Pair( String, IO String )
@@ -46,10 +42,10 @@ const tokenizePair = code => Pair(
 const getLinePattern = pattern => arr =>  
   compose(
       map(map(curry(prop)('loc'))), 
-      // x => x.unsafePerformIO(), 
-      filter(getIdentifier(pattern)
+      filter(getIdentifier(['Identifier', pattern])
     )
 )(arr);
+
 
 // readFiles :: [String] -> Async e [String]
 const readFiles = files => all(files.map(readfile));
@@ -74,7 +70,9 @@ const getFileMarkdown = file => (lines, locs) => locs.map(compose(not, isEmpty))
 
 // getFilesMarkdownCoincidences :: [ String ] -> [ Pair String {}] -> [ String ]
 const getFilesMarkdownCoincidences = files => pairs =>
-  map(merge((lines, locs) => getFileMarkdown(files.splice(0, 1))(lines, locs)))
+  map(
+    merge((lines, locs) => getFileMarkdown(files.splice(0, 1))(lines, locs))
+  )
 (pairs)
 
 // parser :: String -> [ String ] -> [String] 

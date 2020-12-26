@@ -12,7 +12,7 @@ const { Just, Nothing } = Maybe;
 export const getMaybe = f => x => f(x) ? Just(x) : Nothing();
 
 // getIndexValue :: [] -> Int -> *
-export const getIndexValue = arr => index=> flip(curry(prop))(arr)(index);
+export const getIndexValue = arr => index => flip(curry(prop))(arr)(index);
 
 // gotWhiteSpaces :: String -> Maybe a b
 export const gotWhiteSpaces = x => /\s/g.test(x);
@@ -41,23 +41,5 @@ export const log = t => x => {
   console.log(t, '::::', x);
   return x;
 }
-// + :: isDirectory a => Bool
-export const isDirectory = a => 
-{
-  try{
-    return lstatSync(`${a}`).isDirectory();
-  } catch(e){
-    return false;
-  }
-};
-
-
-// + :: isFile a => Bool
-export const isFile = a => 
-{
-  try{
-    return lstatSync(`${a}`).isFile();
-  } catch(e){
-    return false;
-  }
-};
+// splitCodeLines :: String -> [ String ]
+export const splitCodeLines = code => code.split('\n');

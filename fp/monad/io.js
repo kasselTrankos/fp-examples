@@ -1,7 +1,5 @@
 // IO.js
 const daggy = require('daggy');
-const { curryN } = require('ramda');
-const B = f => g => x => f(g(x))
 
 const IO = daggy.tagged('IO', ['unsafePerformIO']);
 

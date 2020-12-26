@@ -33,6 +33,6 @@ export const readdir = dir => Async((rej, res) => fs.readdir(dir, (err, files) =
 );
 
 // isdirectory :: String -> Async e Bool
-export const isdirectory = path  => Async((rej, res)=> fs.stat(path, (err, stats) =>
+export const isdirectory = path => Async((rej, res)=> fs.stat(path, (err, stats) =>
     err ? rej(err) : res(stats.isDirectory())
 ));

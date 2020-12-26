@@ -30,7 +30,9 @@
     "covariant": "nodemon --exec babel-node covariant",
     "cli-fp-e": "babel-node fp-cli",
     "state": "nodemon --exec babel-node state",
-    "o-files": "nodemon --exec babel-node obtain-files"
+    "o-files": "nodemon --exec babel-node obtain-files",
+    "o-files-1": "babel-node obtain-files",
+    "rabin": "nodemon --exec babel-node ./utils/algoritm/knuthmorrispratt"
   },
   "repository": {
     "type": "git",
