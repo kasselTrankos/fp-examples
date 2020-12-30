@@ -4,33 +4,30 @@ import { readdir, isdirectory, basename, readfile, writefile } from './utils/fs'
 import { Token } from './fp/monad/tokenize' 
 import { ignoreHidden, getFileByExtension, toJSON, map, splitCodeLines, getIndexValue } from './utils';
 import { all } from 'crocks/Async';
-import { zipWith, flatten, filter, compose, prop, isEmpty, not, curry, zip } from 'ramda';
+import { zipWith, flatten, filter, compose, prop, isEmpty, not, identical, curry, zip } from 'ramda';
 import Pair from 'crocks/Pair'
 import Async from 'crocks/Async'
 
 const { Resolved } = Async
 
-// concatPath :: [String] -> String -> [ String ]
-const concatPath = a => b => b.map(c => `${a}/${c}`);
+// concatPaths :: String -> [String] -> [ String ]
+const concatPaths = a => b => b.map(c => `${a}/${c}`);
 
-// removeNodeModulesFolder :: String -> Bool
-const removeNodeModulesFolder = x => compose(x => x !== 'node_modules', basename)(x);
-
-// getDirs :: [String] -> Async e [String]
-const getDirs = files => Async.of(
+// findInDir :: [String] -> Async e [String]
+const findInDir = files => Async.of(
+  // array of filters 
   files
-    .filter(removeNodeModulesFolder)
+    .filter(compose(not, curry(identical)('node_modules'), basename))
     .filter(compose(ignoreHidden, basename))
   )
-  .chain(filteredFiles => 
-    all(filteredFiles.map(isdirectory))
-    .map(isDir => zipWith((a, b) =>  Pair(a, b), isDir, filteredFiles))
+  .chain(filteredFiles => all(filteredFiles.map(isdirectory))
+    .map(isDir => zipWith((a, b) => Pair(a, b), isDir, filteredFiles))
     .chain(readDirs)
     .map(flatten)
   )
 
 // setFullPath :: String -> Async e [ String ]
-const setFullPath = file => Async.of(concatPath)
+const setFullPath = file => Async.of(concatPaths)
   .ap(Resolved(file))
   .ap(readdir(file))
 
@@ -38,7 +35,7 @@ const setFullPath = file => Async.of(concatPath)
 // readDirs :: [String] -> Async e [String]
 const readDirs = dir => all(dir.map(
   x => x.fst()
-    ? setFullPath(x.snd()).chain(getDirs)
+    ? setFullPath(x.snd()).chain(findInDir)
     : Resolved(x.snd()))
 );
 
@@ -70,27 +67,30 @@ const zipThreeWith = (f, x, y ,z ) => Array.from({length: x.length}, (_, i)=>
   f(prop(i, x), prop(i, y), prop(i, z))
 )
 
+// setDefaultFolderOnError :: String -> String -> Async String
+const setDefaultFolderOnError = folder => path => 
+  isdirectory(path)
+  .bichain(() => Resolved(folder), () => Resolved(path))
 
-const getContent = ([title, code, pattern]) => Pair(pattern, code)
-  .map(splitCodeLines)
-  .merge(getLines)
-  .map(x => `\n\n##${title}${x}`)
 
 // searchInFiles :: [ String ] -> {} -> [ String ]
-const searchInFiles = files =>  pattern => content =>
-  Pair(pattern, content)
-    .map(map(Token))
-    .merge((a, b) => zipThreeWith((a, b, z) => [a, b , z], files, content, 
-        b.map(x =>x.findArrPatterns(a).unsafePerformIO())
-    ))
-    .filter(compose(not, isEmpty, prop(2)))
-    .map(getContent)
+const searchInFiles = files => pattern => content => Pair(pattern, content)
+  .map(map(Token))
+  .merge((a, b) => zipThreeWith((a, b, z) => [a, b ,z], files, content, 
+      b.map(x => x.findArrPatterns(a).unsafePerformIO())
+  ))
+  .filter(compose(not, isEmpty, prop(2)))
+  .map(([title, code, pattern]) => Pair(pattern, code)
+    .map(splitCodeLines)
+    .merge(getLines)
+    .map(x => `\n\n##${title}${x}`)
+  )
 
 // getListFiles :: String -> Async err [ String]
 const getListFiles = path => 
   readdir(path)
-  .map(concatPath(path))
-  .chain(getDirs)
+  .map(concatPaths(path))
+  .chain(findInDir)
   .map(filter(compose(getFileByExtension('js'), basename)));
 
 
@@ -106,12 +106,9 @@ const filterTokenize = path => files =>
   .map(flatten)
   .map(x => `#(${path})\n\n${x}`)
   
-question('Dame un path ("." error | default): ')
+questionfilterTokenize('Give a path: ')
   .map(prop('element'))
-  .chain(
-    path => isdirectory(path)
-    .bichain( () => Resolved('.'), () => Resolved(path) )
-  )
+  .chain(setDefaultFolderOnError('.'))
   .chain(path => 
     getListFiles(path)
     .chain(files => filterTokenize(path)(files))

@@ -7,6 +7,9 @@ Pair.prototype.map = function(f) {
     return Pair(this.a, f(this.b))
 }
 
+Pair.of = function(a) {
+    return Pair(null, a)
+}
 
 Pair.prototype.chain = function(f) {
     return f(this.b)

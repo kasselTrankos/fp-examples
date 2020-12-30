@@ -2,8 +2,10 @@
 const daggy = require('daggy');
 import { tokenize } from 'esprima';
 import {KMPSearch} from './../../utils/algoritm/knuthmorrispratt';
-import { prop, props, add, flatten, last, keys, curry, equals} from 'ramda';
-import { getIndexValue } from './../../utils' 
+import { prop, props, add, flatten, last, keys, curry, equals, find} from 'ramda';
+import { getIndexValue } from './../../utils'
+import S from 'sanctuary'
+import fl from 'fantasy-land'
 
 // getLineNumber :: String -> {} -> Int 
 const getLineNumber = position => loc => prop('line', prop(position, loc));
@@ -32,12 +34,13 @@ equals(props(['type', 'value'], obj), pattern);
 const Tokenize = daggy.tagged('Tokenize', ['unsafePerformIO']);
 
 
-Tokenize.prototype.map = function(f) {
-    return Tokenize(()=>f(this.unsafePerformIO()));
+// map :: f => ( a -> b) -> f b
+Tokenize.prototype[fl.map] = Tokenize.prototype.map = function(f) {
+    return Tokenize(()=>f(this.unsafePerformIO()))
 }
 
-
-Tokenize.prototype.findArrPatterns = function(arr) {
+export const toPatternArray = arr => tokenize => tokenize.toPatternArray(arr);
+Tokenize.prototype.toPatternArray = function(arr) {
     const pattern = arr.map(x => [...keys(x), prop(prop(0, keys(x)), x)]);
     const KPMs =  this.map(curry(KMPSearch)(getIdentifier)(pattern));
   
@@ -60,30 +63,28 @@ Tokenize.prototype.findArrPatterns = function(arr) {
     })))
 }
 
-Tokenize.prototype.setMarkdown = function(lines) {
-    const _lines = flatten(
-        this.map(x => prop('lines')(x).map(l => ({ 
-                [l]: compose(getIndexValue(lines))(l)
-            })
-        ))
-    );
-    const all = zip(fst, _lines)
-    return [ all.map(x => {
-      const lineStart = prop('line', prop('start', prop(0, x)));
-      x[1][lineStart] = prop(prop('line', prop('start', prop(0, x))), prop(1, x)).substring(
-        0, prop('column', prop('start', prop('0', x)))
-      ) + '**' + prop(prop('line', prop('start', prop(0, x))), prop(1, x)).substring(
-        prop('column', prop('start', prop('0', x)))
-      );
-      const lineEnd = prop('line', prop('end', prop(0, x)))
-      x[1][lineEnd] = prop(prop('line', prop('end', prop(0, x))), prop(1, x)).substring(
-        0, prop('column', prop('end', prop('0', x)))
-      ) + '**' + prop(prop('line', prop('end', prop(0, x))), prop(1, x)).substring(
-        prop('column', prop('end', prop('0', x)))
-      );
-      return Object.keys(prop(1, x)).reduce(
-          (acc, y) => `${acc}\n* **line ${y}**: ${prop(y, prop(1, x))}`, '');
-    })]
+export const toMarkdown = data => tokenize => tokenize.toMarkdown(data)
+Tokenize.prototype.toMarkdown = function(code) {
+
+  const getStartMarkdown = x => this.map(find(p => getStartLineNumber(p) === x)).unsafePerformIO()
+  const getEndMarkdown = x => this.map(find(p => getEndLineNumber(p) === x)).unsafePerformIO()
+  const insertNegrita = str => pos => {
+    const arrStr = str.split('')
+    arrStr.splice(pos, 0, '*')
+    arrStr.splice(pos, 0, '*')
+    return arrStr.join('');
+  }
+  const getLineMarkdown = x => {
+    const str = getIndexValue(code)(x)
+    const startStr = getStartMarkdown(x) ? insertNegrita(str)(getStartColumnNumber(getStartMarkdown(x))) : str
+    const endStr = getEndMarkdown(x) ? insertNegrita(startStr)(getEndColumnNumber(getEndMarkdown(x))) : startStr
+    
+    return endStr
+  }; 
+
+  return this.map(S.map( x =>
+    S.reduce(acc => x => `${acc}\n**line ${x}**:${getLineMarkdown(x)}`)('')(prop('lines')(x))
+  ))
 }
 
 

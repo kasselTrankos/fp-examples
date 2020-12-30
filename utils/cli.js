@@ -3,6 +3,7 @@ import readline from 'readline';
 import Stream from '../fp/monad/stream';
 import Async from 'crocks/Async';
 import inquirer from 'inquirer';
+import { Future } from 'fluture'
 
 
 // getFromList :: String -> Array -> Async String Error 
@@ -19,16 +20,16 @@ export const getFromList = question => list => Async((rej, res)=> {
   });
 
   // question :: String -> ASync String Error
-  export const question = q =>  Async((rej, res) =>inquirer
-    .prompt([
-    {
-      name: 'element',
-      type: "input",
-      message: q,
-    },])
-    .then(res)
-    .catch(rej)
-);
+  export const question = q =>  Future((rej, res) => {
+      inquirer.prompt([{
+        name: 'element',
+        type: "input",
+        message: q,
+      },])
+      .then(res)
+      .catch(rej)
+    return () => {}
+  });
 
 
 

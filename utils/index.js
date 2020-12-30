@@ -37,9 +37,9 @@ export const ignoreHidden = x =>  x.substring(0, 1) !== '.';
 export const parse = a => parseModule(a, {comment: true});
 // toString :: * -> String
 export const toString = a => a.toString();
-export const log = t => x => {
-  console.log(t, '::::', x);
-  return x;
-}
 // splitCodeLines :: String -> [ String ]
 export const splitCodeLines = code => code.split('\n');
+
+// log :: String -> a -> a
+export const log = label => x =>
+(console.log(`[${label}]:`, x), x)
