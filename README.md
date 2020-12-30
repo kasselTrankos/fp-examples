@@ -14,6 +14,7 @@ Path now is incremental in fp-way, The data.tree got only folder name .
 Next step add the name js ```Identifier```  by cli 
 
 
-Got two actions: 
+Got three actions: 
  1. ```cli-json``` wich obtains dependencies prop from json.
  1. ```find-in-code``` wich find string given into .js code.
+ 1. ```find-pattern``` find recursive in your files( ignore dependencies) a pattern defined in ```token.json```
