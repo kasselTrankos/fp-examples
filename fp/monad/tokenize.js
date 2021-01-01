@@ -4,7 +4,7 @@ import { tokenize } from 'esprima';
 import {KMPSearch} from './../../utils/algoritm/knuthmorrispratt';
 import { prop, props, add, flatten, last, keys, curry, equals, find} from 'ramda';
 import { getIndexValue } from './../../utils'
-import S from 'sanctuary'
+import S, { Left, Right } from 'sanctuary'
 import fl from 'fantasy-land'
 
 // getLineNumber :: String -> {} -> Int 
@@ -33,59 +33,79 @@ equals(props(['type', 'value'], obj), pattern);
 
 const Tokenize = daggy.tagged('Tokenize', ['unsafePerformIO']);
 
+// concat :: Semigroup a => a ~> a -> a
+Tokenize.prototype[fl.concat] = Tokenize.prototype.concat = function(that) {
+  return Tokenize(() => this.unsafePerformIO().concat(that.unsafePerformIO()))
+}
 
 // map :: f => ( a -> b) -> f b
 Tokenize.prototype[fl.map] = Tokenize.prototype.map = function(f) {
-    return Tokenize(()=>f(this.unsafePerformIO()))
+    return Tokenize(() => f(this.unsafePerformIO()))
 }
 
-export const toPatternArray = arr => tokenize => tokenize.toPatternArray(arr);
+// toPatternArray :: tokenize a -> [b] -> tokenize [c] 
+export const toPatternArray = arr => tokenize => tokenize.toPatternArray(arr)
+
 Tokenize.prototype.toPatternArray = function(arr) {
-    const pattern = arr.map(x => [...keys(x), prop(prop(0, keys(x)), x)]);
-    const KPMs =  this.map(curry(KMPSearch)(getIdentifier)(pattern));
-  
-    const unifyElements = elms => [ ... new Set(flatten(elms)) ];
-    const getLines = x => unifyElements(x.map(z => [
-      add(getStartLineNumber(prop('loc', z)))(-1),
-      add(getEndLineNumber(prop('loc', z)))(-1)
-    ]))
+  const pattern = arr.map(x => [...keys(x), prop(prop(0, keys(x)), x)])
+  const KPMs =  this.map(S.map(curry(KMPSearch)(getIdentifier)(pattern)))
 
-    return KPMs.map(x => x.map(y => ({
-      lines: getLines(y),
-      start: {
-        line: add(getStartLineNumber(prop('loc', prop(0, y))))(-1), 
-        column: getStartColumnNumber(prop('loc', prop(0, y)))
-      },
-      end: { 
-        line: add(getEndLineNumber(prop('loc', last(y))))(-1),
-        column: getEndColumnNumber(prop('loc', last(y))) + prop('value', last(y)).length
-      }
-    })))
+  const unifyElements = elms => [ ... new Set(flatten(elms)) ];
+  const getLines = x => unifyElements(x.map(z => [
+    add(getStartLineNumber(prop('loc', z)))(-1),
+    add(getEndLineNumber(prop('loc', z)))(-1)
+  ]))
+  return KPMs.map(S.map(S.map(y =>({
+    lines: getLines(y),
+    start: {
+      line: add(getStartLineNumber(prop('loc', prop(0, y))))(-1), 
+      column: getStartColumnNumber(prop('loc', prop(0, y)))
+    },
+    end: { 
+      line: add(getEndLineNumber(prop('loc', last(y))))(-1),
+      column: getEndColumnNumber(prop('loc', last(y)))
+    }
+  }))))
 }
 
-export const toMarkdown = data => tokenize => tokenize.toMarkdown(data)
+
+// toArray :: () -> []
+export const toArray = tokenize => tokenize.toArray()
+Tokenize.prototype.toArray = function() {
+  return S.reduce(S.concat)([])(this.unsafePerformIO())
+}
+
+// toMarkdown :: tokenize a => [ a ]-> [ String ] -> tokenize [ b ] 
+export const toMarkdown = code => tokenize => tokenize.toMarkdown(code)
 Tokenize.prototype.toMarkdown = function(code) {
 
-  const getStartMarkdown = x => this.map(find(p => getStartLineNumber(p) === x)).unsafePerformIO()
-  const getEndMarkdown = x => this.map(find(p => getEndLineNumber(p) === x)).unsafePerformIO()
   const insertNegrita = str => pos => {
     const arrStr = str.split('')
     arrStr.splice(pos, 0, '*')
     arrStr.splice(pos, 0, '*')
     return arrStr.join('');
   }
-  const getLineMarkdown = x => {
-    const str = getIndexValue(code)(x)
-    const startStr = getStartMarkdown(x) ? insertNegrita(str)(getStartColumnNumber(getStartMarkdown(x))) : str
-    const endStr = getEndMarkdown(x) ? insertNegrita(startStr)(getEndColumnNumber(getEndMarkdown(x))) : startStr
-    
-    return endStr
-  }; 
 
-  return this.map(S.map( x =>
-    S.reduce(acc => x => `${acc}\n**line ${x}**:${getLineMarkdown(x)}`)('')(prop('lines')(x))
-  ))
+  const getLineMarkdown = pattern => x => {
+    const str = getIndexValue(code)(x)
+    const startStr = insertNegrita(str)(getStartColumnNumber(pattern))
+    const endStr = insertNegrita(startStr)(add(getEndColumnNumber(pattern))(2))
+
+    return endStr
+  };
+  const getLines = pattern => acc => x => `${acc}\n**line ${add(1)(x)}**:\t${getLineMarkdown(pattern)(x)}`;
+  const getMarkdown = a => S.Right(S.map(
+      x =>  S.reduce(getLines(x))('')(prop('lines', x))
+  )(a))
+
+  return this.map(x => S.isLeft(x) ?  S.map(S.map(x => `\n**[ERR]**\t${x}`))(S.Right(S.lefts([x]))) : S.chain(getMarkdown)(x))
 }
 
 
-export const Token = code => Tokenize(() => tokenize(code, { comment: true, loc: true }));
+export const Token = code => Tokenize(() => {
+  try {
+    return S.Right(tokenize(code, { comment: true, loc: true }))
+  } catch(e) {
+    return S.Left(e)
+  }
+});
