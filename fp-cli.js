@@ -1,6 +1,7 @@
 // fp-cli
 import {cliJSON} from './cli-actions/cli-folder';
 import { findinfiles } from './cli-actions/findincode';
+import { findPattern} from './cli-actions/find-pattern'
 import IO from './fp/monad/io';
 import {Executor, Action} from './fp/monad/executor';
 import { mergeRight, dissoc} from 'ramda';
@@ -14,8 +15,9 @@ const defOptions = {
 
 
 const actions = {
-    [Action('cli-json')]: (path, file) => cliJSON(path),
+    [Action('find-json')]: (path, file) => cliJSON(path),
     [Action('find-in-code')]: () => findinfiles(),
+    [Action('find-pattern')] : () => findPattern()
 
 }
 

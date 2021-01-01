@@ -32,9 +32,7 @@
     "state": "nodemon --exec babel-node state",
     "o-files": "nodemon --exec babel-node obtain-files",
     "o-files-1": "babel-node obtain-files",
-    "chainrec": "nodemon --exec babel-node chainrec",
-    "rabin": "nodemon --exec babel-node ./utils/algoritm/knuthmorrispratt",
-    "find-pattern": "nodemon --exec babel-node find-pattern"
+    "chainrec": "nodemon --exec babel-node chainrec"
   },
   "repository": {
     "type": "git",

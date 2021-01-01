@@ -1,114 +1,105 @@
 //get-methods-name
 
-import { question } from './../utils/cli';
-import { readdir, readfile, writefile} from './../utils/fs';
-import { tokenizeIO, getIdentifier, getEndColumnNumber,getStartLineNumber, getStartColumnNumber } from './../utils/tokenize' 
-import { getFileByExtension, filter, map, getIndexValue,
-  splitCodeLines, gotWhiteSpaces, getMaybe } from './../utils'; 
+import { ask } from './../utils/cli';
+import { readDir, readfile, writefile, isdirectory, basename} from './../utils/fs';
+import {getIdentifier} from './../utils/tokenize' 
+import { getFileByExtension, filter,
+  splitCodeLines, gotWhiteSpaces, ignoreByName, ignoreHidden, log } from './../utils'; 
 import compose from 'crocks/helpers/compose'
-import Pair from 'crocks/Pair'
-import merge from 'crocks/pointfree/merge'
-import { prop, trim, flatten, isEmpty, not, add, curry } from 'ramda';
-
-import maybeToAsync from 'crocks/Async/maybeToAsync'
-import { all } from 'crocks/Async';
-
-
-const error = x => console.log(`Vaya error feo: ${x}`);
-
-const setMarkDown = m => x => `${m} ${x}`;
-
-// getLine :: [String] -> Object ->  [String]
-const getLine = lines => loc => 
-  compose(getIndexValue(lines), add(-1), getStartLineNumber)
-(loc)
+import { prop, flatten, curry } from 'ramda';
+import Generator from './../utils/generator'
+import { Token, toArray } from './../fp/monad/tokenize' 
+import {fork, chain, bichain, reject, resolve, map, parallel} from 'fluture'
+import S from 'sanctuary'
 
 
-// setNegrita :: {} -> String -> String
-const setNegrita = loc => line => {
-  const start = getStartColumnNumber(loc);
-  const end = getEndColumnNumber(loc);
-  return `line ${getStartLineNumber(loc)}: ${line.substring(0, start)}**${line.substring(start, end)}**${line.substring(end)}`
-}
+// getFilesInDir :: String -> [Array] -> Future a b
+const getFilesInDir = files => resolve(files)
+  .pipe(map(filter(ignoreByName('node_modules'))))
+  .pipe(map(filter(compose(ignoreHidden, basename))))
+  .pipe(chain(filteredFiles => 
+    parallel(Infinity)(filteredFiles.map(isdirectory))
+      .pipe(map(isDir => S.zip(isDir)(filteredFiles)))
+      .pipe(chain(recurDir))
+      .pipe(map(flatten))
+  ))
+
+// readDirs :: [Pair a b] -> Future e [ String ]
+const recurDir = dir => parallel(Infinity)(dir.map( p =>
+  S.fst(p) 
+    ? readDir(S.extract(p)).pipe(chain(getFilesInDir))
+    : resolve(S.extract(p))
+))
+
+// branchValid :: (a -> b) -> String -> * -> Future m *
+const branchValid = f => m => x => f(x) ? reject(m) : resolve(x)
+
+// setDefaultFolderOnError :: a -> b -> Future c d -> Future a b
+const setDefaultFolderOnError = defaultPath => path => isdirectory(path)
+  .pipe(bichain(()=> resolve(defaultPath))(()=> resolve(path)))
+
+// madeQuestionMaybe :: String -> Async e String
+const madeAsk = q => ask(q)
+  .pipe(chain(branchValid(gotWhiteSpaces)('Pattern can\'t contains spaces')))
 
 
-
-// tokenizePair :: String -> Pair( String, IO String )
-const tokenizePair = code => Pair(
-  splitCodeLines(code), 
-  tokenizeIO(code)
-);
-
-const getLinePattern = pattern => arr =>  
+// getLoc :: String -> [{}] -> [{}]
+const getLoc = pattern => arr =>  console.log(arr, '0000000') || 
   compose(
-      map(map(curry(prop)('loc'))), 
-      filter(getIdentifier(['Identifier', pattern])
+      S.map(S.map(curry(prop)('loc'))), 
+      S.filter(getIdentifier(['Identifier', pattern])
     )
 )(arr);
 
 
-// readFiles :: [String] -> Async e [String]
-const readFiles = files => all(files.map(readfile));
+// tokenize :: String -< [ String ] -> [ String ]
+const tokenize = titles => Identifier => code =>{
+  const inmutableTitles = Generator.of(titles)
+  const inmutableCode = Generator.of(code)
 
-// joinIntoLines :: [ * ] -> String
-const joinIntoLines = arr => arr.join('\n');
+  return S.pipe([
+    S.map(Token),
+    S.map(x => x.filter([{ Identifier }])),
+    S.map(x => x.toMarkdown(splitCodeLines(inmutableCode.next()))),
+    S.map(toArray),
+    S.map(x => {
+      const title = inmutableTitles.next()
 
+      return x.length ? `\n\n##${title}${x.join('')}` : ''
+    }),
+  ])(code)
+} 
 
-const addTitleMarkDown = title => content => [`#${title}`, ...content];
+// getFiles :: String -> String -> [ String ] -> Future a b
+const getFiles = path => pattern => files => 
+  parallel(Infinity)(files.map(readfile))
+ .pipe(map(tokenize(files)(pattern)))
 
-const getFileContentListMarkDown = lines => loc =>
-  compose(setMarkDown('*'), setNegrita(loc) ,getLine(lines))
-(loc)
+// getListFiles :: String -> Future e [String]
+const getListFiles = path => readDir(path)
+  .pipe(chain(getFilesInDir))
 
-// aqui necesito un maybe y concat o left y right mas bien
-const getFileMarkdown = file => (lines, locs) => locs.map(compose(not, isEmpty)).equals(true) 
-  ? [
-    '',
-    ...file.map(setMarkDown('##')), 
-    ...locs.map(map(getFileContentListMarkDown(lines))).unsafePerformIO()
-  ] : [];
+// parse :: String -> [ String ] -> [String] 
+const parse = path => pattern => getListFiles(path)
+  .pipe(map(S.filter(getFileByExtension('js'))))
+  .pipe(chain(getFilesInDir))
+  .pipe(chain(getFiles(path)(pattern)))
 
-// getFilesMarkdownCoincidences :: [ String ] -> [ Pair String {}] -> [ String ]
-const getFilesMarkdownCoincidences = files => pairs =>
-  map(
-    merge((lines, locs) => getFileMarkdown(files.splice(0, 1))(lines, locs))
-  )
-(pairs)
-
-// parser :: String -> [ String ] -> [String] 
-const parser = pattern => files => 
-  readFiles(files)
-  .map(map(tokenizePair))
-  .map(map(map(getLinePattern(pattern))))
-  .map(getFilesMarkdownCoincidences(files))
-  .map(flatten)
-  .chain(maybeToAsync('No hay ningún resultado', getMaybe(compose(not, isEmpty))))
-  .map(addTitleMarkDown(pattern))
-  .map(joinIntoLines)
-
-// getJsFiles :: String -> [ String]
-const getJsFiles = x => readdir('./')
-  .map(filter(getFileByExtension('js')));
-
-// madeQuestionMaybe :: String -> Async e String
-const madeQuestionMaybe = q => question(q)
-  .map(compose(trim, prop('element')))
-  .chain(maybeToAsync('Pattern can\'t contains spaces', getMaybe(compose(not, gotWhiteSpaces))))
-    
+// findPattern :: String -> Future e a
+const findPattern = path => ask('Give me a pattern: ')
+  .pipe(chain(branchValid(gotWhiteSpaces)('Pattern can\'t contains spaces')))
+  .pipe(chain(x => parse(path)(x)))
+  .pipe(map(x => `#(${path})\n\n${x.join('')}`))
+  
+// saveMarkdown :: String -> Future a b -> Future a b
+const saveMarkdonw = markdown => ask('name file: ')
+  .pipe(chain(filename => writefile(`${filename}.md`)(markdown)))
+  .pipe(map(x=> ' File saved !!'))
 
 
-export const findinfiles = () => madeQuestionMaybe(
-  'Que méthod buscas?'
-  )
-  .chain(
-    pattern => getJsFiles(pattern).chain(files => parser(pattern)(files))
-  )
-  .chain(
-    str => madeQuestionMaybe(
-      'Nombre del archivo: '
-    ).chain(
-      name => writefile(`${name}.md`)(str)
-      .map(() => `${name}.md File saved`)
-    )
-  )
-  .fork(error, console.log)
+const proc = madeAsk('Give a path: ')
+  .pipe(chain(setDefaultFolderOnError('.')))
+  .pipe(chain(findPattern))
+  .pipe(chain(saveMarkdonw))
+
+  export const findinfiles = () => fork(log('error'))(log('response'))(proc)

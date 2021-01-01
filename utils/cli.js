@@ -1,14 +1,13 @@
 //Cli
 import readline from 'readline';
 import Stream from '../fp/monad/stream';
-import Async from 'crocks/Async';
 import inquirer from 'inquirer';
 import { Future, chain, encase } from 'fluture'
 
 
 // getFromList :: String -> Array -> Async String Error 
-export const getFromList = question => list => Async((rej, res)=> {
-    return inquirer
+export const getFromList = question => list => Future((rej, res)=> {
+    inquirer
       .prompt([{
         name: 'element',
         type: "list",
@@ -17,6 +16,7 @@ export const getFromList = question => list => Async((rej, res)=> {
         },])
       .then(res)
       .catch(rej);
+    return ()=> { console.log('CANT BE STOP')}
   });
 
 // question :: String -> Future String Error
@@ -28,7 +28,7 @@ export const question = q =>  Future((rej, res) => {
     },])
     .then(res)
     .catch(rej)
-  return () => {}
+  return () => { console.log('CANT STOP IT')}
 });
 
 // ask :: String -> Future a String

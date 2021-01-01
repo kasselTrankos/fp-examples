@@ -1,14 +1,14 @@
 // find patterm
 
-import { readDir, writefile, readfile, isdirectory, basename } from './utils/fs'
-import { fork, map, chain, bichain, resolve, parallel, ap, coalesce } from 'fluture'
-import { ask } from './utils/cli';
+import { readDir, writefile, readfile, isdirectory, basename } from './../utils/fs'
+import { fork, map, chain, bichain, resolve, parallel, ap } from 'fluture'
+import { ask } from './../utils/cli';
 import { compose, filter, flatten} from 'ramda';
-import { ignoreHidden, getFileByExtension, toJSON, splitCodeLines, log, ignoreByName } from './utils';
+import { ignoreHidden, getFileByExtension, toJSON, splitCodeLines, log, ignoreByName } from './../utils';
 import { zip, extract, fst, pipe } from 'sanctuary';
-import { Token, toPatternArray, toMarkdown, toArray } from './fp/monad/tokenize'
+import { Token, toPatternArray, toArray } from './../fp/monad/tokenize'
 import S from 'sanctuary'
-import Generator from './utils/generator'
+import Generator from './../utils/generator'
 
 
 // getFilesInDir :: String -> [Array] -> Future a b
@@ -85,4 +85,4 @@ const proc = ask('Give a path: ')
 
 
 // compute
-fork(log('error'))(log('response'))(proc)
+export const findPattern = () => fork(log('error'))(log('response'))(proc)

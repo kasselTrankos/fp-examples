@@ -4,7 +4,7 @@ import { tokenize } from 'esprima';
 import {KMPSearch} from './../../utils/algoritm/knuthmorrispratt';
 import { prop, props, add, flatten, last, keys, curry, equals, find} from 'ramda';
 import { getIndexValue } from './../../utils'
-import S, { Left, Right } from 'sanctuary'
+import S from 'sanctuary'
 import fl from 'fantasy-land'
 
 // getLineNumber :: String -> {} -> Int 
@@ -41,6 +41,10 @@ Tokenize.prototype[fl.concat] = Tokenize.prototype.concat = function(that) {
 // map :: f => ( a -> b) -> f b
 Tokenize.prototype[fl.map] = Tokenize.prototype.map = function(f) {
     return Tokenize(() => f(this.unsafePerformIO()))
+}
+
+Tokenize.prototype.filter = function(pattern) {
+  return this.toPatternArray(pattern)
 }
 
 // toPatternArray :: tokenize a -> [b] -> tokenize [c] 
